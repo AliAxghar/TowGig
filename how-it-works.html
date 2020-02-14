@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TowGig</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script>
+    <link rel="stylesheet" type='text/css' href="css/style.css">
+    <link rel="stylesheet" type='text/css' href="css/style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class="aboutbody" id="aboutus">
+    <nav  class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="">
+                <p class="lslogan">TowGig, Brings Auto Smiles</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"  href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="how-it-works.html">How it Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign Up
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a data-toggle="modal" data-target="#Modal-buyer" class="dropdown-item" href="#">Buyer</a>
+                        <a data-toggle="modal" data-target="#Modal-expert" class="dropdown-item" href="#">Expert</a>
+                        <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
+                        <a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="#">Expert</a> -->
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="modal" id="myModal">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone*" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    </div>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="modal" id="myModal1">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email/Username" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password" value="" />
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal2" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="modal" id="myModal2">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent2">
+                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group filel pb-1">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="File01">Upload Selfie/Logo</label>                                      
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Town" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Zip Code" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Towing Hauling Cars Dot Number" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class=" filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label1" for="File01">Professional License </label>                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business or Personal Address" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Province/State" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Country" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label2" for="File01">Insurance Policy (Front)</label>                                      
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal3" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="modal" id="myModal3">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank/Branch Name" value="" />
+                                    </div>
+                                    <div class="form-group" style="color: #6c757d;">
+                                        Date of Birth:<input type="date" class="form-control" placeholder="Date of Birth" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Employee Identity No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" name="Phone" class="form-control" placeholder="Confirm Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Routing No" value="" />
+                                    </div>
+                                    <label for="choose-services" style="color: #6c757d;">Choose Services:</label>
+                                    <br>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tow Haul
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Flat Type
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Replace Battery
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Engin Light On
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Jump Start
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox"  class="mr-1" value="">Lockout
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Gas/Diesel Refill
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tyre/Car Vibration
+                                    </label>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="aboutcontainer3">
+        <div class="container htw">
+                <h2>A guide for how to use TowGig</h2>
+                <h3 class="abtcntnrh4">To save time, money, and enjoy convenience on vehicle needs, we've got you fast & easy
+                    way by a few taps on your phone. View tips below. </h3>
+            <div class="row">
+                <!-- <div class="col-1"></div> -->
+                <div class="col-lg-5 col-md-12 col-md-offet-0 col-sm-12 col-xsm-12 container4-left-col pt-5">
+                    <div class="hwitwork-col-section">
+                        <h4 style="text-align: center;color: #006be9;">A Buyer </h4>
+                        <p>A buyer is Anyone who buy car services through A auto Expert is the one with skills and always
+                            TowGig. Download the app & sign up now for free 
+                        </p>
+                        <p>After downloading the App, & sign in your account
+                            enter address, then select the service you want. The
+                        Services are; <a href="" style="color: #006be9;"> Tow/haul, Mechanic & Roadside Help</a>
+                        </p>
+
+                        <p>Customize gig details & Choose payment method;
+                            & request Gig. Payments are done right in the app
+                        </p>
+
+                        <p>When you request a Gig, an Expert will accept &
+                            you both connect to each other. You'll see Expert 
+                            on the app coming for your help in real time.
+                        </p>
+
+                        <p>Buyer & Expert can text; or call each other with any 
+                            question or concern unanimously through the App. 
+                        </p>
+
+                        <p>Buyer can schedule a gig for a later time. You'll be 
+                            notify when a Expert except your Gig request. then
+                            relax & let TowGig technology handle the rest. 
+                        </p>
+
+                        <p>To increase savings on routine auto care, visit  
+                            <a href="" style="color: #35a28f;">TowGig benefits,</a> in your account dashboard for
+                            amazing deals awaiting you & your family/friends. 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5  offset-2 col-md-12 col-md-offet-0 col-sm-12 col-xsm-12 container4-right-col pt-5">
+                    <div class="hwitwork-col-section2">
+                        <h4 style="text-align: center;color: #006be9;">Certified Expert</h4>
+                        <p>A auto Expert is the one with skills and always
+                            ready to help a Buyer in need of car services
+                        </p>
+
+                        <p>Download your free App, create account, fill and
+                            submit form; we run a full screening checks to
+                            make sure you meet the platform user standards
+                        </p>
+
+                        <p>If you qualify, you will be notify, and given access
+                            into the platform to start accepting orders to gig
+                        </p>
+    
+                        <p>If you've workers, they will continue doing works
+                            for you as usual. though the employee's part is
+                            still under construction & it will be done in a while.
+                        </p>
+
+                        <p>Order alert will show few details of the type of  
+                            Gig ordered. It will also show:<a href="" style="color: #006be9;"> Go Now </a>on your
+                            phone. Tap on Go Now: to connect with Buyer.
+                            Call or Text the Buyer with any questions or
+                            concern before leaving to go and help them.  
+                        </p>
+ 
+                        <p>Call Buyer unanimously from the App in case you 
+                            have a question locating Buyer, or stock in traffic.
+                        </p>
+
+                        <p>Get paid in 10 day for any amazing help you do  
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="col-1"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container" id="aboutcontainer4">
+        <div class="row">
+            <!-- <div class="col-1"></div> -->
+            <div class="col-11 offset-1 container4-col">
+                <h3>
+                   <span style="color: #006be9;font-size: 26px;">Download your free TowGig app now,</span>  and Save <span style="color: #006be9;">$5-$10</span> on your first order.<br> <span style="color: #ffb837;"> Click: Discount Code</span>
+                   <a href="services&promo.html"><button class="button col-button">Discount Code</button></a> 
+                </h3>  
+            </div>
+            <!-- <div class="col-1"></div> -->
+        </div>
+    </div>
+    <div id="aboutcontainer3">
+        <div class="container htw">
+            <h2 class="mt-1">Frequently ask Questions</h2>
+            <h2 class="htwh21 mt-3">For Payments</h2>
+            <div class="row mt-3">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xsm-12"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
+                    <div data-toggle="collapse" data-target="#p1"><span class="htwt">When will I be paid?</span>
+                        <div id="p1" class="collapse">
+                            <p class="htwp">You will be paid within 10 days for every gig that you completed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
+                    <div data-toggle="collapse" data-target="#p2"><span class="htwt">What is the pay period?
+                    </span>
+                        <div id="p2" class="collapse">
+                            <p class="htwp">The period is from the day the service was rendered to the 10th day.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xsm-12"></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xsm-12"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
+                    <div data-toggle="collapse" data-target="#p3"><span class="htwt">How will I be paid?</span>
+                        <div id="p3" class="collapse">
+                            <p class="htwp">You will be paid through direct deposit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
+                    <div data-toggle="collapse" data-target="#p4"><span class="htwt">How can I check my pay?
+                    </span>
+                        <div id="p4" class="collapse">
+                            <p class="htwp">You can check the summary of your pay in the TowGig for Drivers app. You can
+                                update your account also any time.                            
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xsm-12"></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xsm-12"></div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
+                    <div data-toggle="collapse" data-target="#p5"><span class="htwt">Is there cash handling involved?</span>
+                        <div id="p5" class="collapse">
+                            <p class="htwp">The only cash handling that will ever be involved is if a Buyer decides to tip you in
+                                cash.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
+                    <div data-toggle="collapse" data-target="#p6"><span class="htwt">What if I need to change my direct deposit?
+                    </span>
+                        <div id="p6" class="collapse">
+                            <p class="htwp">You can update your bank account information and direct deposit details in the TowGig
+                                for Expert app under Profile.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xsm-12"></div>
+            </div>
+        </div>
+    </div>
+    <div id="aboutcontainer3">
+        <div class="container htw">
+                <h2 class="mt-4">Employer/Employee</h2>
+                <h2 class="htwh2 mt-3">What if I have an Employee?</h2>
+                <h3 class="htwh31 mt-3">For now, only the contractor who signed up with us can use the platform. We're
+                    working to provide a suitable center that will accommodate employees, so that they
+                    can continue to work with their employer. So, sign up now & take your space before is
+                    late. </h3>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!-- <div id="container7">
+        <div id="jssor_1">
+            <div data-u="loading" class="jssorl-009-spin">
+                <img class="img-style" src="img/spin.svg" />
+            </div>
+            <div data-u="slides" class="sliderdiv1">
+                <div class="imgpad">
+                    <img data-u="image" src="img/subaru.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/stripe.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/paypal.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/mobius.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div><a data-u="any" href="https://www.jssor.com" style="display:none">web design</a>
+            </div>
+        </div>
+    </div> -->
+    <footer class="page-footer font-small stylish-color-dark pt-4 abtfooter">
+        <div class="container text-center text-md-left">
+        <div class="row"> 
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 offset-1">
+            <h5 class=" text-white mt-3 mb-4">Platform</h5>
+            <ul class="list-unstyled">
+                <li>
+                <a href="services&promo.html">Service/Promo</a>
+                </li>
+                <li>
+                <a href="benefit&bonus.html">Benefit/Bonus</a>
+                </li>
+                <li>
+                <a href="how-it-works.html">How it works</a>
+                </li>
+                <li>
+                <a href="costing.html">Costing</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/iosbtn.png" class="footer-img1" alt="iosbtn"></a>
+                    <a href="#"><img src="img/googlebtn.png" class="footer-img2" alt="googlebtn"></a>
+                </li>
+            </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 offset-1">
+            <h5 class="text-white mt-3 mb-4">Company</h5>
+            <ul class="list-unstyled">
+                <li>
+                <a href="about.html">About Us</a>
+                </li>
+                <li>
+                <a href="partner-with-us.html">Partner With Us</a>
+                </li>
+                <li>
+                <a href="index.html#TowTruckNearMe">Tow Truck Near Me</a>
+                </li>
+                <li>
+                <a href="#!">Site Map</a>
+                </li>
+            </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 offset-1">
+            <h5 class="text-white mt-3 mb-4">Legal</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#">Terms and Condition</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>  
+                    </li>
+                    <li>
+                        <a href="#">Refund Policy</a>
+                    </li>
+                    <li>
+                    <a href="#">End User License Agreement(EULA)</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <ul class="list-unstyled list-inline text-center footersocial">
+        <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1 footersocial" href="https://www.youtube.com/channel/UCoC2uDJq_ZWqwTVGQs4z1ag">
+                <i class="fab fa-youtube fa-1x"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1 footersocial" href="https://twitter.com/towgig">
+                <i class="fab fa-twitter fa-1x"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1 footersocial" href="https://www.facebook.com/TowGig-Technologies-100417204767612/">
+                <i class="fab fa-facebook-f fa-1x"> </i>
+            </a>
+        </li>
+        
+        </ul>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2020 TowGig Technologies
+        </div>
+        <div class="footer-copyright text-center py-3 text-muted"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
+        </div>
+        <!-- Copyright -->
+
+        <!-- MODEL-BOX -->
+        <!-- <div class="modal fade" id="Modal-buyer">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">A Diligence Expert is waiting to come service your vehicle</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="mbp">For a quick sign up, Please enter your</p>
+                    <input class="minput" type="text" name="email" placeholder="Email Address" >
+                    <input class="minput" type="text" name="phone" placeholder="Enter Phone No" >
+                    <button class="btn btn-primary">Submit</button>
+                    <p class="mbp mt-3"> The App Link will be send to you now <span style="color: #35a28f;">Click Here</span></p>
+                    <p class="mbp" style="color: #006be9;"> Or go to the App store & search to download for free</p>
+                    <h3 class="mbh31">Thank You for Being an Amazing Buyer with TowGig</h3>
+                    
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        <div class="modal fade" id="Modal-expert1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Meet Amazing Buyers Waiting for Your Service,It only takes 3-6 minutes to sign up & start earning.</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="mbp">For a quick sign up, Please enter your</p>
+                    <input class="minput" type="text" name="email" placeholder="Email Address" >
+                    <input class="minput" type="text" name="phone" placeholder="Enter Phone No" >
+                    <button class="btn btn-primary">Submit</button>
+                    <p class="mbp mt-3">The App Link will be send to you now <span style="color: #35a28f;">Click Here</span></p>
+                    <p class="mbp" style="color: #006be9;"> Or go to the App store & search to download for free</p>
+                    <h3 class="mbh31">Thank You for doing Business with TowGig</h3>                   
+                </div>              
+              </div>
+            </div>
+        </div> -->
+
+
+
+                <!-- MODEL-BOX -->
+        <div class="modal fade" id="Modal-expert">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <p class="boxmp">Meet Amazing Buyers Waiting for Your Service,It only takes 3-6 minutes to sign up & start earning.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp">For a quick sign up, Please enter your</p>
+                                                <form action="">
+                                                    <input type="email" class="form-control" placeholder="Email Address" value="" required />
+                                                    <input type="number" class="form-control mt-2" placeholder="Phone Number" value="" required />
+                                                    <input type="submit" class="btnRegister"  value="Send"/>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <p class="mbp mt-1 mt-3 ml-3">The App Link will be send to you, now <strong style="color: #35a28f;">Click Here</strong></p>
+                                        <p class="mbp ml-3" style="color: #006be9;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for doing Business with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal-buyer">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <p class="boxmp">A Diligence Expert is waiting to come service your vehicle.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp">For a quick sign up, Please enter your</p>
+                                                <form action="">
+                                                    <input type="email" class="form-control" placeholder="Email Address" value="" required />
+                                                    <input type="number" class="form-control mt-2" placeholder="Phone Number" value="" required />
+                                                    <input type="submit" class="btnRegister"  value="Send"/>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <p class="mbp mt-3 ml-3">The App Link will be send to you, now <strong style="color: #35a28f;">Click Here</strong></p>
+                                        <p class="mbp ml-3" style="color: #006be9;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for Being an Amazing Buyer with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 0,
+              $SlideDuration: 5000,
+              $SlideEasing: $Jease$.$Linear,
+              $SlideWidth: 140,
+              $Align: 0
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    <script type="text/javascript">jssor_1_slider_init();</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

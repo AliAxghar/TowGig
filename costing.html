@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TowGig</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+    .table strong {
+      
+    }
+    .asignb{
+        text-decoration: none!important;
+        color: #3d7fc1!important;
+    }
+    .asignb:hover{
+        text-decoration: none!important;
+        color: #35a28f!important;
+    }
+    .asignbv{
+        text-decoration: none!important;
+        color: #35a28f!important;
+    }
+    .asignbv:hover{
+        text-decoration: none!important;
+        color: #3d7fc1!important;
+    }
+</style>
+<body class="aboutbody" id="aboutus">
+    <nav  class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="">
+                <p class="lslogan">TowGig, Brings Auto Smiles</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"  href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="how-it-works.html">How it Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign Up
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a  class="dropdown-item" href="#">Buyer</a>
+                        <a class="dropdown-item" href="#">Expert</a>
+                        <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
+                        <a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="#">Expert</a> -->
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="modal" id="myModal">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone*" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- <span class="close">&times;</span> -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    </div>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal1">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- <span class="close">&times;</span> -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email/Username" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password" value="" />
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal2" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent2">
+                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <!-- <div class="form-group">
+                                        <input type="file" class="form-control" placeholder="Upload Selfie/Logo" value="" />
+                                    </div> -->
+                                    <div class="form-group filel pb-1">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="File01">Upload Selfie/Logo</label>                                      
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Town" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Zip Code" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Towing Hauling Cars Dot Number" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class=" filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label1" for="File01">Professional License </label>                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- <span class="close">&times;</span> -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business or Personal Address" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Province/State" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Country" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label2" for="File01">Insurance Policy (Front)</label>                                      
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal3" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal3">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank/Branch Name" value="" />
+                                    </div>
+                                    <div class="form-group" style="color: #6c757d;">
+                                        Date of Birth:<input type="date" class="form-control" placeholder="Date of Birth" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- <span class="close">&times;</span> -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Employee Identity No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" name="Phone" class="form-control" placeholder="Confirm Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Routing No" value="" />
+                                    </div>
+                                    <label for="choose-services" style="color: #6c757d;">Choose Services:</label>
+                                    <br>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tow Haul
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Flat Type
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Replace Battery
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Engin Light On
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Jump Start
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox"  class="mr-1" value="">Lockout
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Gas/Diesel Refill
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tyre/Car Vibration
+                                    </label>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="aboutcontainer3" class="promopage1 strongcos " style="padding-bottom: 0px;">
+        <div class="container htw">
+                <h2>Your Amazing Pricing</h2>
+                <h3 class="abtcntnrh4">The awesome on-demand Auto service. Prices are sets to be affordable for Buyer & satisfactory for
+                    certified Auto Expert. That's why they're delighted to do business together everyday.</h3>
+                    <div class="row promorow1 mt-5">
+                        <div class="col-2"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xsm-12">
+                            <nav>
+                                <div class="nav nav-tabs responsive" id="nav-tab" role="tablist">
+                                    <a style="color: #736c6c;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#Car_haul_services" role="tab" aria-controls="nav-home" aria-selected="true">Tow/Car-Hauling Services</a>
+                                    <a style="color: #736c6c;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#Roadside" role="tab" aria-controls="nav-profile" aria-selected="false">Roadside Assistance Services</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-2"></div>
+                            <!-- <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#Buyer_Expert">Buyer/Expert</a></li>
+                                <li><a data-toggle="tab" href="#Car_manufacturer_Dealer">Car manufacturer & Dealer</a></li>
+                            </ul> -->
+                            
+                            <div class="tab-content" id="nav-tabContent">
+                                <div id="Car_haul_services" class="tab-pane fade in show active"  role="tabpanel">
+                                   <h2 class="mt-5 pb-3" style="text-align: center;">Towing Personal Vehicle Between 0- 5 Miles</h2>
+                                    <div class="row pt-4">
+                                        <div class="table-responsive pt-2">
+                                            <table class="table table-bordered table footable toggle-medium">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th1">Service Tow/Hauling</th>
+                                                        <th class="th1">Economy Car </th>
+                                                        <th class="th1">Luxury Car </th>
+                                                        <th class="th1">Hybrid Car </th>
+                                                        <th class="th1">Self-driving Car </th>
+                                                        <th class="th1">Exotic Car </th>
+                                                        <th class="th1">Space Car </th>
+                                                        <th class="th1">Winch, call Expert Car </th>
+                                                        <th class="th1">New Car </th>
+                                                        <th class="th1">Collusion Scene </th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><strong class="td1">For 1 Car</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$50</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$65</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$65</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$90</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$85</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$25/more</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$200</strong></td>
+    
+                                                </tr>
+                                                <tr>
+                                                    <td><strong class="td1">For 2 Cars</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$90</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$120</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$120</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$180/<strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$170</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$200</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$50/more</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$400</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong class="td1">For 3 Cars</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$135</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$175</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$175</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$270<strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$255</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$300</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$75/more</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$580</strong></td>
+                                                </tr> 
+                                                <tr>
+                                                    <td><strong class="td1">Weekend Or Holiday</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$100<strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                    <td><strong style="color: #5c5c61;" ></strong></td>
+                                                    <td><strong style="color: #5c5c61;" ></strong></td>
+                                                    <td><strong style="color: #5c5c61;" ></strong></td>
+                                                    <td><strong style="color: #5c5c61;" ></strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong class="td1">Between 6pm-6am</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$50</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$200<strong></td>
+                                                    <td><strong style="color: #5c5c61;" >+$150</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                    <td><strong style="color: #5c5c61;" >Winter season +$15</strong></td>
+                                                </tr>          
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <h2 class="pt-4 pb-3">Towing Personal Vehicle above 5 miles</h2>
+                                    <div class="row pt-4">
+                                        <div class="table-responsive pt-2">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th1">Service</th>
+                                                        <th class="th1">Number of Car </th>
+                                                        <th class="th1">Starting Price</th>
+                                                        <th class="th1">Cost Per Mile</th>
+                                                        <th class="th1">Stop to Pickup</th>
+                                                        <th class="th1">Between 5pm-6am</th>
+                                                        <th class="th1">Weekend or Holiday</th>
+                                                        <th class="th1">Winch, also Call Expert</th>
+                                                        <th class="th1">New Car </th>
+                                                        <th class="th1">Collusion Accident </th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >1 Car</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$70</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$3.75</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$50</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$80</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$200</strong></td>
+        
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >2 Car</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$4</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$60</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$50</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$3</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$400</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >3 Car</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$150</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$5</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$80</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$70</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$5</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$580</strong></td>
+                                                    </tr>           
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <h2 class="pt-4 pb-3">Haul Between 4-7 and up to 7-10 Cars for Long Distance Within/out of the Country</h2>
+                                    <div class="row pt-4">
+                                        <div class="table-responsive pt-2">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th1">Service</th>
+                                                        <th class="th1">Number of Car </th>
+                                                        <th class="th1">Auto Category</th>
+                                                        <th class="th1">Starting Price</th>
+                                                        <th class="th1">Cost Per Mile</th>
+                                                        <th class="th1">New Vehicle</th>
+                                                        <th class="th1">Stop to Pickup a Car</th>
+                                                        <th class="th1">Weekend or Holiday Pick up</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong class="td1">Hauling </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >3 to 6 </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Economy or Luxury or Exotic  </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$9,000</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$10</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$60</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Hauling </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >7 to 10 </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Economy, Exotic or Luxury </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$12,000</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$10</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$60</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Hauling </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >3 to 6 </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Van or Pickup Truck or Suv's</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$9,000</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$12</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$60</strong></td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td><strong class="td1">Hauling </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >7 to 10 </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Van or Pickup Truck or Suv's </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$12,000</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$12</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$60</strong></td>
+                                                    </tr>          
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <h2 class="pt-4 pb-3">Towing Commercial Vehicles between 0- 5 Miles</h2>
+                                    <div class="row pt-4">
+                                        <div class="table-responsive pt-2">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th1">Service Tow/Hauling</th>
+                                                        <th class="th1">Suv's or Van</th>
+                                                        <th class="th1">Mini Bus or Pickup Truck</th>
+                                                        <th class="th1">Big Bus or Box Truck</th>
+                                                        <th class="th1">Heavy Duty</th>
+                                                        <th class="th1">Dirverless Trailer </th>
+                                                        <th class="th1">Collusion  </th>
+                                                        <th class="th1">New</th>
+                                                        <th class="th1">Stop to Pick Up</th>
+                                                        <th class="th1">Winch, Call Expert</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong class="td1">For 1</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$120</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$150</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$250</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$300</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$360</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$240</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85/More</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">For 2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$230</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$280</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85/More</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">For 3</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$345</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$400</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85/More</strong></td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td><strong class="td1">Weekend Or Holiday</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$125<strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Between 6pm-6am</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$200</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$280</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >0<strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >--</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Winter season +$5</strong></td>
+                                                    </tr>          
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <h2 class="pt-4 pb-3">Hauling Commercial Vehicle Above 5 Miles</h2>
+                                    <div class="row pt-4">
+                                        <div class="table-responsive pt-2">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="th1">Service</th>
+                                                        <th class="th1">Auto Category</th>
+                                                        <th class="th1">Start Price </th>
+                                                        <th class="th1">Cost Per Mile</th>
+                                                        <th class="th1">Between 6pm-6am</th>
+                                                        <th class="th1">Winch, Can't drive </th>
+                                                        <th class="th1">Weekend or Holiday  </th>
+                                                        <th class="th1">Stop to Pick Up</th>
+                                                        <th class="th1">Collusion Scene</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >SUV or Van </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$120</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$4.50</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$240</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Small Bus or Pickup Truck </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$150</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$4.50</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$240</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Big Bus or Box Truck</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$250</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$4.50</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$240</strong></td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Heavy Duty </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$300</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$5.50</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$150</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$125</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$240</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong class="td1">Tow/Haul</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >Driver-less Trailer</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$360</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >$5.50</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$150</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$85</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$125</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$35</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$240</strong></td>
+                                                    </tr>          
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>    
+                                <div id="Roadside" class="tab-pane fade in"  role="tabpanel">
+                                        <h2 class="pt-4">Roadside Assistance Services</h2>
+                                        <h2 class="pt-3" style="color: #35a28f;font:500;" >Lockout Assistance</h2>
+                                        <h3 class="pt-3" style="color: #0062cc;font:500;text-align:center;">Lockout of Vehicle? Let a specialist open the door for you</h3>
+                                        <div class="row pt-3">
+                                            <div class="table-responsive pt-2">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1">Auto Category</th>
+                                                            <th class="th1">Service  </th>
+                                                            <th class="th1">(7am-3pm) </th>
+                                                            <th class="th1">(4pm-6am) </th>
+                                                            <th class="th1">Winter </th>
+                                                            <th class="th1">Weekend/Holiday</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong class="td1">Economy </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$65</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$10</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$10</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong class="td1">Luxury </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$80</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$105</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$12</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$15</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong class="td1">SUV's or Van </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$90</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$110</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$15</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$20</strong></td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td><strong class="td1">Exotic Car </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$112</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$15</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong class="td1">Pickup Truck Economy </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$112</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$15</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td><strong class="td1">Box Truck  </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$115</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$120</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$20</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$40</strong></td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td><strong class="td1">Heavy Duty  </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$122</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$125</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$20</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$30</strong></td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td><strong class="td1">All Buses </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$100</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$121</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$21</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$30</strong></td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td><strong class="td1">Driverless </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$120</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$125</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$22</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$30</strong></td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td><strong class="td1">Space car</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Lockout</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$125</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$128</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$23</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$30</strong></td>
+                                                        </tr>       
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <h3 class="abtcntnrh4 mt-4">Bought your oil or filter; or select <span style="color: #3d7fc1;font-weight:500;">Average</span >  or <span style="color: #3d7fc1;font-weight:500;">Quality</span >  oil & Expert will bring it for you.</h3>
+                                        <div class="row pt-4">
+                                            <div class="table-responsive pt-2">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1"> Gig Category</th>
+                                                            <th class="th1">Economy Car </th>
+                                                            <th class="th1">Luxury, Space Car & Hybrid </th>
+                                                            <th class="th1">Suv's /Pick up Truck</th>
+                                                            <th class="th1">Van or Box Truck </th>
+                                                            <th class="th1">Heavy Duty/Buss </th>
+                                                            <th class="th1">New Vehicle </th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong class="td1">Fuel Refil</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $45, Diesel: $47</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $45, Diesel: $47</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $45, Diesel: $47</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $47, Diesel: $50</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$80</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$2</strong></td>
+            
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong class="td1">Fuel Refil</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $45, Diesel: $47</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $45, Diesel: $47</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $45, Diesel: $47</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Gasoline: $47, Diesel: $50</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$80</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong class="td1">1 Flat Tire</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$40.00</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$45.50</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$55.50</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$80.50<strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$100</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td><strong class="td1">Jump-start </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$35</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$35</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$40</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$45<strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$50</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$2</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong class="td1">Replace Battery</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Have battery $35 <br>Buy Avg B: $130 <br>Quality B: $145</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Have yours $35 <br>Buy Avg B: $185 <br>Quality B: $210</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Have yours $40 <br>Buy Avg B: $235 <br>Quality B: $250</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Have yours $40 <br>Buy Avg B: $280 <br>Quality B: $295</strong></td>       
+                                                            <td><strong style="color: #5c5c61;" >0<strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                        </tr> 
+                                                        <tr>
+                                                            <td><strong class="td1">Oil Change</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Have oil/Filter? $35 <br>Average oil: $60 Quality oil:$70</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Have oil/Filter? $40 <br>Average oil: $80 Quality oil:$90</strong></td>                                                         
+                                                            <td><strong style="color: #5c5c61;" >Have oil/Filter? $40 <br>Average oil: $110 Quality oil:$115</strong></td>                                                           
+                                                            <td><strong style="color: #5c5c61;" >Have oil/Filter? $45 <br>Average oil: $130 Quality oil:$140</strong></td>     
+                                                            <td><strong style="color: #5c5c61;" >0<strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                        </tr>  
+                                                        <tr>
+                                                            <td><strong class="td1">Auto Vibration</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$16</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$20</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >$25</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0<strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                        </tr>       
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-4">
+                                            <div class="table-responsive pt-2">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1">Between (5pm-6am) </th>
+                                                            <th class="th1">Cost Per Mile</th>
+                                                            <th class="th1">Winter Season </th>
+                                                            <th class="th1">Weekend or Holiday</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong class="td1">+ $15</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+0.25 cent </strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$15</strong></td>
+                                                        <td><strong style="color: #5c5c61;" >+$25</strong></td>
+                                                    </tr>         
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <h3 class="abtcntnrh4 mt-4">For Roadside Assistance: Buyer can send the Expert with money or order the part at a
+                                            nearby store for the Expert to go pickup the part. A small charge is apply for that via below.</h3>
+                                        <div class="row pt-4">
+                                            <div class="table-responsive pt-2">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1"> Service</th>
+                                                            <th class="th1">Leave gig site to Pickup Part</th>
+                                                            <th class="th1">Cost Per Mile/km </th>
+                                                            <th class="th1">Winter</th>
+                                                            <th class="th1">Weekend/Holiday</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong class="td1">Roadside Assistance </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >Start at: $10</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+0.20 Cent</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$10</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+$15</strong></td>     
+            
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-4">
+                                            <div class="table-responsive pt-2">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1"> Service</th>
+                                                            <th class="th1">Multiple stop Request to pickup part</th>
+                                                            <th class="th1"></th>
+                                                            <th class="th1"></th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong class="td1">Tow/Haul </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+ $30/Per Stop</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>     
+            
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong class="td1">Roadside Assistance </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >+ $10/Per Stop </strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>
+                                                            <td><strong style="color: #5c5c61;" >0</strong></td>     
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+        </div>
+    </div>
+                    <div class="container" id="aboutcontainer4">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12 container4-col">
+                                <h3>
+                                   <span>Download app for free, select service, request gig, see Expert in real-time coming for to help; Call
+                                    each other anonymously through app, Payment at the end of service is done right in the app.
+                                </h3>  
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                        <div class="row mt-4">
+                            <!-- <div class="col-1"></div> -->
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 container4-col">
+                                <h3>
+                                   <span>Need auto service now or tomorrow?
+                                    TowGig is the fastest means for that. Start
+                                    with a discount to save. <strong><a class="asignb" href="#">Find it Here.</a></strong> 
+                                </h3>  
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 container4-col">
+                                <h3>
+                                   <span>Bring your auto Expert skills, partner with
+                                    us, get paid for the amazing work you do.
+                                    To become an Auto Expert, <strong><a class="asignbv"  href="#"> Start Here.</a></strong> 
+                                </h3>  
+                            </div>
+                            
+                            <!-- <div class="col-1"></div> -->
+                        </div>
+                    </div>
+
+       
+    <!-- <div id="aboutcontainer5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 offset-1 col-md-8 col-sm-12 col-xsm-12 ">
+                    <h2 class="pt-3">Download the app and Sign Up <strong>For Free</strong></h2>
+                    <button class="btn btn-outline-primary abtcontainer5-button">Get the App</button>
+                </div>
+                <div class="col-lg-1 col-md-3 col-sm-12 col-xsm-12">
+                    <img src="img/TowGig-3.png" class="TowGig3-img" alt="TowGig-3">
+                </div> 
+                <div class="col-lg-5 col-md-8 col-sm-12 col-xsm-12 offset-2  ">
+                    <br>
+                    <h2 class="cntnr5h2">We have a lot discounts available here.</h2>
+                    <button class="button container5-button-right">GO HERE</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div id="container7">
+        <div id="jssor_1">
+            <div data-u="loading" class="jssorl-009-spin">
+                <img class="img-style" src="img/spin.svg" />
+            </div>
+            <div data-u="slides" class="sliderdiv1">
+                <div class="imgpad">
+                    <img data-u="image" src="img/subaru.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/stripe.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/paypal.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/mobius.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div><a data-u="any" href="https://www.jssor.com" style="display:none">web design</a>
+            </div>
+        </div>
+    </div> -->
+    <footer class="page-footer font-small stylish-color-dark pt-4 abtfooter">
+        <div class="container text-center text-md-left">
+        <div class="row"> 
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 offset-1">
+            <h5 class=" text-white mt-3 mb-4">Platform</h5>
+            <ul class="list-unstyled">
+                <li>
+                <a href="services&promo.html">Service/Promo</a>
+                </li>
+                <li>
+                <a href="benefit&bonus.html">Benefit/Bonus</a>
+                </li>
+                <li>
+                <a href="how-it-works.html">How it works</a>
+                </li>
+                <li>
+                <a href="costing.html">Costing</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/iosbtn.png" class="footer-img1" alt="iosbtn"></a>
+                    <a href="#"><img src="img/googlebtn.png" class="footer-img2" alt="googlebtn"></a>
+                </li>
+            </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 offset-1">
+            <h5 class="text-white mt-3 mb-4">Company</h5>
+            <ul class="list-unstyled">
+                <li>
+                <a href="about.html">About Us</a>
+                </li>
+                <li>
+                <a href="partner-with-us.html">Partner With Us</a>
+                </li>
+                <li>
+                <a href="index.html#TowTruckNearMe">Tow Truck Near Me</a>
+                </li>
+                <li>
+                <a href="#!">Site Map</a>
+                </li>
+            </ul>
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 offset-1">
+            <h5 class="text-white mt-3 mb-4">Legal</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#">Terms and Condition</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>  
+                    </li>
+                    <li>
+                        <a href="#">Refund Policy</a>
+                    </li>
+                    <li>
+                    <a href="#">End User License Agreement(EULA)</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <ul class="list-unstyled list-inline text-center footersocial">
+        <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1 footersocial" href="https://www.youtube.com/channel/UCoC2uDJq_ZWqwTVGQs4z1ag">
+                <i class="fab fa-youtube fa-1x"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1 footersocial" href="https://twitter.com/towgig">
+                <i class="fab fa-twitter fa-1x"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1 footersocial" href="https://www.facebook.com/TowGig-Technologies-100417204767612/">
+                <i class="fab fa-facebook-f fa-1x"> </i>
+            </a>
+        </li>
+        
+        </ul>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2020 TowGig Technologies
+        </div>
+        <div class="footer-copyright text-center py-3 text-muted"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <script>
+        $(document).ready(function(){
+    
+            fakewaffle.responsiveTabs(['xs']);
+             $('.footable').footable();
+             
+             var panelView = $('.panel-group.responsive').is(':visible');    
+             $( window ).resize( function () {
+                 if ( $('.panel-group.responsive').is(':visible') != panelView ) {
+                     $('.footable').removeClass('footable-loaded').footable();
+                     panelView = $('.panel-group.responsive').is(':visible');
+                 }
+             } );
+    </script>
+    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $Idle: 0,
+              $SlideDuration: 5000,
+              $SlideEasing: $Jease$.$Linear,
+              $SlideWidth: 140,
+              $Align: 0
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+    <script type="text/javascript">jssor_1_slider_init();</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
