@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,15 +17,35 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
     <style>
+        #toolspan {
+            border: 1px solid #ccc;
+            display: none;
+            font-size: 13px;
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 5px;
+            padding: 5px;
+            text-transform: uppercase;
+            background-color: #1958cf;
+            color: #fff;
+        }
+        
+        #tooldiv:hover #toolspan {
+            display: block;
+        }
+        
         .nav-link {
             color: rgba(0, 0, 0, 0.5);
             font-size: 17px !important;
             font-weight: 500!important;
             padding: 7px 13px !important;
         }
+        
         .nav-link:hover {
             color: #42b883 !important;
             font-size: 17px !important;
@@ -33,10 +54,11 @@
         }
     </style>
 </head>
+
 <body class="aboutbody" id="aboutus">
-    <nav  class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <img src="img/logo.png" alt="">
                 <p class="lslogan">TowGig, Brings Auto Smiles</p>
             </a>
@@ -45,305 +67,279 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link"  href="index.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="how-it-works.html">How it Works</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="services&promo.html">Service/Promo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link mr-3" href="contact.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="how-it-works.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="services&promo.html">Service/Promo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Sign Up
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a  class="dropdown-item" href="#">Buyer</a>
-                        <a  class="dropdown-item" href="#">Expert</a>
-                        <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a data-toggle="modal" data-target="#Modal-buyer" class="dropdown-item" href="#">Buyer</a>
+                            <a data-toggle="modal" data-target="#Modal-expert" class="dropdown-item" href="#">Expert</a>
+                            <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
                         <a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="#">Expert</a> -->
-                    </div>
-                </li>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="modal" id="myModal">
-        <div class="container register">
-            <div class="row">
-                <div class="col-md-3 register-left">
-                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                    <h3>Welcome</h3>
-                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
-                    <input type="submit" name="" value="Login"/><br/>
-                </div>
-                <div class="col-md-9 register-right">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading">Registration For TowGig</h3>
-                            <div class="row register-form">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name*" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone*" value="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- <span class="close">&times;</span> -->
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Username*" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password *" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
-                                    </div>
-                                    <input type="submit" class="btnRegister"  value="Register"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="myModal1">
-        <div class="container register">
-            <div class="row">
-                <div class="col-md-3 register-left">
-                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                    <h3>Welcome</h3>
-                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
-                    <input type="submit" name="" value="Login"/><br/>
-                </div>
-                <div class="col-md-9 register-right">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="tab-content" id="myTabContent1">
-                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading">Registration For TowGig</h3>
-                            <div class="row register-form">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="First Name" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Last Name" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone" value="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- <span class="close">&times;</span> -->
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Email/Username" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control"  placeholder="Confirm Password" value="" />
-                                    </div>
-                                    <input data-toggle="modal" data-target="#myModal2" type="submit" class="btnRegister btnnext"  value="Next"/>
-                                    <input type="submit" class="btnRegister"  value="Register"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="myModal2">
-        <div class="container register">
-            <div class="row">
-                <div class="col-md-3 register-left">
-                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                    <h3>Welcome</h3>
-                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
-                    <input type="submit" name="" value="Login"/><br/>
-                </div>
-                <div class="col-md-9 register-right">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="tab-content" id="myTabContent2">
-                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading">Registration For TowGig</h3>
-                            <div class="row register-form">
-                                <div class="col-md-6">
-                                    <!-- <div class="form-group">
-                                        <input type="file" class="form-control" placeholder="Upload Selfie/Logo" value="" />
-                                    </div> -->
-                                    <div class="form-group filel pb-1">
-                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
-                                        <label class="custom-file-label" for="File01">Upload Selfie/Logo</label>                                      
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Town" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control" placeholder="Zip Code" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Towing Hauling Cars Dot Number" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="file" id="File01" class=" filef pt-2" aria-describedby="inputGroupFileAddon01">
-                                        <label class="custom-file-label1" for="File01">Professional License </label>                                      
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- <span class="close">&times;</span> -->
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Business or Personal Address" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Province/State" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="Country" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
-                                        <label class="custom-file-label2" for="File01">Insurance Policy (Front)</label>                                      
-                                    </div>
-                                    <input data-toggle="modal" data-target="#myModal3" type="submit" class="btnRegister btnnext"  value="Next"/>
-                                    <input type="submit" class="btnRegister"  value="Register"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal" id="myModal3">
-        <div class="container register">
-            <div class="row">
-                <div class="col-md-3 register-left">
-                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                    <h3>Welcome</h3>
-                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
-                    <input type="submit" name="" value="Login"/><br/>
-                </div>
-                <div class="col-md-9 register-right">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="tab-content" id="myTabContent1">
-                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
-                            <h3 class="register-heading">Registration For TowGig</h3>
-                            <div class="row register-form">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Business Name" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Bank Account No" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Bank/Branch Name" value="" />
-                                    </div>
-                                    <div class="form-group" style="color: #6c757d;">
-                                        Date of Birth:<input type="date" class="form-control" placeholder="Date of Birth" value="" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <!-- <span class="close">&times;</span> -->
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Employee Identity No" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" minlength="10" name="Phone" class="form-control" placeholder="Confirm Account No" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="Routing No" value="" />
-                                    </div>
-                                    <label for="choose-services" style="color: #6c757d;">Choose Services:</label>
-                                    <br>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox" class="mr-1" value="">Tow Haul
-                                    </label>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox" class="mr-1" value="">Flat Type
-                                    </label>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox" class="mr-1" value="">Replace Battery
-                                    </label>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox" class="mr-1" value="">Engin Light On
-                                    </label>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox" class="mr-1" value="">Jump Start
-                                    </label>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox"  class="mr-1" value="">Lockout
-                                    </label>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox" class="mr-1" value="">Gas/Diesel Refill
-                                    </label>
-                                    <label class="checkbox-inline pr-1">
-                                        <input type="checkbox" class="mr-1" value="">Tyre/Car Vibration
-                                    </label>
-                                    <input type="submit" class="btnRegister"  value="Register"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="promocontainer3">
         <div class="container-fluid">
-                <h2 class="pb-3">TowGig Amazing 12 Month Benefits Plan</h2>
-                <h3 class="pb-3">7 Day Money back guarantee  </h3>
-                <h4 class="pb-3"><strong class="str1">TowGig Free</strong> for first time user </h4>
-                <h3 class="h32 pb-3">Its free after 2 Business transactions are Done</h3>
+            <h2 class="pb-3"><strong>TowGig Amazing 12 Month Benefits Plan</strong></h2>
+            <h3 class="pb-3"><strong>7 Day Money back guarantee  </strong></h3>
+            <div style="margin-left: auto; margin-right: auto;" class="row container">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12 pt-4 pl-5">
+                    <div>
+                        <h2 class="pt-3"><strong class="str1" style="color: #006be9!important; font-size: 1.59rem; font-weight: 600;">TowGig Free</strong></h2>
+                    </div>
+                    <br>
+                    <img style="width: 100%;" src="img/T-F.png" alt="banner">
+                    <div style="text-align: center!important;" class="pt-5"><button class="button container3-button-left" style="padding: 7px 20px!important;"><a href="contact.html" style="text-decoration: none;color: #fff;">Contact us </a></button></div>
+                </div>
+                <!--<div class="col-lg-1 col-md-1 col-sm-12 col-xsm-12"></div>-->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12 pt-4 pl-5">
+                    <div>
+                        <h2 class="pt-3"><strong class="str1" style="color: #006be9!important; font-size: 1.59rem; font-weight: 600;">Expert or Buyer</strong></h2>
+                    </div>
+                    <br>
+                    <img style="width: 100%;" src="img/B-E.png" alt="banner">
+                    <div style="text-align: center!important;" class="pt-5">
+                        <div class="dropdown navlinkback">
+                            <button style="padding: 7px 20px!important;" class="button container3-button-left dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BUY IT NOW</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <span class="p-3">
+                                <a href="https://apps.apple.com/pk/app/towgig/id1507223706" class=" text-center"><button class="btn btn-primary" style="background-color:#064acb;">AppStore</button></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.crymzee.towgig" class="-item text-center"><button class="btn btn-primary" style="background-color:#064acb;">PlayStore</button></a>
+                            </span>
+                            </div>
+                        </div>
+                        <!-- <button class="button container3-button-left" style="padding: 7px 20px!important;"></button> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12 pt-4 pl-5">
+                    <div>
+                        <h2 class="pt-3"><strong class="str1" style="color: #006be9!important; font-size: 1.59rem; font-weight: 600;">Car Manufacture or Dealer</strong></h2>
+                    </div>
+                    <br>
+                    <img style="width: 100%;" src="img/C-M.png" alt="banner">
+                    <div style="text-align: center!important;" id="tooldiv" class="pt-5"><button class="button container3-button-left" style="padding: 8px 20px!important;">View More *</button>
+                        <span id="toolspan">
+                            As an auto dealer, Towgig will refer prospects to buy from you It works as, you give us your business name, location, & a discount code. We then share your details to our users community. Any interested buyer will come to you with the promo code you had given to us, so that they can save some money. This service is free with us
+                        </span>
+                    </div>
+                </div>
+
+                <!--<div class="col-lg-1 col-sm-12 col-xsm-12"></div>-->
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12" style=" padding: 5px; border: 1px solid;border-radius: 5px;">
+
+                    <div style="color: #fff;text-align: center; background-color: #064acb;padding: 10px;font-size: 1.35rem;border-radius: 5px;">
+                        Benefits are provided by our trusted partners <br> Benefit to be given by us may ask prove<br> The benefit provider determine the number of time the discount can be use.<br> We're looking to bring more of your favorite benefits<br>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12">
-                    <p>✔ Get free financial planner services</p>
-                    <p><strong style="color:#006be9;">✔ Save 5%</strong>  on labor cost with TowGig Expert auto shop </p>
-                    <p>✔ Save up to <strong style="color:#006be9;"> 10% </strong> for 2 or more <strong style="color: #35a28f;"> hotel nights</strong> stay</p>
-                    <p> <strong style="color: #35a28f;">✔ Refer 10 </strong> Friends, & each earn<strong style="color:#006be9 ;"> $10 bonus</strong></p>
-                    <p><strong style="color:#006be9;">✔ Save 5%</strong> if you buy a Trip planner/travel agent service</p>
-                    <p>✔ Could save up to <strong style="color:#006be9;" >10%</strong> on car parts with<strong style="color: #35a28f;">(Company)</strong></p>
-                    <p>✔ Could save <strong style="color:#006be9;" >5%</strong> each time you ship with <strong style="color: #35a28f;">(Company)</strong></p>
-                    <p>✔ Save up to <strong style="color:#006be9;"> 10% </strong> when you fly within or across the <strong style="color: #35a28f;"></strong>country</strong></p>
-                    <p>✔ Save up to <strong style="color:#006be9;"> 10% </strong> when you buy furniture <strong style="color: #35a28f;">(Wayfair company)</strong></p>
-                    <p>✔ Save <strong style="color:#006be9;"> 10% </strong> with preferred middle class <strong style="color: #35a28f;">restaurants</strong> near you<strong style="color:#006be9;">(ihop, chase cake)</strong></p>
+                    <h3 class="pt-4"><strong>Earn $100, and up to $1000 Bonus, when you refer
+                        friends. Get your Biggest Bonus Ever. </strong></h3>
                 </div>
-                <div class="col-1"></div> 
+                <div class="col-1"></div>
             </div>
-            <div class="row promorow1">
-                <div class="col-2"></div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xsm-12">
-                    <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <a style="color: #736c6c;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#Buyer_Expert" role="tab" aria-controls="nav-home" aria-selected="true">Buyer/Expert</a>
-                            <a style="color: #736c6c;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#Car_manufacturer_Dealer" role="tab" aria-controls="nav-profile" aria-selected="false">Car manufacturer & Dealer</a>
+            <div class="row pt-3">
+                <div class="col-1"></div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12">
+                    <h3 class="pt-3" style="color: #545050;"><strong>TowGig Technologies; Referral & Promo Code Rules</strong></h3>
+                    <h3 class="pt-3" style="text-align: center;color: #545050;"> <strong>For details: <span style="color: #006be9;" data-toggle="collapse" data-target="#bonusp">Please Click Here</span> </strong></h3>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-1"></div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12">
+                    <div id="bonusp" class="collapse">
+                        <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                            Thank you for helping to grow our community. From time to time, TowGig, its subsidiaries and affiliates ("TowGig") may invite you to participate in one of their referral programs to encourage people to use the TowGig applications and/or websites. Participating
+                            in a referral program, either by referring your friends or family or signing up with a referral code can be a great way for Expert, Buyers, and or TowGig users (collectively " TowGig users") to receive TowGig credits, other
+                            discounts or earn extra money (each a "Referral Reward").
+                        </p>
+                        <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                            TowGig Referral Program rules (the "Rules") apply to referral programs that are administered solely by TowGig, except for the TowGig Partners. By accepting and sharing your referral code or by signing up with a referral code, you are agreeing to be bound
+                            by these Rules. Any violation of these Rules will not only prevent you from participating in any TowGig referral program (now or in the future), but could also result in the forfeiture or retraction of TowGig credits, money,
+                            or other rewards earned through the program and even the deactivation of your account.
+                        </p>
+                        <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                            In addition, there may be other terms that apply to your Referral Reward based on the city where you signed up, including what actions you may need to take as well as the type and amount of the Referral Reward. You call us if you have any concern or query
+                            about the referral program in your state/country.
+
+                        </p>
+                        <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                            Please note that these Rules are in addition to the Terms of Use as updated from time to time and it governing your use of TowGig app, as well as any agreement (if one exists) between you and TowGig or any of its subsidiaries and affiliates related to
+                            your interactions with TowGig Technologies.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-1"></div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12">
+                    <h3 class="pb-3" style="color:#064acb;font-size: 1.36rem;text-align: left;" data-toggle="collapse" data-target="#eligible">
+                        <strong>
+                            1:Who is eligible to be a referrer/inviter?
+                        </strong>
+                    </h3>
+                    <div id="eligible" class="collapse">
+                        <p class="pt-3" style="text-align: left;font-size: 1.38rem;">
+                            Thank you for helping to grow our community. From time to time, TowGig, its subsidiaries and affiliates ("TowGig") may invite you to participate in one of their referral programs to encourage people to use the TowGig applications and/or websites. Participating
+                            in a referral program, either by referring your friends or family or signing up with a referral code can be a great way for Expert, Buyers, and or TowGig users (collectively " TowGig users") to receive TowGig credits, other
+                            discounts or earn extra money (each a "Referral Reward").
+                        </p>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12">
+                    <h3 class="pb-3" style="color:#064acb;font-size: 1.38rem;text-align: left;" data-toggle="collapse" data-target="#dis-code">
+                        <strong>
+                            2:Rules of promo/discount code: 
+                        </strong>
+                    </h3>
+                    <div id="dis-code" class="collapse">
+                        <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                            If you are a TowGig user and notice that you qualify for a promo code, then contact us. We may ask a few questions to verify the user's eligibility before issuing a discount code. A discount code can only be used ones, and it is active for a limited time.
+                            And if its not used on time, it shall expire and can no longer be use for any TowGig service again. In must cases, TowGig won't issue a discount code for replacement. So, the user is advise to use it immediately they get received
+                            the Promo code
+                        </p>
+                        <br>
+                        <h3 class="pb-3" style="color:#064acb;font-size: 1.36rem;text-align: center;">
+                            <strong>
+                                Buyer Bonuses
+                            </strong>
+                        </h3>
+                        <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                            Buyer Refer Buyer & Earn $100 Bonus. To qualify, the Buyer must refer a minimum of 10 Buyers/friends; and each of the friends after signed up on TowGig, they must spend a minimum of $100 per service gig. When the Buyer reached the bonus threshold to earn
+                            bonus, the system would notify Admin/us about the Buyer qualify to earn their one time bonus of $100.
+                        </p>
+                        <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                            If the Buyer, refer only 20 Expert, they would earn a $400 Bonus. To qualify, the Buyer must refer 20 Experts; and each of the 20 Experts must complete one job on TowGig. Each of the jobs completed must be a minimum of $300 . The system would automatically
+                            track and alert Admin/us and the Buyer that they have reached their bonus threshold. Then the Buyer will contact us to make arrangement how they would like to receive their bonus.
+
+                        </p>
+                        <br>
+                        <h3 class="pb-3" style="color:#064acb;font-size: 1.36rem;text-align: center;">
+                            <strong>
+                                Expert Bonuses
+                            </strong>
+                        </h3>
+                        <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                            Expert Refer Expert & earn $1000 Bonus. To qualify for the $1000 bonus, the Expert must refer 20 Experts. Each of the Experts must complete Two jobs. And each of the jobs completed must be a minimum of $500 . The system would automatically track the referral
+                            code/link and notify Admin when the Expert qualify to earn their one time bonus of $1000. The Expert will then contact us to make arrangement how they had link to receive their one time bonus.
+                        </p>
+                        <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                            Expert to Refer Buyer & earn $200. To qualify for the $200 bonus, the Expert must refer 10 Buyers/friends. And each of the Buyers referred must spent a minimum of $200 per service gig. The system would automatically track the referral code/link and notify
+                            Admin and Expert at the same time. Then the Expert will contact us to make arrangement how they would like to receive their one time bonus of $200
+                        </p>
+                        <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                            Expert to earn $500 bonus after completing 50 jobs. To qualify, the Expert must successfully complete 50 jobs. And each job completed must be a minimum of $100. The system will automatically track and alert Admin and Expert when the Expert qualify to
+                            earn their one time bonus of $500, after the completion of 50 jobs.
+                        </p>
+                        <br>
+                        <h3 class="pb-3" style="color:#064acb;font-size: 1.39rem;text-align: center;">
+                            Guarantee Referral Bonus. No time frame, Invite as many friends as you like. That's why Its The best referral Program ever.
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <h3 class="h32 pb-3">Its free after 2 Business transactions are Done</h3> -->
+    <!-- <div class="row" >
+                <div class="col-3"></div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 pt-4" style="padding: 5px; border: 1px solid #010129;">
+                    <p class="">✔ Get a free TowGig T- shirt</p>
+                    <p><strong>Get free financial planner services</strong> </p>
+                    <p><strong style="color:#006be9;">✔ 5%</strong>  on labor cost with approved body shop</p>
+                    <p> <strong style="color:#006be9;">✔ Save 10% </strong> with some hotel </p>
+                    <p> <strong style="color: #35a28f;">✔ Save 10 </strong> on Travel planner service</p>
+                    <p><strong style="color:#006be9;">✔ Save 10%</strong>on any car parts </p>
+                    <p><strong style="color:#006be9;">✔ Save 10%</strong>on shipping</p>
+                    <p><strong style="color:#006be9;">✔ Save 10%</strong>if you fly with this airlines</p>
+                    <p><strong style="color:#006be9;">✔ Save 10%</strong>on furniture with </p>
+                    <p><strong style="color:#006be9;">✔ Save 10%</strong> on restaurant food </p>
+                    <p><strong style="color:#006be9;">✔ Save 10%</strong>on car-wash</p>
+                    <div style="text-align: center!important;"><button class="button container3-button-left" style="padding: 7px 20px!important;"><a href="contact.html" style="text-decoration: none;color: #fff;">Contact us </a></button></div>
+                </div>
+                <div class="col-3"></div> 
+            </div> -->
+    <!-- <div class="row promorow1">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xsm-12">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a style="color: #736c6c;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#Buyer_Expert" role="tab" aria-controls="nav-home" aria-selected="true">Buyer/Expert</a>
+                                    <a style="color: #736c6c;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#Car_manufacturer_Dealer" role="tab" aria-controls="nav-profile" aria-selected="false">Car manufacturer & Dealer</a>
+                                </div>
+                            </nav>
                         </div>
-                    </nav>
-                    <!-- <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#Buyer_Expert">Buyer/Expert</a></li>
-                        <li><a data-toggle="tab" href="#Car_manufacturer_Dealer">Car manufacturer & Dealer</a></li>
-                    </ul> -->
-                    
+                        <div class="col-2"></div>
+                    </div>
                     <div class="tab-content" id="nav-tabContent">
                         <div id="Buyer_Expert" class="tab-pane fade in show active"  role="tabpanel">
-                            <h2 class="pt-4 pb-3">Enjoy this Benefits for</h2>
+                            <div class="row pt-5">
+                                <div class="col-4"></div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12 pb-2" style="background-color: #010129;">
+                                    <h4 class="pt-3"><strong class="str1" style="color: #fff!important;">Buyer/Expert</strong></h4>
+                                    <h4 class="pt-2">Enjoy this Benefits for</h4>` 
+                                    <h4 style="color:rgb(255, 123, 0) ;"><strong>Only $15/year </strong></h4>`   
+                                </div>
+                                <div class="col-4"></div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-3"></div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 pt-4" style="padding: 5px; border: 1px solid #010129;">
+                                    <p><strong style="color:#006be9;">✔ Save 10%</strong> on car renter </p>
+                                    <p><strong style="color:#006be9;">✔ Earn $25</strong>if you buy car insurance</p>
+                                    <p><strong style="color:#006be9;">✔ Get low cost group term life insurance</p>
+                                    <p><strong style="color:#006be9;">✔ Get $250 </strong> if you installed solar power</p>
+                                    <p><strong style="color:#006be9;">✔ Get $500-$2000</strong> on Travel agent product</p>
+                                    <p><strong style="color:#006be9;">✔ Get</strong> a free TowGig T-Shirt </p>
+                                    <p><strong style="color:#006be9;">✔ Save 10% on business insurance</p>
+                                    <p><strong style="color:#006be9;">✔ Save 15%</strong>on hotel stay</p>
+                                    <p><strong style="color:#006be9;">✔ May save $100-$500</strong> on car insurance </p>
+                                    <p><strong style="color:rgb(20, 20, 20);"> Save 10% + on some auto part</p>
+                                    <p><strong style="color:#006be9;">✔ Save 10% + at airport/city packing space</p>
+                                    <div style="text-align: center!important;"><button class="button container3-button-left" style="padding: 7px 20px!important;"><a href="" style="text-decoration: none;color: #fff;">Buy It Now </a></button></div>
+                                </div>
+                                <div class="col-3"></div> 
+                            </div> -->
+    <!-- <h2 class="pt-4 pb-3">Enjoy this Benefits for</h2>
                             <h3 class="pb-3">Only $15/year </h3>
                             <h4 class="pb-3">Plan benefits include TowGig free benefits</h4>                            
                             <p>✔ Get free financial planner services</p>
@@ -362,66 +358,287 @@
                                     </button>
                                 </div>
                             </div>
-                            </p>
-                        </div>
-                        <div id="Car_manufacturer_Dealer" class="tab-pane fade in"  role="tabpanel">
-                            <h2 class="pt-4">Car Manufacture or Dealer</h2>
-                            <br>
-                            <p>Frequently ship cars? Then start saving today; </p>
-                            <p>✔ Ship: multiple cars within/across the Country</p>
-                            <p>✔ Ship as many times as you want</p>
-                            <p>✔ Cut down Processing Fee always</p>
-                            <p>✔ Save Big each time you ship</p>
-                            <p>✔ Ship,15 times within 5 month, earn $25 </p>
-                            <p>✔ Car buying referral is included </p>
-                            <p>✔ Include benefits in TowGig Free plan</p>
-                            <p>✔ Enjoy your benefits & savings each Month</p>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
-                                    <h3 class="h3a" style="font-size: 1.35rem; font-weight:500">Blue: $10/Mth at 8%</h3>
-                                    <p><div class="container-contact100-form-btn">
-                                        <div class="wrap-contact100-form-btn">
-                                            <div class="contact100-form-bgbtn"></div>
-                                            <button class="contact100-form-btn probtn">
-                                                Buy Saving
-                                            </button>
-                                        </div>
-                                    </div>
-                                    </p>
+                            </p> -->
+    <!-- </div> -->
+    <!-- <div id="Car_manufacturer_Dealer" class="tab-pane fade in"  role="tabpanel">
+                            <div class="row pt-5">
+                                <div class="col-4"></div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12 pb-2" style="background-color: #010129;">
+                                    <h4 class="pt-3"><strong class="str1" style="color: #fff!important;">Car Manufacture or Dealer</strong></h4>
+                                    <h4 class="pt-2">Frequently Ship or Sell Vehicles? <br>Then start savings today</h4>` 
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
-                                    <h3 class="h3a" style="font-size: 1.35rem; font-weight:500">Black: $15/Mth at 12% </h3>
-                                    <p><div class="container-contact100-form-btn">
-                                        <div class="wrap-contact100-form-btn">
-                                            <div class="contact100-form-bgbtn"></div>
-                                            <button class="contact100-form-btn probtn">
-                                                Start Saving
-                                            </button>
-                                        </div>
-                                    </div>
-                                    </p>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-12 col-xsm-12">
-                                    <h3 class="h3a" style="font-size: 1.35rem; font-weight:500">Brown: $220/12Mth at 20%</h3>
-                                    <p>
-                                    <div class="container-contact100-form-btn">
-                                        <div class="wrap-contact100-form-btn">
-                                            <div class="contact100-form-bgbtn"></div>
-                                            <button class="contact100-form-btn probtn">
-                                                Buy Saving
-                                            </button>
-                                        </div>
-                                    </div>
-                                    </p>
-                                </div>
+                                <div class="col-4"></div>
                             </div>
-                        </div>
-                    </div>
-                <div class="col-2"></div> 
+                            <div class="row" >
+                                <div class="col-3"></div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 pt-4" style="padding: 5px; border: 1px solid #010129;">
+                                    <p>✔ Ship cars within/across the Country </p>
+                                    <p>✔ Ship as many times as you want</p>
+                                    <p>✔ No transaction fee</p>
+                                    <p>✔ Save Big each time you ship</p>
+                                    <p>✔ Ship,15 times within 5 month, earn $25</p>
+                                    <div id="tooldiv">
+                                        <p>
+                                            ✔ Car buying referral include. <button style="color: #1958cf;">(View More)</button>
+                                        </p>
+                                        
+                                        <span id="toolspan">
+                                            As an auto dealer, Towgig will refer prospects to buy from you It works as, you give us your business name, location, & a discount code. We then share your details to our users community. Any interested buyer will come to you with the promo code you had given to us, so that they can save some money. This service is free with us
+                                        </span>
+                                    </div> 
+                                    <p>✔ Could same 10% on business insurance</p>
+                                    <p>✔ Start growing your business today</p>
+                                    <br>
+                                    <h3 class="pb-3" style="color: rgb(20, 20, 20);">Choose your savings price below! </h3>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                            <h3 class="h3a" style="font-size: 1.35rem; font-weight:500;  color: #1958cf;">Blue: $10/Month at 8%</h3>
+                                            <p><div class="container-contact100-form-btn">
+                                                <div class="wrap-contact100-form-btn">
+                                                    <div class="contact100-form-bgbtn"></div>
+                                                    <button class="contact100-form-btn probtn">
+                                                        BUY 8% SAVING
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                            <h3 class="h3a" style="font-size: 1.35rem; font-weight:500;color: rgb(20, 20, 20);">Black: $15/Month at 12%</h3>
+                                            <p><div class="container-contact100-form-btn">
+                                                <div class="wrap-contact100-form-btn">
+                                                    <div class="contact100-form-bgbtn"></div>
+                                                    <button class="contact100-form-btn probtn">
+                                                        BUY 12% SAVING
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                            <h3 class="h3a" style="font-size: 1.35rem; font-weight:500; color: brown;">Brown: $220/12Month at 20%</h3>
+                                            <p>
+                                            <div class="container-contact100-form-btn">
+                                                <div class="wrap-contact100-form-btn">
+                                                    <div class="contact100-form-bgbtn"></div>
+                                                    <button class="contact100-form-btn probtn">
+                                                        BUY 20% SAVING
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <h4 class="" style="color: rgb(20, 20, 20);"> YOUR DISCOUNT WILL AUTOMATICALLY APPLY
+                                                EACH TIME YOU ORDER A GIG
+                                                </h4>
+                                            </p>
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3"></div> 
+                            </div>
+                        </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-2"></div>  -->
+    <!-- </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xsm-12" style=" padding: 5px; border: 1px solid;">
+
+                <div style="color: #fff;text-align: center; background-color: #064acb;padding: 10px;">
+                    Benefits are provided by our trusted partners <br>
+                    Benefit to be given by us may ask prove<br>
+                    Discount usage are limited to 2 times within a year.<br>
+                    We're looking to bring more of your favorite benefits<br>
+                    You shall blame yourself if you do not buy your own Benefit Plan now<br>
+                </div>
             </div>
+            <div class="col-2"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12" style=" padding: 5px; border: 1px solid;border-bottom: 0px;">
+                <div style="padding: 10px;text-align: center;"><strong>
+                    Earn $100, and up to $1000 Bonus, when you refer 
+                        friends. Get your Biggest Bonus Ever. </strong>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xsm-12" style=" padding: 5px; border: 1px solid;">
+                <div style="padding: 10px;text-align: center;">
+                    <h3 class="pb-3" style="color:#064acb">
+                    <strong>
+                    TowGig Technologies; Referral & Promo Code Rules 
+                    </strong>
+                </h3>
+                   <h4>For details: <a href="#" style="font-size:20px;font-weight:700;text-decoration:none;color:#064acb">Please Click Here </a></h4> 
+                   <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                    Thank you for helping to grow our community. From time to time, TowGig, its subsidiaries
+                    and affiliates ("TowGig") may invite you to participate in one of their referral programs to
+                    encourage people to use the TowGig applications and/or websites. Participating in a referral
+                    program, either by referring your friends or family or signing up with a referral code can be
+                    a great way for Expert, Buyers, and or TowGig users (collectively " TowGig users") to receive
+                    TowGig credits, other discounts or earn extra money (each a "Referral Reward").
+                   </p>
+                   <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                    TowGig Referral Program rules (the "Rules") apply to referral programs that are
+                    administered solely by TowGig, except for the TowGig Partners. By accepting and sharing
+                    your referral code or by signing up with a referral code, you are agreeing to be bound by
+                    these Rules. Any violation of these Rules will not only prevent you from participating in any
+                    TowGig referral program (now or in the future), but could also result in the forfeiture or
+                    retraction of TowGig credits, money, or other rewards earned through the program and even
+                    the deactivation of your account.
+                   </p>
+                   <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                    In addition, there may be other terms that apply to your Referral Reward based on the city
+                    where you signed up, including what actions you may need to take as well as the type and
+                    amount of the Referral Reward. You call us if you have any concern or query about the
+                    referral program in your state/country.
+                    
+                   </p>
+                   <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                    Please note that these Rules are in addition to the Terms of Use as updated from time to time
+                    and it governing your use of TowGig app, as well as any agreement (if one exists) between
+                    you and TowGig or any of its subsidiaries and affiliates related to your interactions with
+                    TowGig Technologies.
+                   </p>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xsm-12" style=" padding: 5px; border: 1px solid;">
+                <div style="padding: 10px;text-align: center;">
+                    
+                    <ol>
+                        <li>
+                            <h3 class="pb-3" style="color:#064acb;font-size: 1.36rem;text-align: left;">
+                                <strong>
+                                    1:Who is eligible to be a referrer/inviter?
+                                </strong>
+                            </h3>
+                            <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                                Anyone may be a referrer/inviter who (a) is a legal resident of his/her country(13years), (b)
+                                is of legal age where they live, and (c) has a TowGig account in good standing.
+                                Referrers/inviters can be any type of TowGig user; however, they cannot have more than
+                                one account for each TowGig product or service.
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="pb-3" style="color:#064acb;font-size: 1.36rem;text-align: left;">
+                                <strong>
+                                    2:Rules of promo/discount code: 
+                                </strong>
+                            </h3>
+                            <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                                If you are a TowGig user and notice that you qualify for a promo code, then give call
+                                contact us. We may ask a few questions to verify the user's eligibility before issuing a
+                                discount code. A discount code can only be used ones, and it is active for a limited
+                                time. And if its not used on time, it shall expire and can no longer be use for any
+                                TowGig service again. In must cases, TowGig won't issue a discount code for
+                                replacement. So, the user is advise to use it immediately they get received the Promo
+                                code
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="pb-3" style="color:#064acb;font-size: 1.36rem;text-align: center;">
+                                <strong>
+                                    Buyer Bonuses
+                                </strong>
+                            </h3>
+                            <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                                Buyer Refer Buyer & Earn $100 Bonus. To qualify, the Buyer must refer a minimum
+                                of 10 Buyers/friends; and each of the friends after signed up on TowGig, they must
+                                spend a minimum of $100 per service gig.
+                                When the Buyer reached the bonus threshold to earn bonus, the system would notify
+                                Admin/us about the Buyer qualify to earn their one time bonus of $100. 
+                            </p>
+                            <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                                If the Buyer, refer only 20 Expert, they would earn a $400 Bonus. To qualify, the
+                                Buyer must refer 20 Experts; and each of the 20 Experts must complete one job on
+                                TowGig. Each of the jobs completed must be a minimum of $300 . The system would
+                                automatically track and alert Admin/us and the Buyer that they have reached their
+                                bonus threshold. Then the Buyer will contact us to make arrangement how they
+                                would like to receive their bonus.
+ 
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="pb-3" style="color:#064acb;font-size: 1.36rem;text-align: center;">
+                                <strong>
+                                    Expert Bonuses
+                                </strong>
+                            </h3>
+                            <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                                Expert Refer Expert & earn $1000 Bonus. To qualify for the $1000 bonus, the Expert
+                                must refer 20 Experts. Each of the Experts must complete Two jobs. And each of the
+                                jobs completed must be a minimum of $500 . The system would automatically track
+                                the referral code/link and notify Admin when the Expert qualify to earn their one
+                                time bonus of $1000. The Expert will then contact us to make arrangement how they
+                                had link to receive their one time bonus.
+                            </p>
+                            <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                            Expert to Refer Buyer & earn $200. To qualify for the $200 bonus, the Expert must
+                            refer 10 Buyers/friends. And each of the Buyers referred must spent a minimum of
+                            $200 per service gig. The system would automatically track the referral code/link
+                            and notify Admin and Expert at the same time. Then the Expert will contact us to
+                            make arrangement how they would like to receive their one time bonus of $200
+                            </p>
+                            <p class="pt-2" style="text-align: left;font-size: 1.35rem;">
+                                Expert to earn $500 bonus after completing 50 jobs. To qualify, the Expert must
+                                successfully complete 50 jobs. And each job completed must be a minimum of $100. The
+                                system will automatically track and alert Admin and Expert when the Expert qualify to
+                                earn their one time bonus of $500, after the completion of 50 jobs.
+                            </p>
+                        </li>
+                    </ol>
+                   <h4>For details: <a href="#" style="font-size:20px;font-weight:700;text-decoration:none;color:#064acb">Please Click Here </a></h4> 
+
+                   <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                    TowGig Referral Program rules (the "Rules") apply to referral programs that are
+                    administered solely by TowGig, except for the TowGig Partners. By accepting and sharing
+                    your referral code or by signing up with a referral code, you are agreeing to be bound by
+                    these Rules. Any violation of these Rules will not only prevent you from participating in any
+                    TowGig referral program (now or in the future), but could also result in the forfeiture or
+                    retraction of TowGig credits, money, or other rewards earned through the program and even
+                    the deactivation of your account.
+                   </p>
+                   <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                    In addition, there may be other terms that apply to your Referral Reward based on the city
+                    where you signed up, including what actions you may need to take as well as the type and
+                    amount of the Referral Reward. You call us if you have any concern or query about the
+                    referral program in your state/country.
+                    
+                   </p>
+                   <p class="pt-3" style="text-align: left;font-size: 1.35rem;">
+                    Please note that these Rules are in addition to the Terms of Use as updated from time to time
+                    and it governing your use of TowGig app, as well as any agreement (if one exists) between
+                    you and TowGig or any of its subsidiaries and affiliates related to your interactions with
+                    TowGig Technologies.
+                   </p>
+                   <br>
+                   <h3 class="pb-3" style="color:#064acb;font-size: 1.39rem;text-align: center;">
+                    <strong>
+                        Guarantee Referral Bonus. No time frame, Invite as many friends as
+                            you like. That's why Its The best referral Program ever.
+                    </strong>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-2"></div>
         </div>
     </div> 
+</div> -->
     <!-- <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
@@ -439,7 +656,7 @@
             <!-- <div class="col-1"></div> -->
             <div class="col-11 offset-1 container4-col">
                 <h3>
-                   <span style="color: #006be9;font-size: 26px;">Download your free TowGig app now,</span>  and Save <span style="color: #006be9;">$5-$10</span> on your first order.<br> <span style="color: #ffb837;"> Click: Discount Code</span>
+                    <span style="color: #006be9;font-size: 26px;">Download your free TowGig app now,</span> and Save <span style="color: #006be9;">$5-$10</span> on your first order.<br> <span style="color: #ffb837;">
                 </h3>  
             </div>
             <!-- <div class="col-1"></div> -->
@@ -516,8 +733,8 @@
                 <a href="costing.html">Costing</a>
                 </li>
                 <li>
-                    <a href="#"><img src="img/iosbtn.png" class="footer-img1" alt="iosbtn"></a>
-                    <a href="#"><img src="img/googlebtn.png" class="footer-img2" alt="googlebtn"></a>
+                    <a href="https://apps.apple.com/pk/app/towgig/id1507223706"><img alt="iosbtn" class="footer-img1" src="img/iosbtn.png" /></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.crymzee.towgig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
                 </li>
             </ul>
             </div>
@@ -532,11 +749,12 @@
                 <a href="partner-with-us.html">Partner With Us</a>
                 </li>
                 <li>
-                <a href="index.html#TowTruckNearMe">Tow Truck Near Me</a>
+                <a href="index.php#TowTruckNearMe">Tow Truck Near Me</a>
                 </li>
                 <li>
                 <a href="#!">Site Map</a>
                 </li>
+                <li><a href="blog.php">Blog</a>
             </ul>
             </div>
             <hr class="clearfix w-100 d-md-none">
@@ -544,16 +762,16 @@
             <h5 class="text-white mt-3 mb-4">Legal</h5>
             <ul class="list-unstyled">
                 <li>
-                    <a href="#">Terms and Condition</a>
+                    <a href="terms.html">Terms and Condition</a>
                     </li>
                     <li>
-                        <a href="#">Privacy Policy</a>  
+                        <a href="privacy.html">Privacy Policy</a>  
                     </li>
                     <li>
-                        <a href="#">Refund Policy</a>
+                        <a href="refundPolicy.html">Refund Policy</a>
                     </li>
                     <li>
-                    <a href="#">End User License Agreement(EULA)</a>
+                    <a href="user-agreement.html">End User License Agreement(EULA)</a>
                 </li>
             </ul>
             </div>
@@ -582,78 +800,219 @@
         <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2020 TowGig Technologies
         </div>
         <div class="footer-copyright text-center py-3 text-muted"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
-        </div>
-        <!-- Copyright -->
-    
-    </footer>
-    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        window.jssor_1_slider_init = function() {
+            </div>
+            <!-- Copyright -->
 
-            var jssor_1_options = {
-              $AutoPlay: 1,
-              $Idle: 0,
-              $SlideDuration: 5000,
-              $SlideEasing: $Jease$.$Linear,
-              $SlideWidth: 140,
-              $Align: 0
-            };
+            </footer>
+            <!-- MODEL-BOX -->
+            <div class="modal fade" id="Modal-expert">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="container register">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-11 register-right model-pad">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                            <p class="boxmp">Meet Amazing Buyers Waiting for Your Service,It only takes 3-6 minutes to sign up & start earning.</p>
+                                            <div class="row register-form">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <p class="mbp mt-2">For a quick sign up, Please enter your</p>
+                                                        <section class="mx-2 pb-3 text-center">
+                                                            <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                                <li class="nav-item waves-effect waves-light">
+                                                                    <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#signupemail" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                                </li>
+                                                                <li class="nav-item waves-effect waves-light">
+                                                                    <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#signupphone" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content" id="myTabContentMD">
+                                                                <div class="tab-pane fade in show active" id="signupemail" role="tabpanel" aria-labelledby="home-tab-md">
+                                                                    <form name="myForm" action="towgigsignup.php" method="post">
+                                                                        <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                        <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="signupphone" role="tabpanel" aria-labelledby="profile-tab-md">
+                                                                    <form name="myForm" action="towgigsignup.php" method="post">
+                                                                        <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number" value="" required/>
+                                                                        <br>
+                                                                        <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                                <!-- <p class="mbp1 mt-1 mt-3 ml-3">The App Link will be send to you, now</p> -->
+                                                <p class="mbp1 ml-3 mt-2" style="color:#424141e0!iantmport;"> Or go to the App store & search to download for free</p>
+                                                <h3 class="mbh31 ml-3">Thank You for doing Business with TowGig</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="Modal-buyer">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="container register">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-11 register-right model-pad">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                            <p class="boxmp">A Diligence Expert is waiting to come service your vehicle.</p>
+                                            <div class="row register-form">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <p class="mbp mt-2">For a quick sign up, Please enter your</p>
+                                                        <section class="mx-2 pb-3 text-center">
+                                                            <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                                <li class="nav-item waves-effect waves-light">
+                                                                    <a class="nav-link active" id="home-tab-mdb" data-toggle="tab" href="#signupemailb" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                                </li>
+                                                                <li class="nav-item waves-effect waves-light">
+                                                                    <a class="nav-link" id="profile-tab-mdb" data-toggle="tab" href="#signupphoneb" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content" id="myTabContentMDb">
+                                                                <div class="tab-pane fade in show active" id="signupemailb" role="tabpanel" aria-labelledby="home-tab-mdb">
+                                                                    <form name="myForm" action="towgigsignup.php" method="post">
+                                                                        <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                        <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="signupphoneb" role="tabpanel" aria-labelledby="profile-tab-mdb">
+                                                                    <form name="myForm" action="towgigsignup.php" method="post">
+                                                                        <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number1" value="" required/>
+                                                                        <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </section>
 
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+                                                    </div>
+                                                </div>
+                                                <!-- <p class="mbp1 mt-1 ml-3">The App Link will be send to you, now</p> -->
+                                                <p class="mbp1 ml-3 mt-2" style="color:#424141e0!important;"> Or go to the App store & search to download for free</p>
+                                                <h3 class="mbh31 ml-3">Thank You for Being an Amazing Buyer with TowGig</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cookie-bar"><span class="message">The Free Benefits program is not activated yet; we will notify you when it's time.Thanks for your understanding!</span> <label class="close-cb" for="checkbox-cb"></label></div>
+            <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                window.jssor_1_slider_init = function() {
 
-            /*#region responsive code begin*/
+                    var jssor_1_options = {
+                        $AutoPlay: 1,
+                        $Idle: 0,
+                        $SlideDuration: 5000,
+                        $SlideEasing: $Jease$.$Linear,
+                        $SlideWidth: 140,
+                        $Align: 0
+                    };
 
-            var MAX_WIDTH = 980;
+                    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
-            function ScaleSlider() {
-                var containerElement = jssor_1_slider.$Elmt.parentNode;
-                var containerWidth = containerElement.clientWidth;
+                    /*#region responsive code begin*/
 
-                if (containerWidth) {
+                    var MAX_WIDTH = 980;
 
-                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+                    function ScaleSlider() {
+                        var containerElement = jssor_1_slider.$Elmt.parentNode;
+                        var containerWidth = containerElement.clientWidth;
 
-                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                        if (containerWidth) {
+
+                            var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                            jssor_1_slider.$ScaleWidth(expectedWidth);
+                        } else {
+                            window.setTimeout(ScaleSlider, 30);
+                        }
+                    }
+
+                    ScaleSlider();
+
+                    $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                    $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                    $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                    /*#endregion responsive code end*/
+                };
+            </script>
+            <style>
+                /*jssor slider loading skin spin css*/
+                
+                .jssorl-009-spin img {
+                    animation-name: jssorl-009-spin;
+                    animation-duration: 1.6s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
                 }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
+                
+                @keyframes jssorl-009-spin {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
                 }
-            }
+            </style>
+            <script>
+                var phone_number = window.intlTelInput(document.querySelector("#phone_number"), {
+                    separateDialCode: true,
+                    preferredCountries: ["us"],
+                    hiddenInput: "full",
+                    utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+                });
 
-            ScaleSlider();
+                $("form").submit(function() {
+                    var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+                    $("input[name='phone_number[full]'").val(full_number);
+                    alert(full_number);
+                });
+            </script>
+            <script>
+                var phone_number = window.intlTelInput(document.querySelector("#phone_number1"), {
+                    separateDialCode: true,
+                    preferredCountries: ["us"],
+                    hiddenInput: "full",
+                    utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+                });
 
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-            /*#endregion responsive code end*/
-        };
-    </script>
-    <style>
-        /*jssor slider loading skin spin css*/
-        .jssorl-009-spin img {
-            animation-name: jssorl-009-spin;
-            animation-duration: 1.6s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-
-        @keyframes jssorl-009-spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-    </style>
-    <script type="text/javascript">jssor_1_slider_init();</script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+                $("form").submit(function() {
+                    var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+                    $("input[name='phone_number[full]'").val(full_number);
+                    alert(full_number);
+                });
+            </script>
+            <script type="text/javascript">
+                jssor_1_slider_init();
+            </script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+            </script>
 </body>
 
 </html>

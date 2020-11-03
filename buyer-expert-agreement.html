@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TowGig</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+</head>
+<style>
+    body {
+        background: #cfe3ea!important;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        p.htwp-p.mt-2 {
+            font-size: 16px!important;
+            font-weight: 400!important;
+        }
+    }
+    
+    #bmobile {
+        display: none!important;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        #bmobile {
+            display: block!important;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .bmobile {
+            display: none!important;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .top-p p {
+            margin-bottom: 0px!important;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        p.htwp-p.mt-2.text-center {
+            margin-bottom: 5px!important;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        h2.privacyh2 {
+            margin-bottom: 0px!important;
+        }
+    }
+</style>
+
+<body class="" id="aboutus">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <img src="img/logo.png" alt="">
+                <p class="lslogan">TowGig, Brings Auto Smiles</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-works.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign Up
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a data-toggle="modal" data-target="#Modal-buyer" class="dropdown-item" href="#">Buyer</a>
+                            <a data-toggle="modal" data-target="#Modal-expert" class="dropdown-item" href="#">Expert</a>
+                            <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
+                        <a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="#">Expert</a> -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="modal" id="myModal">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone*" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    </div>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal1">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email/Username" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password" value="" />
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal2" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent2">
+                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group filel pb-1">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="File01">Upload Selfie/Logo</label>                                      
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Town" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Zip Code" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Towing Hauling Cars Dot Number" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class=" filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label1" for="File01">Professional License </label>                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business or Personal Address" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Province/State" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Country" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label2" for="File01">Insurance Policy (Front)</label>                                      
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal3" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal3">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank/Branch Name" value="" />
+                                    </div>
+                                    <div class="form-group" style="color: #6c757d;">
+                                        Date of Birth:<input type="date" class="form-control" placeholder="Date of Birth" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Employee Identity No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" name="Phone" class="form-control" placeholder="Confirm Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Routing No" value="" />
+                                    </div>
+                                    <label for="choose-services" style="color: #6c757d;">Choose Services:</label>
+                                    <br>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tow Haul
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Flat Type
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Replace Battery
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Engin Light On
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Jump Start
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox"  class="mr-1" value="">Lockout
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Gas/Diesel Refill
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tyre/Car Vibration
+                                    </label>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="aboutcontainer3" class="promopage1" style="padding-bottom: 0px;">
+        <div class="container htw">
+            <h2 class="privacyh2"> Towgig Buyer and Expert Service Agreement </h2>
+        </div>
+        <div class="container htw privacy_p">
+            <div id="serviceid ">
+                <div class="">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <!-- <div data-toggle="collapse" data-target="#p1"><span class="htwt">INTRODUCTION</span>
+                            <div id="p1" class="collapse"> -->
+                            <div>
+                                <div id="p1">
+                                    <p class="htwp-p mt-2 text-center"> TowGig Technologies is looking to connect you for a safe, secure, and genuine business transaction.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div class="row top-p">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 text-center">
+                                    <p class="b-p">A <strong>Buyer</strong> is one who: </p>
+                                    <p>✔ Need towing service </p>
+                                    <p>✔ Need to ship vehicle </p>
+                                    <p>✔ Need car maintenance </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xsm-12 text-center">
+                                    <p class="b-p"><strong>Expert</strong> is one who provide: </p>
+                                    <p>✔ Towing Service</p>
+                                    <p>✔ Car-hauling Service</p>
+                                    <p>✔ Roadside Assistance/Repair</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xsm-12 offset-1 pt-2">
+                                    <nav class="text-center">
+                                        <div class="nav nav-tabs responsive text-center" id="nav-tab" role="tablist">
+                                            <a style="color: #736c6c;" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#Buyer-agreement" role="tab" aria-controls="nav-home" aria-selected="true">Read Buyer & Expert Agreement</a>
+                                            <a style="color: #736c6c;" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#Expert-agreement" role="tab" aria-controls="nav-profile" aria-selected="false">Expert Only, Click & Read Agreement</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 pt-3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 pt-3 tab-content" id="nav-tabContent">
+                                        <div id="Buyer-agreement" class=" tab-pane fade in active show" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                                                    <div data-toggle="collapse" data-target="#p2">
+                                                        <div class="text-center">
+                                                            <span class="htwt" style="color: #3d7fc1!important; font-size: 26px!important;text-align: center!important;">TowGig,The Buyer and Expert Operating Agreement
+                                                        </span>
+                                                        </div>
+                                                        <div id="p2" class="">
+                                                            <p class="htwp-p mt-2">Please carefully read this Buyer and Expert Agreement (hereinafter referred to as the “Agreement”) which is entered into between the Vehicle Owner (hereinafter referred to as the “Buyer”) in
+                                                                need of the services of fixing, towing, or hauling vehicles (hereinafter referred to as “Services”), an Auto Specialist (hereinafter referred to as the “Expert”) a professional that provides
+                                                                the services, and TowGig Technologies (hereinafter referred to as the “TowGig” or the “Company”) the provider of the TowGig Platform. </p>
+                                                            <p class="htwp-p mt-2">These terms incorporated herein apply to your access to and use of all services provided by TowGig. The Buyer, The Expert (hereinafter referred to as the “Parties) understand that by using the
+                                                                TowGig services (including, without limitation any associated links, you agree to be bound by the terms of the agreement. The Parties also understands that the Company reserves the right
+                                                                to modify or replace the Terms and all other operating rules, policies and procedures that may be published across TowGig’s platforms from time to time without notice. Please review the terms
+                                                                periodically so that you will be apprised of any changes. The Parties understands that continued use of the Site and its services following the posting of any changes to the Terms constitutes
+                                                                acceptance of those changes.</p>
+                                                            <p class="htwp-p mt-2">If you do not agree to these Terms, do not subscribe to or use the Services. You agree to have these Terms and any related information made available to you, and to otherwise have communications
+                                                                between you and us, occur electronically. The Company reserves the right, in its sole discretion, to refuse, suspend, or terminate Services to anyone. The Parties agree that if unsure of
+                                                                the meaning of any part of these Terms or have any questions regarding the Terms, will not hesitate to contact us for clarification.</p>
+                                                            <p class="htwp-p mt-2">WHEREAS, the Buyer desires to contract with the Company to purchase the services listed in accordance with terms of this Agreement; and The Expert desires to perform certain services for the
+                                                                Company, as an independent contractor as set forth in this Agreement.</p>
+                                                            <p class="htwp-p mt-2">The Expert is responsible for the conduct, management and operation of Services on behalf of the TowGig, and may, without limitation:</p>
+                                                            <ol>
+                                                                <li class="li-p">Undertake, conduct, manage and engage in services on behalf of the company; and</li>
+                                                                <li class="li-p">Enter into agreements with registered buyers for services required in the conduct, management or operation under the control of the Company;</li>
+                                                            </ol>
+                                                            <p class="htwp-p mt-2">The Company wishes to ensure that the services provided are for the benefit of the Buyer while treating the Experts in a fair manner that encourages growth and the long-term health of the industry.
+                                                                In addition, the Company has requested and the Experts has agreed to provide certain services pertaining to the Company’s conduct, management and operation according to the terms and conditions
+                                                                set out in this Agreement.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p3"><span class="htwt">PURPOSE</span>
+                                                        <div id="p3" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Purpose of this agreement is for the Company to employ the services of experts to provide all technical and professional services, materials, and to perform all operations necessary and required to provide maintenance and repair services for Buyers
+                                                                vehicle.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p131"><span class="htwt">EXPERTS</span>
+                                                        <div id="p131" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert shall provide the following services to the Buyer in accordance with the terms and conditions of this Agreement.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                                                    <div data-toggle="collapse" data-target="#p112">
+                                                        <div class="">
+                                                            <span class="htwt">EXPERT SERVICES DESCRIPTIONS
+                                                        </span>
+                                                        </div>
+                                                        <div id="p112" class="collapse">
+                                                            <p class="htwp-p mt-2">The Company hereby retains and appoints the Expert during the Term to provide the Services to the Buyers in the Company’s conduct, management and operations subject to and in accordance with
+                                                                the terms of this Agreement and Applicable Law.</p>
+                                                            <p class="htwp-p mt-2">The services that the Expert will have to provide as stated on the platform for the Buyer includes: </p>
+                                                            <ol>
+                                                                <li class="li-p">Towing Services</li>
+                                                                <li class="li-p">Fixing / Repairing</li>
+                                                                <li class="li-p">Hauling Services</li>
+                                                                <li class="li-p">Others as may be required by the Buyer and approved by the Company.</li>
+                                                            </ol>
+                                                            <p class="htwp-p mt-2">Expert agrees to perform the following services in a timely, expeditious and professional manner, performing Services in accordance with all applicable provisions of the company. In the event
+                                                                of any conflicts between the Agreement and any of the terms, the terms of this Agreement shall prevail.</p>
+                                                            <p class="htwp-p mt-2">Expert represents and acknowledges that the Services performed under this Agreement will be done using the company’s or personally owned equipment at Buyers designated locations, and at hours
+                                                                and times as determined by The Company. Experts is engaged in providing these types of services for Buyers, and the Expert is not required to provide services exclusively to any other during
+                                                                the term of this Agreement.</p>
+                                                            <p class="htwp-p mt-2">The Expert acknowledges and agrees that the Company, in its discretion, will decide which services are made available on the platform at any given time and the Expert will provide the Services.</p>
+                                                            <p class="htwp-p mt-2">
+                                                                Nothing in this Agreement is intended to grant to the Expert any exclusivity rights as to subject matter, time or geographic location, and the Company is free to contract with, or grant any rights to, any other Experts in any location that the company
+                                                                deems appropriate in its discretion. The Expert will provide the Services continuously and without interruption throughout the Term, subject to the exercise of the Company’s).
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert is an independent contractor engaged by the company to perform the Services. Nothing in this Agreement is intended to create a partnership, joint venture, agency, employment or representation relationship between the Company and the Expert
+                                                                or Buyer. The Expert will not, and will cause such Personnel, subcontractors and other Persons not to, represent itself or themselves as a partner, joint venturer, agent, employee or representative
+                                                                of the company to any Person, except as Prescribed by the company.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Except to the extent expressly allocated to the company under this Agreement, all risks, costs and expenses in relation to the performance by the Expert of its obligations under this Agreement are allocated to, and accepted by, the Expert as its entire
+                                                                and exclusive responsibility.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                                                    <div data-toggle="collapse" data-target="#p113">
+                                                        <div class="">
+                                                            <span class="htwt">EXPERT RESPONSIBILITIES
+                                                        </span>
+                                                        </div>
+                                                        <div id="p113" class="collapse">
+                                                            <p class="htwp-p mt-2">In addition to all other obligations contained herein, Expert agrees:</p>
+                                                            <ul>
+                                                                <li class="li-p">To furnish all tools, labor and supplies in such quantities and of the proper quality to professionally and timely perform the Services; and</li>
+                                                                <li class="li-p">To proceed with diligence and promptness and hereby warrants that such Services shall be performed in accordance with the highest professional workmanship and service standards in the field
+                                                                    to the satisfaction of the Buyer; and</li>
+                                                                <li class="li-p">To comply, at its own expense, with the provisions of all state, local and federal laws, regulations, ordinances, requirements and codes which are applicable to the performance of the Services
+                                                                    hereunder.
+                                                                </li>
+                                                                <li class="li-p">To require its sub-Experts to comply, at their own expense, with the provisions of all state, local and federal laws, regulations, ordinances, requirements and codes which are applicable
+                                                                    to the performance of the Services hereunder or to sub-Expert as an employer, including maintenance of standard Workers’ Compensation as required by law.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p4"><span class="htwt">LABOR COST DISCOUNT</span>
+                                                        <div id="p4" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                In the event that Buyer tows their vehicle to the Experts shop, the Expert would discount 10% on labor cost to the Buyer. If an outside auto service provider happens to bring a Buyer’s car to a repair shop that the Expert is a contractor with TowGig,
+                                                                the Buyer can still get a 10% discount on labor cost. The Buyer is responsible to ask the shop for the labor discount. Feel free to contact us for verification and further information.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p5"><span class="htwt">EXPERT DELIVERY OF THE SERVICES</span>
+                                                        <div id="p5" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert shall commence the provision of the Services immediately and after the Buyer places an order for the services requested on the TowGig Platform in accordance to the requirements of the Buyer. The Expert shall complete the Services within stipulated
+                                                                dated agreed. Failure to comply with the delivery completion duration be interpreted as a breach of this agreement and shall warrant to the termination of this agreement.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert warrants to the Buyer and TowGig that all services provided will be of good quality, in conformance with the highest standards of the profession and in conformance with this Agreement.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p115"><span class="htwt">EXPERT COMPLIANCE & INTEGRITY OF SERVICES</span>
+                                                        <div id="p115" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Expert acknowledges that the Company is responsible for the conduct, management and operation of the services on the Platform and TowGig Centre. The Expert will provide the Services under the control of the Company.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert will provide the Services in full compliance with this Agreement and all Applicable Law. The Company may in its discretion, amend the agreement, in whole or in part, as it deems necessary, for purposes of the conduct, management and operation
+                                                                of Services, the integrity and reputation of Services, the Buyer experience, and compliance and consistency with Applicable Law.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">The Expert will continue to perform the Services in accordance with the amended Agreement.</p>
+                                                            <p class="htwp-p mt-2">
+                                                                The Company will post amendments to the agreement on the TowGig Platform or such other location Prescribed by the Company, and it is the Expert’s responsibility to inform itself of and comply with such amendments. The Company will use reasonable efforts
+                                                                to provide advance notice of any amendments, except for amendments that are required for urgent or emergency situations.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert is not entitled to any compensation for or contribution to costs arising from an amendment of the agreement except as provided in this section. Nothing in this Section limits the Expert’s obligations to comply with all amendments of the agreement,
+                                                                which is absolute.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Without limiting the generality of this section, the Expert represents, warrants, covenants and agrees with the Company as follows:
+                                                            </p>
+                                                            <ol>
+                                                                <li class="li-p"><strong>No Unapproved Services:</strong> The Expert will not promote, display, operate or offer for sale any Services, or perform any services, except as Prescribed by the Company.</li>
+                                                                <li class="li-p"> <strong>Appropriate Conduct:</strong> The Expert will not engage in any conduct that in the discretion of the Company is contrary to the public interest, or is prejudicial to the integrity
+                                                                    or reputation of the services, the platform or the Company.</li>
+                                                                <li class="li-p"> <strong>No Minors:</strong> The Expert will, using all reasonable efforts, not permit any individual who does not meet the minimum age requirements, as required by Applicable Law or as Prescribed
+                                                                    by the Company, to enter or be present in the platform and participate in providing any service at the TowGig Centre.</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p1115"><span class="htwt">REPORTING </span>
+                                                        <div id="p1115" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert in a timely manner will:
+                                                            </p>
+
+                                                            <ul>
+                                                                <li class="li-p">furnish to the Company the reports set out in, and in accordance with, the agreement, or as otherwise Prescribed by the Company;</li>
+                                                                <li class="li-p">promptly give notice to the Company upon the Expert becoming aware of any non-compliance of the Expert with the agreement, any Material Breach or any Event of Default;</li>
+                                                                <li class="li-p">promptly give notice to the Company of any material breach or allegation of a material breach of any Applicable Law committed by a director, Buyer or Significant Interest holder of the company
+                                                                    of which breach or allegation the Expert has knowledge or would have had knowledge upon reasonable inquiry; and</li>
+                                                                <li class="li-p">promptly give notice to the Company of any Information Security Incident or any event or circumstance that has occurred or will occur that materially adversely affects the company or the
+                                                                    Expert.
+                                                                </li>
+                                                            </ul>
+                                                            <p class="htwp-p mt-2">
+                                                                The Company acknowledges that the reporting standards under this Agreement are different from those under any Previous Agreement. As such, if there was a Previous Agreement in effect between the parties, the Expert will have ninety (90) days from the
+                                                                Effective Date to comply with the agreement or any other reporting requirements.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p6"><span class="htwt">OTHER EXPERT RESPONSIBILITY</span>
+                                                        <div id="p6" class="collapse">
+                                                            <p class="htwp-p mt-2">Expert must verify and identify the Buyer before the commencement any service to the vehicle. This is for safety, security, and better service transaction between both the Buyer and the Expert.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p116"><span class="htwt">VERIFICATION</span>
+                                                        <div id="p116" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Expert are qualified professionals and skillful in their auto services. However, when the Expert arrive at the service location, the Buyer may request the Expert professional license or certification, or coverage protection prior to commencing the job.
+                                                                TowGig does not require the Expert to present to the Buyer their qualifications document. But in the event that Buyers request for the above verifications, Expert should oblige to the Buyer
+                                                                request. Experts also understands that this verification option shall bring an amazing vehicle service experience if agreed.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                TowGig will run a personal or business check on Experts business and professionalism in order to confirm that you are a legitimate person and a professional business. It will also guaranty the safety and security of both users on the TowGig Platfrom,
+                                                                as well as making sure that Expert meets the criterial of rendering a secure, smooth, and genuine business through TowGig Platform.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p1116"><span class="htwt">CHANGE BUSINESS NAME OR LOCATION</span>
+                                                        <div id="p1116" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                In the event of a change in Business name of Location, Expert must notify TowGig immedtaley, not later than Seven (7) days with any such aschanges made, new address or new business name. Expert is to do so by informing TowGig Supoort of any changes made.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p7"><span class="htwt">BUYERS REGISTRATION</span>
+                                                        <div id="p7" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                To access our Services, you must be a legal entity, or an individual of Eighteen (18) years of age or older who can form legally binding contracts. Buyers agree that the TowGig Platform may only be used in accordance with these Terms of Service. If you
+                                                                do not agree with the Terms of Service or do not wish to be bound by them, you agree to refrain from using these services.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Regardless of how you access the Service, to ensure the integrity of the Service, you are required to complete an account registration process. To become a Registered User, you must accept all of the terms and conditions incorporated by reference and
+                                                                linked to, these Terms of Service. By becoming a Registered User, you agree to:
+                                                            </p>
+                                                            <ul>
+                                                                <li class="li-p">abide by the Terms of Service and the processes, procedures, and guidelines described throughout the Website and Application;</li>
+                                                                <li class="li-p">be financially responsible for your use of the Website and Application and the purchase or delivery of services; and</li>
+                                                                <li class="li-p">perform your obligations as specified by any Service Agreement that you accept, unless such obligations are prohibited by law or by the Terms of Service.</li>
+                                                            </ul>
+                                                            <p class="htwp-p mt-2">
+                                                                To become a Registered User and to access services you must register for a Buyer Account. You agree to provide true, accurate and complete information as prompted by the registration form and all forms you access on the TowGig Platform and to update this
+                                                                information to maintain its truthfulness, accuracy and completeness.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Once you have registered on the platform, an Account ID will be associated with your account registered. We may refuse to accept your application to register for the Service, in our sole discretion. During registration, you must choose a username and
+                                                                password for the Account. As a Buyer on the platform, you are responsible for maintaining the confidentiality of your Account login information and are fully responsible for all activities
+                                                                that occur under your Account. You authorize TowGig to assume that any person using the service with your username and password is you or is authorized to act for you. You agree to notify
+                                                                us immediately if you suspect any unauthorized use of the Account.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Buyer agrees to immediately notify TowGig Technologies of any unauthorized use, or suspected unauthorized use of your Account or any other breach of security. TowGig Technologies cannot and will not be liable for any loss or damage arising from your failure
+                                                                to comply with the above requirements.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p117"><span class="htwt">PURCHASING AND PAYMENTS</span>
+                                                        <div id="p117" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Buyer is solely responsible for all of its costs and expenses related to the Service purchased on TowGig. Buyer pays TowGig to create an order from Experts on the platform. TowGig partners with Payment Services Providers for purposes of collecting all
+                                                                payments from Buyers and transferring such payments to Expert, and holding funds in connection with TowGig Balances. All payments services in connection with the collection of funds on the
+                                                                TowGig platform are performed by TowGig’s Payment Services Providers.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                A Buyer may not offer direct payments to Experts using payment systems outside of the Towgig platform. In the event, you have been asked to use an alternative payment method, please report it immediately to Customer Support. Purchases on TowGig platform
+                                                                can be made by using one of the following payment methods: Credit Card, PayPal, or existing TowGig Wallet Balance. Buyer existing Wallet balance will be applied automatically to next purchase.
+                                                                For satisfactory performance of the Services hereunder, Buyer shall pay TowGig for the performance of the services in accordance with the price or amount of such service provided.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                By using any payment method and/or providing payment details for making purchases on the TowGig Platform, you represent and warrant that:
+                                                            </p>
+                                                            <ul>
+                                                                <li class="li-p">you are legally authorized to provide such information;</li>
+                                                                <li class="li-p">you are legally authorized or have permission to make payments using the payment method(s); </li>
+                                                                <li class="li-p">if you are an employee or agent of a company or person that owns the payment method, you are authorized by that company or person to use the payment method to make payments on TowGig; and
+                                                                </li>
+                                                                <li class="li-p">such actions do not violate any applicable law.</li>
+                                                            </ul>
+                                                            <p class="htwp-p mt-2">
+                                                                Buyers can request for services that address specific requirements, and receive a Custom services offers from Experts through the site or through TowGig. Buyer shall have no obligation to make any payments until such time as Buyer accepts Expert’s performance
+                                                                as satisfactory. All payments under this contract shall be to the trade or business name of the company (TowGig Technologies). No payments will be personally made to the Expert under this
+                                                                contract.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Services requested on the platform must be an allowed service on Towgig. Buyers should refrain from using platform for any purpose other than looking for services on Platform. For further information on payments see: Fees, Subscriptions and Payments on
+                                                                our terms of service.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p611"><span class="htwt">LOCATION CHANGE</span>
+                                                        <div id="p611" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Thanks to the flexibility in our technology that enables Buyer to change their vehicle dropoff location during a live delivery. However, we cannot decide what the Expert must do in a situation where the Buyer wants to change the car drop off location.
+                                                                Some Expert are restricted regionally, so bare in mind that the Expert May accept or decline a change of delivery location.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p612"><span class="htwt">SUBSCRIPTION & BENEFITS</span>
+                                                        <div id="p612" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Users of TowGig Center get extra benefit/bonus when they subscribed to a plan. Buyers agrees to contact our affiliate partners for any benefit that is not provided by TowGig, using the provided contact details that TowGig shall give Buyers to get the
+                                                                stated benefit from them.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p613"><span class="htwt">AUTO ITEM PURCHASE </span>
+                                                        <div id="p613" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert usually carry Auto Items of Spare Parts such as battery, jumpstart cable, oil, and more for sale. If the Buyer chooses to buy any product from the Expert, such transaction is between the Buyer and Expert. Parties understand that TowGig do not
+                                                                manage or control the item price of how the Expert sell the item(s).
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p614"><span class="htwt">WINCH HELP</span>
+                                                        <div id="p614" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Buyer understands that the winch cost set by TowGig is between 20 to 59 minutes, and if the job takes more time, Buyer agrees to pay the extra cost of winching their vehicle at the rate the Expert will charge for the service. Buyer will pay the extra
+                                                                directly to the Expert using the agreeable method of payment. (Expert should advise and discuss rate before starting service to evade any possible problem).
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                During winching assistance any incident on either the Expert machine or Buyer vehicle, is cover/protected by the Expert insurance. That is why the Expert contractor must have liability protection for their business. In any eventuality, TowGig only responsibility
+                                                                is to help provide the necessary.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p615"><span class="htwt">STORAGE</span>
+                                                        <div id="p615" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Buyer understands that the cost paid to a service does not include storage fee if the vehicle is towed to a storage facility or left at the repair shop. That will be a personal arrangement and agreement between buyer and the Expert provider, or storage
+                                                                owner.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Location change: thanks to the flexibility in our technology that The Buyer can change their vehicle dropoff location during a live delivery. However, we can not decide what the Expert must do in a situation where the Buyer wants to change the car drop
+                                                                off location. Some Expert are restricted regionally, so bare in mind that the Expert May accept or decline a change of delivery location.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p616"><span class="htwt">ACCEPTABLE USE /CONDUCT</span>
+                                                        <div id="p616" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                When accessing or using the Services, you agree that you will not violate any law, contract, intellectual property or other third-party right or commit a tort, and that you are solely responsible for your conduct while using our Services.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                At the Buyer service location, the Buyer and Expert aggrees no to get into each other’s personal space. This will ensure and help improve safety, eliminate distraction, and enable the Expert to focus on producing quality service. Towgig recommend that
+                                                                you use diverse means to communicate between exach other. Any close contact between parties is the responsibility of both the Buyer and Expert.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Without limiting the generality of the foregoing, you agree that you will not:
+                                                            </p>
+                                                            <ul>
+                                                                <li class="li-p">Use our Services in any manner that could interfere with, disrupt, negatively affect or inhibit other users from fully enjoying our Services, or that could damage, disable, overburden or
+                                                                    impair the functioning of our Services in any manner;</li>
+                                                                <li class="li-p">Use our Services to pay for, support or otherwise engage in any illegal activities, including, but not limited to illegal gambling, fraud, money-laundering, or terrorist activities.</li>
+                                                                <li class="li-p">Use any robot, spider, crawler, scraper or other automated means or interface not provided by us to access our Services or to extract data;</li>
+                                                                <li class="li-p">Engage in Automated Data Collection (scraping) unless such Automated Data Collection is confined solely to search indexing for display on the Internet.</li>
+                                                                <li class="li-p">Use or attempt to use another user’s account without authorization;</li>
+                                                                <li class="li-p">Attempt to circumvent any content filtering techniques we employ, or attempt to access any service or area of our Services that you are not authorized to access;</li>
+                                                                <li class="li-p">Introduce to the Services any virus, trojan worms, logic bombs or other harmful material;</li>
+                                                                <li class="li-p">Develop any third-party applications that interact with our Services without our prior written consent;</li>
+                                                                <li class="li-p">Provide false, inaccurate, or misleading information; and</li>
+                                                                <li class="li-p">Encourage or induce any third party to engage in any of the activities prohibited under this Section.</li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p617"><span class="htwt">RELATIONSHIP OF THE PARTIES</span>
+                                                        <div id="p617" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Parties acknowledge and agree that the Services performed by the Expert Provider, its employees, agents or sub-contractors shall be as an independent contractor and that nothing in this Agreement shall be deemed to constitute a partnership, joint
+                                                                venture, agency relationship or otherwise between the parties.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p618"><span class="htwt">INTELLECTUAL PROPERTY RIGHTS</span>
+                                                        <div id="p618" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert agrees to grant to the Buyer an exclusive, irrevocable, royalty free licence to use, copy and modify any elements of the Material not specifically created for the Buyer as part of the Services. In respect of the Material specifically created
+                                                                for the Buyer as part of the Services, the Expert assigns the full title guarantee to the Buyer and any all of the copyright, other intellectual property rights and any other data or material
+                                                                used or subsisting in the Material whether finished or unfinished. If any third party intellectual property rights are used in the Material the Service Provider shall ensure that it has secured
+                                                                all necessary consents and approvals to use such third party intellectual property rights for the Expert and the Buyer. For the purposes of this "Material" shall mean the materials, in whatever
+                                                                form, used by the Expert to provide the Services and the products, systems, programs or processes, in whatever form, produced by the Expert pursuant to this Agreement.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p619"><span class="htwt">WARRANTY</span>
+                                                        <div id="p619" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert represents and warrants that Services be performed with reasonable care and skill; and the Services and the Materials provided by the Expert to the Buyer under this Agreement will not infringe or violate any intellectual property rights or
+                                                                other right of any third party.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p620"><span class="htwt">LIMITATION OF LIABILITY</span>
+                                                        <div id="p620" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Subject to the Buyer’s obligation to pay the Price to the Expert, either party’s liability in contract, tort or otherwise (including negligence) arising directly out of or in connection with this Agreement or the performance or observance of its obligations
+                                                                under this Agreement and every applicable part of it shall be limited in aggregate to the Price.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                To the extent it is lawful to exclude the following heads of loss and subject to the Buyer’s obligation to pay the Price, in no event shall either party be liable for any loss of profits, goodwill, loss of business, loss of data or any other indirect
+                                                                or consequential loss or damage whatsoever.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Nothing in this section will serve to limit or exclude either Party’s liability for death or personal injury arising from its own negligence.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p621"><span class="htwt">CONFIDENTIALITY</span>
+                                                        <div id="p621" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Party will neither use, copy, adapt, alter or part with possession of any information of the other which is disclosed or otherwise comes into its possession under or in relation to this Agreement and which is of a confidential nature. This obligation
+                                                                will not apply to information which the recipient can prove was in its possession at the date it was received or obtained or which the recipient obtains from some other person with good legal
+                                                                title to it or which is in or comes into the public domain otherwise than through the default or negligence of the recipient or which is independently developed by or for the recipient.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p622"><span class="htwt">HANDLING SERVICE ORDERS</span>
+                                                        <div id="p622" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                When a Buyer orders a Gig, the Expert is notified by email as well as notifications on the site while logged into the account. Experts are required to meet the delivery time specified as agreed herein.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p623"><span class="htwt">REVIEWS</span>
+                                                        <div id="p623" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Feedback reviews provided by Buyers while completing an Order are an essential part of TowGig's rating system. Reviews demonstrate the Buyer's overall experience with the Experts and their service. Buyers are encouraged to communicate to the Expert any
+                                                                concerns experienced during their active order in regards to the service provided by the Expert.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Leaving a Buyer's feedback is a basic prerogative of a Buyer. Feedback reviews will not be removed unless there are clear violations of our Terms of Service and/or our Community Standards.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                To prevent any misuse of our Feedback system, all feedback reviews must come from legitimate sales executed exclusively through the TowGig platform from users within our Community. Purchases arranged, determined to artificially enhance Expert ratings,
+                                                                or to abuse the TowGigr platform with purchases from additional accounts, will result in a permanent suspension of all related accounts.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p624"><span class="htwt">DISPUTES AND CANCELLATIONS</span>
+                                                        <div id="p624" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                We encourage our Buyers and Experts to try and settle conflicts amongst themselves. If for any reason this fails after using the Support or if you encounter non-permitted usage on the Site, users can contact TowGig's Customer Support department for assistance.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p625"><span class="htwt">TERM AND TERMINATION</span>
+                                                        <div id="p625" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement shall be effective on the date hereof and shall continue, unless terminated sooner in accordance with this section below, until the Completion Date.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Either Party may terminate this Agreement upon notice in writing if the other is in breach of any material obligation contained in this Agreement, which is not remedied (if the same is capable of being remedied) within 30 days of written notice from the
+                                                                other Party so to do; or a voluntary arrangement is approved, a bankruptcy or an administration order is made or a receiver or administrative receiver is appointed over any of the other Party's
+                                                                assets or an undertaking or a resolution or petition to wind up the other Party is passed or presented (other than for the purposes of amalgamation or reconstruction) or any analogous procedure
+                                                                in the country of incorporation of either party or if any circumstances arise which entitle the Court or a creditor to appoint a receiver, administrative receiver or administrator or to present
+                                                                a winding-up petition or make a winding-up order in respect of the other Party.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Any termination of this Agreement (howsoever occasioned) shall not affect any accrued rights or liabilities of either Party nor shall it affect the coming into force or the continuance in force of any provision hereof which is expressly or by implication
+                                                                intended to come into or continue in force on or after such termination.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p626"><span class="htwt">INDEMNIFICATION AND INSURANCE</span>
+                                                        <div id="p626" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Parties shall indemnify and hold harmless the Company from and against all claims, damages, losses, and expenses arising out of or resulting from acts or omissions of the Expert, Expert’s sub-Experts or otherwise arising out of the performance of services
+                                                                by Expert.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Insurance coverage shall not be reduced below the limits described above or cancelled without TowGig’s written approval of such reduction or cancellation. Reduction, cancellation or termination of insurance coverage, or failure to obtain insurance coverage,
+                                                                without the TowGigs’s written approval shall constitute a material breach of the Agreement and shall automatically terminate the Agreement. Experts shall require that any of its agents or
+                                                                sub-Experts who enter upon the Company’s premises shall maintain like insurance. Certificates of such insurance, of agents and sub-consultants, shall be provided to the TowGig upon request.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p627"><span class="htwt">NOTICE</span>
+                                                        <div id="p627" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Any notice to be given hereunder by either party to the other, shall be in writing and shall be deemed given when sent by certified mail. If either party changes its address during the term herein, it shall so advise the other party in writing as herein
+                                                                provided and any notice thereafter provided to be given shall thereafter be sent by certified mail to such new address.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p628"><span class="htwt">THIRD PARTIES</span>
+                                                        <div id="p628" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Parties understand that TowGig will only refer you to our partners to enjoy some great benefit for being with TowGig. Parties also understand that the Third Parties have their own user policy. You agree to have read and concur to their policy before using
+                                                                any of their services. This Agreement does not and shall not be deemed to confer upon any third party any right to claim damages to bring suit, or other proceeding against either the Buyer,
+                                                                Expert or the Company because of any term contained in this Agreement.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p629"><span class="htwt">ASSIGNMENT</span>
+                                                        <div id="p629" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement is for personal services predicated upon Expert's special abilities or knowledge, and Expert shall not assign this Agreement in whole or in part without prior written consent of the Company.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p631"><span class="htwt">ENTIRE AGREEMENT</span>
+                                                        <div id="p631" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement constitutes the entire agreement and understanding between the parties and supersedes any prior agreement or understanding relating to the subject matter of this Agreement.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p632"><span class="htwt">MODIFICATION</span>
+                                                        <div id="p632" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement may be modified or amended only by a duly authorized written instrument executed by the parties hereto.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p633"><span class="htwt">SEVERABILITY</span>
+                                                        <div id="p633" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                If any of the provisions of this Agreement shall be invalid or unenforceable, such invalidity or unenforceability shall not invalidate or render unenforceable the entire Agreement, but rather the entire Agreement shall be construed as if not containing
+                                                                the particular invalid or unenforceable provision or provisions, and the rights and obligations of the party shall be construed and enforced accordingly, to effectuate the essential intent
+                                                                and purposes of this Agreement.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p634"><span class="htwt">ENFORCEMENT AND WAIVER</span>
+                                                        <div id="p634" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The failure of either party in any one or more instances to insist upon strict performance of any of the terms and provisions of this Agreement, shall not be construed as a waiver of the right to assert any such terms and provisions on any future occasion
+                                                                or of damages caused thereby.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p635"><span class="htwt">NONEXCLUSIVE NATURE</span>
+                                                        <div id="p635" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement does not grant Expert an exclusive privilege or right to supply services to the TowGig. TowGig makes no representations or warranties as to a minimum or maximum procurement of Services hereunder.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p636"><span class="htwt">INTERPRETATION / HEADINGS</span>
+                                                        <div id="p636" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The validity, interpretation and effect of this Agreement shall be determined under the New Hamshire, USA law. All actions arising directly or indirectly as a result or in consequence of this Agreement shall be instituted and litigated only in courts
+                                                                having situs in the City of Bedford, New Hampsire, United States of America. Any provision found to be invalid or unenforceable shall have no effect upon the validity of any other section
+                                                                of this contract.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p637"><span class="htwt">OPT OUT</span>
+                                                        <div id="p637" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                In the event that any Parties need to opt out from the TowGig center, do endeavour to contact us by email or phone to properly delete your account/data.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#p638"><span class="htwt">EFFECTIVE DATE</span>
+                                                        <div id="p638" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The effective date of this Agreement shall be the date first written above regardless of the date when the Agreement is actually signed by the parties.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="Expert-agreement" class=" tab-pane fade in" role="tabpanel">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                                                    <div data-toggle="collapse" data-target="#e2">
+                                                        <div class="text-center">
+                                                            <span class="htwt" style="color: #3d7fc1!important; font-size: 26px!important;text-align: center!important;">TOWGIG SERVICE EXPERT AGREEMENT
+                                                        </span>
+                                                        </div>
+                                                        <div id="e2" class="">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement (the “Agreement”) is made and entered into by and between you, the undersigned Service Provider (hereinafter referred to as “Expert”), an independent Auto Service Provider engaged in the business of performing the services described by
+                                                                this Agreement, and TowGig Technologies (hereinafter referred to as “TowGig” or “Company”). Expert may enter this Agreement either as an individual or as a corporate entity. This Agreement
+                                                                will become effective on the date it is accepted regardless of whether you are eligible to, or ever do, perform any contracted expert Services. PLEASE READ THIS AGREEMENT CAREFULLY.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                TowGig Technologies is an auto-tech platform that enables our users access our world class Auto Services from our professional service providers available round the clock. TowGig was designed to satisfy vehicle owners and third party dealer's needs. TowGig
+                                                                Services includes the ability for users to book appointments, purchase vehicle maintenance services, repairs, roadside assistance, vehicle transportation and related services (Vehicle Services),
+                                                                It also involves Vehicle parts dealers, repair shops and independent Experts (Vehicle Parts Dealers, Mechanics, Towing Companies & Vehicle Transportation Companies).
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                <strong>WHEREAS</strong> Expert is an independent Service provider who is a licensed and skilled motor vehicle specialist authorized to conduct the services of Towing, Fixing, or Hauling
+                                                                BuyersVehicles in the geographic location(s) in which the Expert operates. Expert possesses all equipment and personnel necessary to perform the services described by this Agreement in accordance
+                                                                with applicable laws.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                <strong>WHEREAS</strong> Expert desires to enter into this Agreement for the right to Provide the services of Towing, Fixing, or Hauling opportunities made available through TowGig's platform.
+                                                                Expert understands and expressly agrees that he/she is not an employee of TowGig or other business or consumer and that he/she is providing auto services on behalf of him/herself and his/her
+                                                                business, not on behalf of the Company. Expert understands that he/she
+                                                            </p>
+
+                                                            <ol>
+                                                                <li class="li-p">
+                                                                    is free to select those times he/she wishes to be available on the platform to receive delivery opportunities;
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    is free to accept or reject the opportunities transmitted through the TowGig platform by consumers, and can make such decisions to maximize his/her opportunity to profit; and
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    has the sole right to control the manner in which services are performed and the means by which those deliveries are completed.
+                                                                </li>
+                                                            </ol>
+                                                            <p class="htwp-p mt-2">
+                                                                NOW THEREFORE, for good and valuable consideration, the sufficiency and receipt of which are hereby acknowledged and agreed as well as the mutual promises described herein, the Company and the Expert (hereinafter collectively referred to as “the parties”)
+                                                                hereby agree as follows:
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e3"><span class="htwt">PURPOSE OF THE AGREEMENT</span>
+                                                        <div id="e3" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement governs the relationship between TowGig and the Expert, and establishes the parties’ respective rights and obligations. In exchange for the promises contained in this Agreement, the Expert shall have the right and obligation to perform
+                                                                the “Contracted Services” as defined herein. However, nothing in this Agreement requires the Expert to perform any particular volume of Contracted Services during the term of this Agreement,
+                                                                and nothing in this Agreement shall guarantee Expert any particular volume of business for any particular time period.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert shall have no obligation to accept or perform any particular auto service offered by TowGig. However, once an auto service is accepted, the Expert shall be contractually bound to complete the Contracted Services in accordance with all consumer
+                                                                specifications and the terms laid out in this Agreement.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e131"><span class="htwt">EXPERT SERVICES</span>
+                                                        <div id="e131" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Expert represents that he/she operates an independently established enterprise that offers and provides auto services described on the TowGig platform, which satisfies all legal requirements and has all necessary licenses and permits necessary to perform
+                                                                any services contemplated by this Agreement. As an independent Expert/enterprise, Expert shall be solely responsible for determining how to operate his/her business and how to perform the
+                                                                Contracted Services.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert agrees to fully perform the Contracted Services in a timely, efficient, safe, and lawful manner. TowGig shall have no right to, and shall not, control the manner, method or means Expert uses to perform the Contracted Services. Instead, Expert shall
+                                                                be solely responsible for determining the most effective, efficient, and safe manner to perform the Contracted Services.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                As an independent business enterprise, Expert retains the right to perform services for others and to hold him/herself out to the public as a separately established business. The parties recognize that they are or may be engaged in similar arrangements
+                                                                with others and nothing in this Agreement shall prevent Expert or TowGig from doing business with others. TowGig does not have the right to restrict Expert from performing services for other
+                                                                businesses, customers or consumers at any time, even if such business directly competes with TowGig, and even during the time Expert is logged into the TowGig platform. Expert’s right to
+                                                                compete with TowGig, or perform services for business that compete with TowGig, will survive even after termination of this Agreement.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert is not required to purchase, lease, or rent any products, equipment or services from TowGig as a condition of doing business with TowGig or entering into this Agreement.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert agrees to promptly notify the company if Expert's right to control the manner or method he/she uses to perform services differs from the terms contemplated in this Section.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                                                    <div data-toggle="collapse" data-target="#e112">
+                                                        <div class="">
+                                                            <span class="htwt">PARTIES RESPONSIBILITY
+                                                        </span>
+                                                        </div>
+                                                        <div id="e112" class="collapse">
+
+                                                            <p class="htwp-p mt-2">
+                                                                Occasionally, the TowGig platform will notify Expert of the opportunity to complete auto services listed above in accordance with orders placed by buyers through the TowGig platform. For each Service accepted by the Expert ("Contracted Service"), Expert
+                                                                agrees to retrieve the service orders from the buyers on time and safely, ensure the order is accurately filled, and complete to consumers satisfaction in a safe and timely fashion.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert understands and agrees that the Buyer, not TowGig, establishes the parameters of each Contracted Service and represents the result desired, not the means by which the Expert is to accomplish the result.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert has the right to cancel, from time to time, a Contracted Service when, in the exercise of Expert's reasonable discretion and business judgment, it is appropriate to do so. Notwithstanding the foregoing, Expert agrees to maintain both a customer
+                                                                rating and a completion rate found here as of the date this Agreement becomes effective. Failure to satisfy this obligation constitutes a material breach of this Agreement, and TowGig shall
+                                                                have the right to terminate this Agreement and/or deactivate Expert's account.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert acknowledges that TowGig has discretion as to which or any offer, just as Expert has the discretion whether and to what extent to accept any Delivery Opportunity.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert acknowledges that Expert is engaged in Expert’s own business, separate and apart from TowGig’s business, which is to provide an online marketplace connection using web-based technology that connects Experts, Dealers and Buyers.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert authorizes TowGig, during the course of a Contracted Service, to communicate with Expert, buyers or other business to assist Expert, to the extent permitted by Expert, in facilitating order completion. However, under no circumstances shall TowGig
+                                                                be authorized to control the manner or means by which Expert performs delivery services or other services contemplated under this agreement.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                In the event Expert fails to fully perform any Contracted Service (a "Service Failure") due to Expert's action or omission, Expert shall forfeit all or part of the agreed upon fee for that service. If Expert disputes responsibility for a Service Failure,
+                                                                the dispute shall be resolved pursuant to the "Payment Disputes" provision below.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert agrees to immediately notify TowGig immediately by submitting a Support inquiry through contact page if Expert's services or scope of work differ in any way from what is contemplated in this Section.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                                                    <div data-toggle="collapse" data-target="#e113">
+                                                        <div class="">
+                                                            <span class="htwt">RELATIONSHIP OF PARTIES
+                                                        </span>
+                                                        </div>
+                                                        <div id="e113" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The parties acknowledge and agree that this Agreement is between two co-equal, independent business enterprises that are separately owned and operated. The parties intend this Agreement to create the relationship of principal and independent Expert and
+                                                                not that of employer and employee. The parties are not employees, agents, joint venturers, or partners of each other for any purpose. Party shall have the right to bind the other by contract
+                                                                or otherwise except as specifically provided in this Agreement.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                TowGig shall not have the right to, and shall not, control the manner or the method of accomplishing Contracted Services to be performed by Expert. The parties acknowledge and agree that those provisions of the Agreement reserving ultimate authority in
+                                                                TowGig have been inserted solely for the safety of Buyers and other Experts using the Towgig platform or to achieve compliance with federal, state, or local laws, regulations, and interpretations
+                                                                thereof.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                TowGig shall report all payments made to Expert on a calendar year basis using an appropriate IRS Form 1099, if the volume of payments to Expert qualify. Expert agrees to report all such payments and any cash gratuities to the appropriate federal, state
+                                                                and local taxing authorities.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e4"><span class="htwt">EXPERT INDEPENDENT CONTRACTOR STATUS</span>
+                                                        <div id="e4" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Expert is an independent Contractor, and neither Expert nor Expert's employees or contract personnel are, or shall be deemed, TowGig's employees. In its capacity as an independent Expert, Expert agrees and represents, and TowGig agrees, as follows:
+                                                            </p>
+                                                            <ol>
+                                                                <li class="li-p">
+                                                                    Expert has the right to perform services for others during the term of this Agreement.
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    Expert has the sole right to control and direct the means, manner, and method by which the services required by this Agreement will be performed. Expert shall select the routes taken, starting and quitting times, days of work, and order the work is performed.
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    Expert has the right to hire assistants as sub-experts or to use employees to provide the services required by this Agreement.
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    Neither Expert nor Expert's employees or contract personnel shall be required to wear any uniforms provided by TowGig Technologies.
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    The services required by this Agreement shall be performed by Expert, Expert's employees, or contract personnel, and TowGig shall not hire, supervise, or pay any assistants to help Expert.
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    Neither Expert nor Expert's employees or contract personnel shall receive any training from TowGig in the professional skills necessary to perform the services required by this Agreement.
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    Neither Expert nor Expert's employees or contract personnel shall be required by TowGig to devote full time to the performance of the services required by this Agreement.
+                                                                </li>
+
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e5"><span class="htwt">PAYMENT FOR SERVICES</span>
+                                                        <div id="e5" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                In consideration for the services to be performed by Expert, the Company agrees to pay Expert at the following rates: ____________________________. Unless notified otherwise by TowGig in writing or except as provided herein, Expert will receive payment
+                                                                per accurate Contracted Service completed in an amount consistent with the publicly provided pay model, which you can view here. From time to time, TowGig may offer opportunities for Expert
+                                                                to earn more money for performing Contracted Services at specified times or in specified locations.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Nothing prevents the parties from negotiating a different rate of pay, and Expert is free to accept or deny any such opportunities to earn different rates of pay. TowGig may permit Buyers to add a bonus to be paid to Expert, and Buyers can give a bonus
+                                                                to Expert in cash or kind. Expert shall retain 100% of any bonus paid by the Buyer, whether by cash or credit card. TowGig acknowledges it has no right to interfere with the amount of bonus
+                                                                given by the Buyer to the Expert.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                TowGig will process payments made by Buyers and then transmit to Expert. Payments for all completed Service in two (2) weeks will be transferred to Expert via Expert choice of recievng payments for all completed services assigned on the platform.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                From time to time, TowGig may offer various promotions or referral programs. Expert agrees that Expert will not manipulate or abuse the referral programs or promotions by, among other things:
+                                                            </p>
+                                                            <ol>
+                                                                <li class="li-p">
+                                                                    tampering with the location feature on his or her mobile phone
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    collecting incentive or promotional pay when not eligible to receive such pay under relevant policies; or,
+                                                                </li>
+                                                                <li class="li-p">
+                                                                    creating multiple Expert accounts.
+                                                                </li>
+                                                            </ol>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert understands that engaging in this type of manipulation or abuse constitutes a material breach of this Agreement and may lead to deactivation of his or her account.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Service completion shall be defined as the fulfillment of Services as described in accordance with industry standards and to the approval of the Company, not to be unreasonably withheld.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e115"><span class="htwt">PAYMENT DISPUTES</span>
+                                                        <div id="e115" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                <strong>Expert's Failure: </strong> In the event there is a Service Failure, Expert shall not be entitled to payment as described within this agreement. Any withholding of payment shall be
+                                                                based upon proof provided by the Buyer, or other business, Expert, and any other party with information relevant to the dispute. TowGig shall make the initial determination as to whether
+                                                                a Service Failure was the result of Expert's action/omission. Expert shall have the right to challenge TowGig’s determination through any legal means contemplated by this Agreement; however,
+                                                                Expert shall immedietly notify the company via Phone Call or Support Page of the challenge and provide TowGig the opportunity to resolve the dispute. Expert should include any documents or
+                                                                other information in support of his/her challenge.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                <strong>TowGig’s Failure:</strong> In the event TowGig fails to remit payment in a timely or accurate manner, Expert shall have the right to seek proper payment by any legal means contemplated
+                                                                by this Agreement and, should Expert prevail, shall be entitled to recover reasonable costs incurred in pursuing proper payment, provided, however, Expert shall first inform TowGig in writing
+                                                                of the failure and provide a reasonable opportunity to solve it.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e1115"><span class="htwt">EXPERT EQUIPMENT AND EXPENSES </span>
+                                                        <div id="e1115" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Expert represents that he/she has or can lawfully acquire all equipment, including vehicles, tools and machineries ("Equipment") necessary for performing Contracted Services, and Expert is solely responsible for ensuring that all equipment used conforms
+                                                                to all vehicle laws pertaining to safety, equipment, inspection, and operational capability.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert agrees that he/she is responsible for all costs and expenses arising from Expert's performance of Contracted Services, including, but not limited to, costs related to Expert's Personnel and Equipment. Except as otherwise required by law, Expert
+                                                                assumes all risk of damage or loss to its Equipment.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e6"><span class="htwt">EXPERT PERSONNEL</span>
+                                                        <div id="e6" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                In order to perform any Contracted Services, Expert must, for the safety of Buyers on the TowGig platform, pass a background check administered by TowGig assigned third-party vendor, subject to Expert's lawful consent. Expert is not required to perform
+                                                                any Contracted Services personally, but may, to the extent permitted by law and subject to the terms of this Agreement, hire or engage others (as employees or sub-experts of Expert) to perform
+                                                                all or some of the Contracted Services, provided any such employees or sub-experts meet all the requirements applicable to Expert including, but not limited to, the background check requirements
+                                                                that Expert must meet in order to perform Contracted Services. To the extent, Expert furnishes his/her own employees or sub-experts (collectively "Expert Personnel"), Expert shall be solely
+                                                                responsible for the direction and control of the Personnel it uses to perform all Contracted Services.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert assumes full and sole responsibility for the payment of all amounts due to his/her Personnel for work performed in relation to this Agreement, including all wages, benefits and expenses, if any, and for all required state and federal income tax
+                                                                withholdings, unemployment insurance contributions, and social security taxes as to Expert and all Personnel employed by Expert in the performance of Contracted Services under this Agreement.
+                                                                TowGig shall have no responsibility for any wages, benefits, expenses, or other payments due Expert's Personnel, nor for income tax withholding, social security, unemployment insurance contributions,
+                                                                or other payroll taxes relating to Expert or his/her Personnel. Neither Expert nor his/her Personnel shall receive any wages, including vacation pay or holiday pay, from the company, nor
+                                                                shall they participate in or receive any other benefits, if any, available to TowGig's employees.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Unless mandated by law, TowGig shall have no authority to withhold state or federal income taxes, social security taxes, unemployment insurance taxes/contributions, or any other local, state or federal tax on behalf of Expert or his/her Personnel.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert and Expert’s Personnel shall not be required to wear a uniform or other clothing of any type bearing TowGig's name or logo. If Expert uses the services of any Personnel to perform the Contracted Services, Expert's Personnel must satisfy and comply
+                                                                with all of the terms of this Agreement, which Expert must make enforceable by written agreement between Expert and such Personnel. A copy of such written agreement must be provided to TowGig
+                                                                at least 7 days in advance of such Personnel performing the Contracted Services. The parties acknowledge that the sole purpose of this requirement is to ensure Expert's compliance with the
+                                                                terms of this Agreement.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert represents and warrants that Expert and Expert's employees and contract personnel will comply with all federal, state, and local laws requiring drivers and other licenses, business permits, and certificates required to carry out the services to
+                                                                be performed under this Agreement.
+                                                            </p>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e116"><span class="htwt">CONFIDENTIALITY</span>
+                                                        <div id="e116" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The Expert acknowledges that it will be necessary for the Buyer to disclose certain confidential and proprietary information to the Expert in order for the Expert to perform their duties under this Agreement. The Expert acknowledges that disclosure to
+                                                                a third party or misuse of this proprietary or confidential information would irreparably harm the Buyer. Accordingly, the Expert will not disclose or use, either during or after the term
+                                                                of this Agreement, any proprietary or confidential information of the Buyer without the Buyer's prior written permission except to the extent necessary to perform Services on the Buyer's
+                                                                behalf.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Proprietary or confidential information includes, but is not limited to: The written, printed, graphic, or electronically recorded materials furnished by The company for Expert to use; Any written or tangible information stamped “confidential,” “proprietary,”
+                                                                or with a similar legend, or any information that TowGig makes reasonable efforts to maintain the secrecy of business or marketing plans or strategies, customer lists, operating procedures,
+                                                                trade secrets, design formulas, know-how and processes, computer programs and inventories, discoveries, and improvements of any kind, sales projections, and pricing information; and information
+                                                                belonging to customers and suppliers of the Company about whom the Expert gained knowledge as a result of the Expert's Services to Buyers.Upon termination of the Expert's Services to the
+                                                                Buyer, or at the Buyer's request, the Expert shall deliver to the Buyer all materials in the Expert's possession relating to TowGig Buyer's business.The Expert acknowledges any breach or
+                                                                threatened breach of confidentiality that this Agreement will result in irreparable harm to the Buyer for which damages would be an inadequate remedy. Therefore, the Buyer shall be entitled
+                                                                to equitable relief, including an injunction, in the event of such breach or threatened breach of confidentiality. Such equitable relief shall be in addition to the Buyer's rights and remedies
+                                                                otherwise available at law.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e1116"><span class="htwt">PROPRIETARY INFORMATION</span>
+                                                        <div id="e1116" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Expert hereby assigns to TowGig all right, title, and interest in any and all photographic images and videos or audio recordings made by TowGig during Expert’s work for them, including, but not limited to, any royalties, proceeds, or other benefits derived
+                                                                from such photographs or recordings; and TowGig will be entitled to use Expert's name and/or likeness in advertising and other materials.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e7"><span class="htwt">INSURANCE</span>
+                                                        <div id="e7" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                TowGig shall not provide insurance coverage of any kind for Expert or Expert's employees or contract personnel. Expert shall obtain the following insurance coverage and maintain it during the entire term of this Agreement:
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Automobile liability insurance for each vehicle used in the performance of this Agreement including owned, non-owned (for example, owned by Expert's employees), leased, or hired vehicles.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Comprehensive or commercial general liability insurance coverage in the minimum amount of $______ combined single limit, including coverage for bodily injury, personal injury, broad form property damage, contractual liability, and cross-liability.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Before commencing any work, Expert shall provide TowGig with proof of this insurance and with proof that TowGig has been made an additional insured under the policies.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e117"><span class="htwt">INDEMNITY</span>
+                                                        <div id="e117" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                TowGig agrees to indemnify, protect and hold harmless Expert from any and all claims, demands, damages, suits, losses, liabilities and causes of action arising directly from TowGig's actions arranging and offering the Contracted Services to Expert.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert agrees to indemnify, protect and hold harmless TowGig, including all parent, subsidiary and/or affiliated companies, as well as its and their past and present successors, assigns, officers, owners, directors, agents, representatives, attorneys,
+                                                                and employees, from any and all claims, demands, damages, suits, losses, liabilities and causes of action arising directly or indirectly from, as a result of or in connection with, the actions
+                                                                of Expert and/or his/her Personnel arising from the performance of service delivery under this Agreement, including personal injury or death to any person (including to Expert and/or his/her
+                                                                Personnel), as well as any liability arising from Expert's failure to comply with the terms of this Agreement. Expert's obligations hereunder shall include the cost of defense, including
+                                                                attorneys' fees, as well as the payment of any final judgment rendered against or settlement agreed upon by TowGig or its parent, subsidiary and/or affiliated companies.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert agrees to indemnify, protect and hold harmless TowGig, including all parent, subsidiary, and/or affiliated companies, as well as its and their past and present successors, assigns, officers, owners, directors, agents, representatives, attorneys,
+                                                                and employees, from any and all tax liabilities and responsibilities for payment of all federal, state and local taxes, including, but not limited to all payroll taxes, self-employment taxes,
+                                                                workers compensation premiums, and any contributions imposed or required under federal, state and local laws, with respect to Expert and Expert's Personnel.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert shall be responsible for, indemnify and hold harmless TowGig, including all parent, subsidiary, and/or affiliated companies, as well as its and their past and present successors, assigns, officers, owners, directors, agents, representatives, attorneys,
+                                                                and employees, from all costs of Expert's business, including, but not limited to, the expense and responsibility for any and all applicable insurance, local, state or federal licenses, permits,
+                                                                taxes, and assessments of any and all regulatory agencies, boards or municipalities.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e611"><span class="htwt">ARBITRATION </span>
+                                                        <div id="e611" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                You and TowGig Technologies agree to arbitrate any dispute that arises or is related to the Terms or Services, except in the case where either party seeks equitable and any relief for the alleged unlawful use of copyrights, trademarks, trade names, trade
+                                                                secrets, logos, or patents; and that any arbitration prevents you from suing in court or from having a jury trial. Arbitration prevents you from suing in court or from having a jury trial
+                                                                and the arbitration will occur in Bedford, New Hampshire. The arbitration will be confidentially conducted by a single arbitrator in accordance with the rules of the State or Federal courts
+                                                                of Bedford, New Hampshire shall have exclusive jurisdiction over any appeals of an arbitration award and any other suit, if any, between the parties that is not subject to arbitration.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The proceedings shall be in English, all evidence shall be in English (or translated into English) and the governing law shall be as set forth herein. The arbitrator’s decision shall be in writing and shall comply with all terms and conditions in the
+                                                                applicable version of the Terms of Service. The decision and award rendered shall be final and binding on both parties. You and TowGig Technologies agree that any dispute heard in arbitration
+                                                                or in court will not commence against the other a class action, class arbitration or representative action or proceeding.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The prevailing party, also known as the winner, will be able to recover its attorney’s fees and other reasonable costs for a dispute resolved by binding arbitration or litigation.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e612"><span class="htwt">GOVERNING LAW </span>
+                                                        <div id="e612" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                The interpretation and execution of these Terms, and the relationship between you and TowGig Technologies, shall be governed and construed in accordance with the laws of New Hamshire, USA. Any claim or dispute arising either directly or indirectly out
+                                                                of these Terms shall be brought before a court of competent jurisdiction in the City of Bedford, New Hampsire, United States of America. The United Nations Convention on Contracts for the
+                                                                International Sale of Goods shall not apply to the Terms of Service.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e613"><span class="htwt">TERMINATION OF AGREEMENT</span>
+                                                        <div id="e613" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Expert may terminate this Agreement upon seven (7) days written notice. TowGig may terminate this Agreement and deactivate Expert’s account only for the reasons set forth in the TowGig Termination Clause, or for a material breach of this Agreement. Notwithstanding
+                                                                any other provision in this Agreement, TowGig reserves the right to modify the Termination Clause if, in TowGig’s good faith and reasonable discretion, it is necessary to do so for the safe
+                                                                and/or effective operation of the TowGig platform. TowGig shall provide notice of any such changes to Expert via e-mail. Changes to the termination clause shall be effective and binding on
+                                                                the parties upon Expert’s continued use of the TowGig platform following TowGig’s e-mail notice of such modifications. Nothing will prevent Expert from attempting to negotiate an exemption
+                                                                from any modification to the Termination Clause.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Expert’s and TowGig’s obligations and rights arising under the Arbitration Provision of this Agreement shall survive termination of this Agreement. Notwithstanding any other provision in this Agreement, the Termination Policy is subject to change; such
+                                                                changes shall be effective and binding on the parties upon TowGig’s provision of notice to Expert via e-mail.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e614"><span class="htwt">SEVERABILITY </span>
+                                                        <div id="e614" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Except as specifically provided in the Arbitration Section, if any part of this Agreement is declared unlawful or unenforceable, the remainder of this Agreement shall remain in full force and effect.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e615"><span class="htwt">NO PARTNERSHIP </span>
+                                                        <div id="e615" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement does not create a partnership relationship between the Company and the Expert. Unless otherwise directed, the Expert shall have no authority to enter into contracts on the company's behalf or represent TowGig in any manner.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e616"><span class="htwt">HEADINGS / INTERPRETATION</span>
+                                                        <div id="e616" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Captions appearing in this Agreement are for convenience only and do not in any way limit, amplify, modify, or otherwise affect the terms and provisions of this Agreement.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e617"><span class="htwt">ENTIRE AGREEMENT, TRANSFERABILITY, AND WAIVER</span>
+                                                        <div id="e617" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement shall constitute the entire agreement and understanding between the parties with respect to the subject matter of this Agreement and shall not be modified, altered, changed or amended in any respect, unless in writing and signed by both
+                                                                parties.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                Before accepting any modifications, alterations, changes or amendments, Expert shall have the right to discuss any proposed changes with TowGig and consider whether to continue the contractual relationship with TowGig. This Agreement supersedes any prior
+                                                                contract between the parties.
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                This Agreement may not be assigned by either party without written consent of the other and shall be binding upon the parties hereto, including their heirs and successors, provided, however, that TowGig may assign its rights and obligations under this
+                                                                Agreement to an affiliate of TowGig or any successor(s) to its business and/or purchaser of substantially all of its stock or assets. References in this Agreement to TowGig shall be deemed
+                                                                to include such successor(s).
+                                                            </p>
+                                                            <p class="htwp-p mt-2">
+                                                                The failure of Towgig or Expert in any instance to insist upon a strict performance of the terms of this Agreement or to exercise any option herein, shall not be construed as a waiver or relinquishment of such term or option and such term or option shall
+                                                                continue in full force and effect.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e618"><span class="htwt">ADDITIONAL TERMS AND CONDITIONS</span>
+                                                        <div id="e618" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                __________________________________________________________________________ __________________________________________________________________________ __________________________________________________________________________
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div data-toggle="collapse" data-target="#e619"><span class="htwt">BREACH WAIVER</span>
+                                                        <div id="e619" class="collapse">
+                                                            <p class="htwp-p mt-2">
+                                                                Any waiver by TowGig of a breach of any section of this Agreement by the Expert shall not operate or be construed as a waiver of any subsequent breach by the Expert.
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div class="">
+                                                        <p class="htwp-p mt-2">
+                                                            TowGig’s Signature____________________________________ Date ________________
+                                                        </p>
+                                                        <p class="htwp-p mt-2">
+                                                            Print Name ______________________________________________________________
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div class="">
+                                                        <p class="htwp-p mt-2">
+                                                            Expert’s Signature____________________________________ Date ________________
+                                                        </p>
+                                                        <p class="htwp-p mt-2">
+                                                            Print Name ______________________________________________________________
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                                    <div><span class="htwt" style="color:#007bff;">CONTACT</span>
+                                                        <div id="p22">
+                                                            <p class="htwp-p mt-2">If there are any questions regarding this agreement you may contact us using the information below.</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <note>TowGig Technologies:</note>
+                                                    <address>1 Hardy Road
+                                                    #1206 Bedford,
+                                                    NH 03110. US
+                                                    </address>
+                                                    <a href="towgig.com" style="text-decoration: underline;">www.towgig.com </a> <br>
+                                                    <div style="color: #007bff;">atumf@towgig.com</div>
+                                                    <p class="htwp-p mt-2 mb-4">You hereby acknowledge that you have read and understood this Agreement and agree that by clicking "Accept" or by installing, copying, or using the Application you are acknowledging your agreement to
+                                                        be bound by this Agreement</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                        <div class="text-center">
+                            <p class="htwp-p mt-2" style="font-size: 24px!important;color: #42b883!important;">
+                                You'll get your signed Agreement copy by email
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="container">
+                    <div class="row mt-3">
+                        <span class="htwt" style="color:#007bff;">Data Protection Officer</span>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <p class="htwp-p mt-2">TowGig Technologies has appointed a designated Data Protection Officers who can be reached at:</p>
+                            <span>Email: <span style="color: #007bff;"> atumf@towgig.com</span></span> 
+                        </div>
+                    </div>      
+                </div> -->
+                <!-- <div class="container">
+                <div class="row mt-2">
+                    
+                    
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- <div id="aboutcontainer5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 offset-1 col-md-8 col-sm-12 col-xsm-12 ">
+                    <h2 class="pt-3">Download the app and Sign Up <strong>For Free</strong></h2>
+                    <button class="btn btn-outline-primary abtcontainer5-button">Get the App</button>
+                </div>
+                <div class="col-lg-1 col-md-3 col-sm-12 col-xsm-12">
+                    <img src="img/TowGig-3.png" class="TowGig3-img" alt="TowGig-3">
+                </div> 
+                <div class="col-lg-5 col-md-8 col-sm-12 col-xsm-12 offset-2  ">
+                    <br>
+                    <h2 class="cntnr5h2">We have a lot discounts available here.</h2>
+                    <button class="button container5-button-right">GO HERE</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div id="container7">
+        <div id="jssor_1">
+            <div data-u="loading" class="jssorl-009-spin">
+                <img class="img-style" src="img/spin.svg" />
+            </div>
+            <div data-u="slides" class="sliderdiv1">
+                <div class="imgpad">
+                    <img data-u="image" src="img/subaru.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/stripe.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/paypal.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/mobius.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div><a data-u="any" href="https://www.jssor.com" style="display:none">web design</a>
+            </div>
+        </div>
+    </div> -->
+    <input class="checkbox-cb" id="checkbox-cb" type="checkbox" />
+    <!-- <div class="cookie-bar">
+    <span class="message">Visit to our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
+    <span class="mobile">Visit our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
+    <label for="checkbox-cb" class="close-cb">x</label>
+    </div> -->
+    <footer class="page-footer font-small stylish-color-dark pt-4 abtfooter">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class=" text-white mt-3 mb-4">Platform</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="services&promo.html">Service/Promo</a>
+                        </li>
+                        <li>
+                            <a href="benefit&bonus.html">Benefit/Bonus</a>
+                        </li>
+                        <li>
+                            <a href="how-it-works.html">How it works</a>
+                        </li>
+                        <li>
+                            <a href="costing.html">Costing</a>
+                        </li>
+                        <li>
+                            <a href="https://apps.apple.com/pk/app/towgig/id1507223706"><img alt="iosbtn" class="footer-img1" src="img/iosbtn.png" /></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.crymzee.towgig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class="text-white mt-3 mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="partner-with-us.html">Partner With Us</a>
+                        </li>
+                        <li>
+                            <a href="index.php#TowTruckNearMe">Tow Truck Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#!">Site Map</a>
+                        </li>
+                        <li><a href="blog.php">Blog</a>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class="text-white mt-3 mb-4">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="terms.html">Terms and Condition</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="refundPolicy.html">Refund Policy</a>
+                        </li>
+                        <li>
+                            <a href="user-agreement.html">End User License Agreement(EULA)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <ul class="list-unstyled list-inline text-center footersocial">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1 footersocial" href="https://www.youtube.com/channel/UCoC2uDJq_ZWqwTVGQs4z1ag">
+                    <i class="fab fa-youtube fa-1x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1 footersocial" href="https://twitter.com/towgig">
+                    <i class="fab fa-twitter fa-1x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1 footersocial" href="https://www.facebook.com/TowGig-Technologies-100417204767612/">
+                    <i class="fab fa-facebook-f fa-1x"> </i>
+                </a>
+            </li>
+
+        </ul>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2020 TowGig Technologies
+        </div>
+        <div class="footer-copyright text-center py-3 text-muted"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- MODEL-BOX -->
+    <div class="modal fade" id="Modal-expert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right model-pad">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <p class="boxmp">Meet Amazing Buyers Waiting for Your Service,It only takes 3-6 minutes to sign up & start earning.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp mt-2">For a quick sign up, Please enter your</p>
+                                                <section class="mx-2 pb-3 text-center">
+                                                    <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#signupemail" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                        </li>
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#signupphone" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContentMD">
+                                                        <div class="tab-pane fade in show active" id="signupemail" role="tabpanel" aria-labelledby="home-tab-md">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="signupphone" role="tabpanel" aria-labelledby="profile-tab-md">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number" value="" required/>
+                                                                <br>
+                                                                <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <!-- <p class="mbp1 mt-1 mt-3 ml-3">The App Link will be send to you, now</p> -->
+                                        <p class="mbp1 ml-3 mt-2" style="color:#424141e0!important;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for doing Business with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Modal-buyer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right model-pad">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <p class="boxmp">A Diligence Expert is waiting to come service your vehicle.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp mt-1">For a quick sign up, Please enter your</p>
+                                                <section class="mx-2 pb-3 text-center">
+                                                    <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link active" id="home-tab-mdb" data-toggle="tab" href="#signupemailb" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                        </li>
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link" id="profile-tab-mdb" data-toggle="tab" href="#signupphoneb" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContentMDb">
+                                                        <div class="tab-pane fade in show active" id="signupemailb" role="tabpanel" aria-labelledby="home-tab-mdb">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="signupphoneb" role="tabpanel" aria-labelledby="profile-tab-mdb">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number1" value="" required/>
+                                                                <br>
+                                                                <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                            </div>
+                                        </div>
+                                        <!-- <p class="mbp1 mt-1 ml-3">The App Link will be send to you, now</p> -->
+                                        <p class="mbp1 ml-3 mt-2" style="color:#424141e0!important;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for Being an Amazing Buyer with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $Idle: 0,
+                $SlideDuration: 5000,
+                $SlideEasing: $Jease$.$Linear,
+                $SlideWidth: 140,
+                $Align: 0
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin spin css*/
+        
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#phone_number"), {
+            separateDialCode: true,
+            preferredCountries: ["us"],
+            hiddenInput: "full",
+            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+        });
+
+        $("form").submit(function() {
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("input[name='phone_number[full]'").val(full_number);
+            alert(full_number);
+        });
+    </script>
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#phone_number1"), {
+            separateDialCode: true,
+            preferredCountries: ["us"],
+            hiddenInput: "full",
+            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+        });
+
+        $("form").submit(function() {
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("input[name='phone_number[full]'").val(full_number);
+            alert(full_number);
+        });
+    </script>
+    <script type="text/javascript">
+        jssor_1_slider_init();
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

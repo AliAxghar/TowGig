@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TowGig</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+</head>
+
+<body class="aboutbody" id="aboutus">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <img src="img/logo.png" alt="">
+                <p class="lslogan">TowGig, Brings Auto Smiles</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-works.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign Up
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a data-toggle="modal" data-target="#Modal-buyer" class="dropdown-item" href="#">Buyer</a>
+                            <a data-toggle="modal" data-target="#Modal-expert" class="dropdown-item" href="#">Expert</a>
+                            <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
+                        <a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="#">Expert</a> -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="modal" id="myModal">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone*" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    </div>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal1">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email/Username" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password" value="" />
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal2" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent2">
+                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group filel pb-1">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="File01">Upload Selfie/Logo</label>                                      
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Town" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Zip Code" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Towing Hauling Cars Dot Number" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class=" filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label1" for="File01">Professional License </label>                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business or Personal Address" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Province/State" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Country" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label2" for="File01">Insurance Policy (Front)</label>                                      
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal3" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal3">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank/Branch Name" value="" />
+                                    </div>
+                                    <div class="form-group" style="color: #6c757d;">
+                                        Date of Birth:<input type="date" class="form-control" placeholder="Date of Birth" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Employee Identity No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" name="Phone" class="form-control" placeholder="Confirm Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Routing No" value="" />
+                                    </div>
+                                    <label for="choose-services" style="color: #6c757d;">Choose Services:</label>
+                                    <br>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tow Haul
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Flat Type
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Replace Battery
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Engin Light On
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Jump Start
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox"  class="mr-1" value="">Lockout
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Gas/Diesel Refill
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tyre/Car Vibration
+                                    </label>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="aboutcontainer3" class="promopage1" style="padding-bottom: 0px;">
+        <div class="container htw">
+            <h2 class="privacyh2">OUR COOKIE POLICY</h2>
+        </div>
+        <div class="container htw mt-4 privacy_p">
+            <div id="serviceid ">
+                <div class="pt-2">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <!-- <div data-toggle="collapse" data-target="#p1"><span class="htwt">INTRODUCTION</span>
+                            <div id="p1" class="collapse"> -->
+                            <div>
+                                <div id="p1">
+                                    <p class="htwp-p mt-2">
+                                        This Cookie Policy explains how TowGig Technologies ("TowGig", "we", "us", and "our") uses cookies and similar technologies to recognize you when you visit our websites at http://www.towgig.com, ("Site"). It explains what these technologies are and why
+                                        we use them, as well as your rights to control our use of them.
+                                    </p>
+                                    <p class="htwp-p mt-2">
+                                        In some cases, we may use cookies to collect personal information, or that becomes personal information if we combine it with other information.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                            <div><span class="htwt">What are Cookies?
+                        </span>
+                                <div id="p2">
+                                    <p class="htwp-p mt-2">Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as
+                                        well as to provide reporting information.</p>
+                                    <p class="htwp-p mt-2">Cookies set by TowGig Technologies are called "first party cookies". Cookies set by parties other than the us, are called "third party cookies". Third party cookies enable third party features or functionality to be
+                                        provided on or through the website (e.g. like advertising, interactive content and analytics). The parties that set these third party cookies can recognize your computer both when it visits the website in question
+                                        and also when it visits certain other websites.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div><span class="htwt">How Our Cookies Benefit You</span>
+                                <div id="p3">
+                                    <p class="htwp-p mt-2">
+                                        Our site utilizes Cookies, as practically all sites do, to help give you the best experience we can. Our Cookies help us:
+                                    </p>
+                                    <ul>
+                                        <li class="li-p">Make our site function as you'd anticipate</li>
+                                        <li class="li-p">Remember your settings amid and between visits</li>
+                                        <li class="li-p">Improve the speed/security of the site</li>
+                                        <li class="li-p">Continuously improve our website for you</li>
+                                        <li class="li-p">Make our marketing more efficient (ultimately helping us to offer the service we do at the price we do)</li>
+                                    </ul>
+                                    <p class="htwp-p mt-2">We do not use cookies to:</p>
+                                    <ul>
+                                        <li class="li-p">Collect any personally identifiable information (without your express permission)</li>
+                                        <li class="li-p">Collect any sensitive information (without your express permission)</li>
+                                        <li class="li-p">Pass personally identifiable data to third parties</li>
+                                        <li class="li-p">Pay sales commissions</li>
+                                    </ul>
+                                    <p class="htwp-p mt-2">You can learn more about all the cookies we use below</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p4"><span class="htwt">Why Do We Use Cookies?</span>
+                                <div id="p4" class="collapse">
+                                    <p class="htwp-p mt-2">
+                                        We use first and third party cookies for several reasons. Some cookies are required for technical reasons in order for our Websites to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies also enable us to track
+                                        and target the interests of our users to enhance the experience on our site. Third parties serve cookies through our Websites for advertising, analytics and other purposes. This is described in more detail below.
+                                    </p>
+                                    <p class="htwp-p mt-2">
+                                        The specific types of first and third party cookies served through our Websites and the purposes they perform are described below (please note that the specific cookies served may vary depending on the specific Online Properties (Mobile App or Website)
+                                        that you visit):</p>
+                                    <ol>
+                                        <li><strong>Essential website cookies:</strong> These cookies are strictly necessary to provide you with services available through our Websites and to use some of its features, such as access to secure areas.</li>
+                                        <li><strong>Performance Cookies:</strong> These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least
+                                            popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site,
+                                            and will not be able to monitor its performance.</li>
+                                        <li><strong>Functionality Cookies:</strong> These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third party providers whose services we have added to our
+                                            pages. If you do not allow these cookies then some or all of these services may not function properly.</li>
+                                        <li><strong>Analytics and customization cookies:</strong> These cookies collect information that is used either in aggregate form to help us understand how our Websites are being used or how effective our marketing
+                                            campaigns are, or to help us customize our Websites for you.</li>
+                                        <li><strong>Unclassified cookies:</strong> These are cookies that have not yet been categorized. We are in the process of classifying these cookies with the help of their providers.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p5"><span class="htwt">Tracking Technologies, like Web Beacons</span>
+                                <div id="p5" class="collapse">
+                                    <p class="htwp-p mt-2">Cookies are not the only way to recognize or track visitors to a website. We may use other, similar technologies from time to time, like web beacons (sometimes called "tracking pixels" or "clear gifs"). These are tiny
+                                        graphics files that contain a unique identifier that enable us to recognize when someone has visited our Websites or opened an e-mail including them. This allows us, for example, to monitor the traffic patterns
+                                        of users from one page within a website to another, to deliver or communicate with cookies, to understand whether you have come to the website from an online advertisement displayed on a third-party website, to
+                                        improve site performance, and to measure the success of e-mail marketing campaigns. In many instances,these technologies are reliant on cookies to function properly, and so declining cookies will impair their functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p6"><span class="htwt">Do we use Flash cookies or Local Shared Objects?</span>
+                                <div id="p6" class="collapse">
+                                    <p class="htwp-p mt-2">Websites may also use so-called "Flash Cookies" (also known as Local Shared Objects or "LSOs") to, among other things, collect and store information about your use of our services, fraud prevention and for other site
+                                        operations.
+                                    </p>
+                                    <p class="htwp-p mt-2">If you do not want Flash Cookies stored on your computer, you can adjust the settings of your Flash player to block Flash Cookies storage using the tools contained in the Website Storage Settings Panel . You can also
+                                        control Flash Cookies by going to the Global Storage Settings Panel and following the instructions (which may include instructions that explain, for example, how to delete existing Flash Cookies (referred to "information"
+                                        on the Macromedia site), how to prevent Flash LSOs from being placed on your computer without your being asked, and (for Flash Player 8 and later) how to block Flash Cookies that are not being delivered by the operator
+                                        of the page you are on at the time).</p>
+                                    <p class="htwp-p mt-2">Please note that setting the Flash Player to restrict or limit acceptance of Flash Cookies may reduce or impede the functionality of some Flash applications, including, potentially, Flash applications used in connection
+                                        with our services or online content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p7"><span class="htwt">Targeted Advertising</span>
+                                <div id="p7" class="collapse">
+                                    <p class="htwp-p mt-2">Third parties may serve cookies on your computer or mobile device to serve advertising through our Websites. These companies may use information about your visits to this and other websites in order to provide relevant
+                                        advertisements about goods and services that you may be interested in. They may also employ technology that is used to measure the effectiveness of advertisements. This can be accomplished by them using cookies
+                                        or web beacons to collect information about your visits to this and other sites in order to provide relevant advertisements about goods and services of potential interest to you. The information collected through
+                                        this process does not enable us or them to identify your name, contact details or other details that directly identify you unless you choose to provide these.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p8"><span class="htwt">Cookie Policy Update</span>
+                                <div id="p8" class="collapse">
+                                    <p class="htwp-p mt-2">We may update this Cookie Policy from time to time in order to reflect, for example, changes to the cookies we use or for other operational, legal or regulatory reasons. Please therefore re- visit this Cookie Policy
+                                        regularly to stay informed about our use of cookies and related technologies.</p>
+                                    <p class="htwp-p mt-2">The date at the top of this Cookie Policy indicates when it was last updated.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p9"><span class="htwt">Controling Cookies</span>
+                                <div id="p9" class="collapse">
+                                    <p class="htwp-p mt-2">You have the right to decide whether to accept or reject cookies. You can exercise your cookie rights by setting your preferences in the Cookie Consent Manager. The Cookie Consent Manager allows you to select which
+                                        categories of cookies you accept or reject. Essential cookies cannot be rejected as they are strictly necessary to provide you with services.</p>
+                                    <p class="htwp-p mt-2">The Cookie Consent Manager can be found in the notification banner and on our website. If you choose to reject cookies, you may still use our website though your access to some functionality and areas of our website
+                                        may be restricted. You may also set or amend your web browser controls to accept or refuse cookies. As the means by which you can refuse cookies through your web browser controls vary from browser-to-browser, you
+                                        should visit your browser's help menu for more information.</p>
+                                    <p class="htwp-p mt-2">In addition, most advertising networks offer you a way to opt out of targeted advertising. If you would like to find out more information, please visit <a href="http://www.aboutads.info/choices/">http://www.aboutads.info/choices/</a>                                        or <a href="http://www.youronlinechoices.com">http://www.youronlinechoices.com</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p0"><span class="htwt">Turning Cookies Off</span>
+                                <div id="p0" class="collapse">
+                                    <p class="htwp-p mt-2">You can forestall the background of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be cognisant that disenabling cookies will feign the functionality of this and many other
+                                        websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the site. Therefore it is recommended that you do not disable cookies.</p>
+                                    <p class="htwp-p mt-2">Most browsers allow you to refuse to accept cookies; for example:</p>
+                                    <ul>
+                                        <li><strong>In Internet Explorer</strong> you can block cookies using the cookie handling override settings available by clicking "Tools", "Internet Options", "Privacy" and then" Advanced";</li>
+                                        <li><strong>In Firefox</strong> you can block all cookies by clicking "Tools", "Options", "Privacy", selecting "Use custom settings for history" from the drop-down menu, and unticking "Accept cookies from sites";and</li>
+                                        <li><strong>In Chrome </strong>you can block all cookies by accessing the "Customize and control" menu, and clicking "Settings", "Show advanced settings" and "Content settings", and then selecting "Block sites from
+                                            setting any data" under the "Cookies" heading.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p10"><span class="htwt">Deleting Cookies</span>
+                                <div id="p10" class="collapse">
+                                    <p class="htwp-p mt-2">You can cancel cookies already stored on your computer; for example:</p>
+                                    <ul>
+                                        <li><strong>In Internet Explorer</strong> (version 11), you must manually delete cookie files (you can find instructions for doing so at http://windows.microsoft.com/en- gb/internet-explorer/delete-manage-cookies#ie=ie-11);</li>
+                                        <li><strong>In Firefox</strong> you can delete cookies by clicking "Tools", "Options" and "Privacy", then selecting "Use custom settings for history" from the drop- down menu, clicking "Show Cookies", and then clicking
+                                            "Remove All Cookies";and</li>
+                                        <li><strong>In Chrome </strong>you can delete all cookies by accessing the "Customize and control" menu, and clicking "Settings", "Show advanced settings" and "Clear browsing data", and then selecting "Cookies and other
+                                            site and plug-in data" before clicking "Clear browsing data".</li>
+                                    </ul>
+                                    <p class="htwp-p mt-2">Deleting cookies will have a negative impact on the usability of many websites.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div><span class="htwt" style="color:#007bff;">More Information</span>
+                                <div id="p22">
+                                    <p class="htwp-p mt-2">If you have any questions about our use of cookies or other technologies, please contact us through the our Contact Page or use the contact details below:</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4 mb-5">
+                            <div><span class="htwt" style="color:#007bff;">CONTACT</span>
+                                <div id="p22">
+                                    <p class="htwp-p mt-2">Please feel free to send any questions or comments (including all inquiries unrelated to copyright infringement) regarding this Site to the support page on the Website and Application or to our physical office address:</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                <note>TowGig Technologies:</note>
+                                <address>1 Hardy Road
+                                #1206 Bedford,
+                                NH 03110. US
+                                </address>
+                                <a href="towgig.com" style="text-decoration: underline;">www.towgig.com </a> <br>
+                                <a href="towgig.com" style="text-decoration: underline;">help@towgig.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="aboutcontainer5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 offset-1 col-md-8 col-sm-12 col-xsm-12 ">
+                    <h2 class="pt-3">Download the app and Sign Up <strong>For Free</strong></h2>
+                    <button class="btn btn-outline-primary abtcontainer5-button">Get the App</button>
+                </div>
+                <div class="col-lg-1 col-md-3 col-sm-12 col-xsm-12">
+                    <img src="img/TowGig-3.png" class="TowGig3-img" alt="TowGig-3">
+                </div> 
+                <div class="col-lg-5 col-md-8 col-sm-12 col-xsm-12 offset-2  ">
+                    <br>
+                    <h2 class="cntnr5h2">We have a lot discounts available here.</h2>
+                    <button class="button container5-button-right">GO HERE</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div id="container7">
+        <div id="jssor_1">
+            <div data-u="loading" class="jssorl-009-spin">
+                <img class="img-style" src="img/spin.svg" />
+            </div>
+            <div data-u="slides" class="sliderdiv1">
+                <div class="imgpad">
+                    <img data-u="image" src="img/subaru.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/stripe.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/paypal.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/mobius.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div><a data-u="any" href="https://www.jssor.com" style="display:none">web design</a>
+            </div>
+        </div>
+    </div> -->
+    <input class="checkbox-cb" id="checkbox-cb" type="checkbox" />
+    <!-- <div class="cookie-bar">
+    <span class="message">Visit to our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
+    <span class="mobile">Visit our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
+    <label for="checkbox-cb" class="close-cb">x</label>
+    </div> -->
+    <footer class="page-footer font-small stylish-color-dark pt-4 abtfooter">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class=" text-white mt-3 mb-4">Platform</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="services&promo.html">Service/Promo</a>
+                        </li>
+                        <li>
+                            <a href="benefit&bonus.html">Benefit/Bonus</a>
+                        </li>
+                        <li>
+                            <a href="how-it-works.html">How it works</a>
+                        </li>
+                        <li>
+                            <a href="costing.html">Costing</a>
+                        </li>
+                        <li>
+                            <a href="https://apps.apple.com/pk/app/towgig/id1507223706"><img alt="iosbtn" class="footer-img1" src="img/iosbtn.png" /></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.crymzee.towgig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class="text-white mt-3 mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="partner-with-us.html">Partner With Us</a>
+                        </li>
+                        <li>
+                            <a href="index.php#TowTruckNearMe">Tow Truck Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#!">Site Map</a>
+                        </li>
+                        <li><a href="blog.php">Blog</a>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class="text-white mt-3 mb-4">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="terms.html">Terms and Condition</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="refundPolicy.html">Refund Policy</a>
+                        </li>
+                        <li>
+                            <a href="user-agreement.html">End User License Agreement(EULA)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <ul class="list-unstyled list-inline text-center footersocial">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1 footersocial" href="https://www.youtube.com/channel/UCoC2uDJq_ZWqwTVGQs4z1ag">
+                    <i class="fab fa-youtube fa-1x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1 footersocial" href="https://twitter.com/towgig">
+                    <i class="fab fa-twitter fa-1x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1 footersocial" href="https://www.facebook.com/TowGig-Technologies-100417204767612/">
+                    <i class="fab fa-facebook-f fa-1x"> </i>
+                </a>
+            </li>
+
+        </ul>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2020 TowGig Technologies
+        </div>
+        <div class="footer-copyright text-center py-3 text-muted"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- MODEL-BOX -->
+    <div class="modal fade" id="Modal-expert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right model-pad">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <p class="boxmp">Meet Amazing Buyers Waiting for Your Service,It only takes 3-6 minutes to sign up & start earning.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp mt-2">For a quick sign up, Please enter your</p>
+                                                <section class="mx-2 pb-3 text-center">
+                                                    <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#signupemail" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                        </li>
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#signupphone" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContentMD">
+                                                        <div class="tab-pane fade in show active" id="signupemail" role="tabpanel" aria-labelledby="home-tab-md">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="signupphone" role="tabpanel" aria-labelledby="profile-tab-md">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number" value="" required/>
+                                                                <br>
+                                                                <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <!-- <p class="mbp1 mt-1 mt-3 ml-3">The App Link will be send to you, now</p> -->
+                                        <p class="mbp1 ml-3 mt-2" style="color:#424141e0!important;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for doing Business with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Modal-buyer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right model-pad">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <p class="boxmp">A Diligence Expert is waiting to come service your vehicle.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp mt-1">For a quick sign up, Please enter your</p>
+                                                <section class="mx-2 pb-3 text-center">
+                                                    <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link active" id="home-tab-mdb" data-toggle="tab" href="#signupemailb" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                        </li>
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link" id="profile-tab-mdb" data-toggle="tab" href="#signupphoneb" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContentMDb">
+                                                        <div class="tab-pane fade in show active" id="signupemailb" role="tabpanel" aria-labelledby="home-tab-mdb">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="signupphoneb" role="tabpanel" aria-labelledby="profile-tab-mdb">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number1" value="" required/>
+                                                                <br>
+                                                                <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                            </div>
+                                        </div>
+                                        <!-- <p class="mbp1 mt-1 ml-3">The App Link will be send to you, now</p> -->
+                                        <p class="mbp1 ml-3 mt-2" style="color:#424141e0!important;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for Being an Amazing Buyer with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $Idle: 0,
+                $SlideDuration: 5000,
+                $SlideEasing: $Jease$.$Linear,
+                $SlideWidth: 140,
+                $Align: 0
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin spin css*/
+        
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#phone_number"), {
+            separateDialCode: true,
+            preferredCountries: ["us"],
+            hiddenInput: "full",
+            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+        });
+
+        $("form").submit(function() {
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("input[name='phone_number[full]'").val(full_number);
+            alert(full_number);
+        });
+    </script>
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#phone_number1"), {
+            separateDialCode: true,
+            preferredCountries: ["us"],
+            hiddenInput: "full",
+            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+        });
+
+        $("form").submit(function() {
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("input[name='phone_number[full]'").val(full_number);
+            alert(full_number);
+        });
+    </script>
+    <script type="text/javascript">
+        jssor_1_slider_init();
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,3 @@
-
 input.minput {
   margin-right: 182px;
   margin-bottom: 13px;
@@ -85,21 +84,23 @@ p.htwp {
   color: #525050e0;
 }
 p.mbp {
-  font-size: 1.10rem;
-  color: #424141e0;
-  font-weight: 400;
-  line-height: 12px;
+  font-size: 14px!important;
+  color: #424141e0!important;
+  font-weight: 400!important;
+  line-height: 12px!important;
+  text-align: left!important;
 }
 p.mbp1 {
-  font-size: 1.15rem;
-  color: #006be9;
-  font-weight: 500;
+  font-size: 1.15rem!important;
+  color: #006be9!important;
+  font-weight: 500!important;
 }
 h3.mbh31 {
-  font-size: 1.10rem;
-  color: #006be9;
-  font-weight: 500;
-  line-height: 12px;
+  font-size: 1rem!important;
+  color: #006be9!important;
+  font-weight: 500!important;
+  line-height: 21px!important;
+  text-align: left!important;
 }
 .modal-content {
   position: relative;
@@ -117,12 +118,12 @@ h3.mbh31 {
   border-radius: 6px;
 }
 p.boxmp{
-  margin-top: 16px;
-  margin-left: 10px;
-  color: #2865cf;
-  text-align: center;
-  font-size: 17px;
-  font-weight: 600;
+  margin-top: 16px!important;
+  margin-left: 10px!important;
+  color: #2865cf!important;
+  text-align: center!important;
+  font-size: 17px!important;
+  font-weight: 600!important;
 }
 .modal button.close {
   float: right;
@@ -142,7 +143,7 @@ p.boxmp{
 }
 .btnRegister {
   float: right;
-  margin-top: 10px;
+  margin-top: -34px;
   border: none;
   border-radius: 1.5rem;
   padding: 1%;
@@ -154,7 +155,7 @@ p.boxmp{
 }
 .btnRegister:hover {
   float: right;
-  margin-top: 10px;
+  margin-top: -34px;
   border: none;
   border-radius: 1.5rem;
   padding: 1%;
@@ -163,4 +164,54 @@ p.boxmp{
   font-weight: 600;
   width: 24%;
   cursor: pointer;
+}
+p.mbp1 {
+  font-size: 0.9rem!important;
+  color: #40b584!important;
+  font-weight: 300!important;
+  line-height: 20px;
+}
+.model-pad{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (min-width:1024) and (max-width:1300px){
+  .table-responsive1 {
+    display: block;
+    width: 100%!important;
+    overflow-x: auto!important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (min-width:1024) and (max-width:1300px){
+  .table-responsive1 {
+    display: block;
+    width: 100%!important;
+    overflow-x: auto!important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (min-width:768px) and (max-width:1020px){
+  .table-responsive1 {
+    display: block;
+    width: 75%!important;
+    overflow-x: auto!important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (min-width:667px) and (max-width:767px){
+  .table-responsive1 {
+    display: block;
+    width: 75%!important;
+    overflow-x: auto!important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media only screen and (max-width:666px){
+  .table-responsive1 {
+    display: block;
+    width: 45%!important;
+    overflow-x: auto!important;
+    -webkit-overflow-scrolling: touch;
+  }
 }

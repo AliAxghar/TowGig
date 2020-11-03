@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TowGig</title>
+    <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+</head>
+
+<body class="aboutbody" id="aboutus">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <img src="img/logo.png" alt="">
+                <p class="lslogan">TowGig, Brings Auto Smiles</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-works.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign Up
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a data-toggle="modal" data-target="#Modal-buyer" class="dropdown-item" href="#">Buyer</a>
+                            <a data-toggle="modal" data-target="#Modal-expert" class="dropdown-item" href="#">Expert</a>
+                            <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
+                        <a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="#">Expert</a> -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="modal" id="myModal">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone*" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username*" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    </div>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal1">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" maxlength="15" name="Phone" class="form-control" placeholder="Phone" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email/Username" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control"  placeholder="Confirm Password" value="" />
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal2" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal2">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent2">
+                        <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group filel pb-1">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="File01">Upload Selfie/Logo</label>                                      
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Town" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Zip Code" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Towing Hauling Cars Dot Number" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class=" filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label1" for="File01">Professional License </label>                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business or Personal Address" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Province/State" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Country" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" id="File01" class="filef pt-2" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label2" for="File01">Insurance Policy (Front)</label>                                      
+                                    </div>
+                                    <input data-toggle="modal" data-target="#myModal3" type="submit" class="btnRegister btnnext"  value="Next"/>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal3">
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>Join The Center & Conduct a Clean,Fast, and Genuine Business</p>
+                    <input type="submit" name="" value="Login"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="tab-content" id="myTabContent1">
+                        <div class="tab-pane fade show active" id="home1" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Registration For TowGig</h3>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Business Name" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Bank/Branch Name" value="" />
+                                    </div>
+                                    <div class="form-group" style="color: #6c757d;">
+                                        Date of Birth:<input type="date" class="form-control" placeholder="Date of Birth" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Employee Identity No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" minlength="10" name="Phone" class="form-control" placeholder="Confirm Account No" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control"  placeholder="Routing No" value="" />
+                                    </div>
+                                    <label for="choose-services" style="color: #6c757d;">Choose Services:</label>
+                                    <br>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tow Haul
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Flat Type
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Replace Battery
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Engin Light On
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Jump Start
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox"  class="mr-1" value="">Lockout
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Gas/Diesel Refill
+                                    </label>
+                                    <label class="checkbox-inline pr-1">
+                                        <input type="checkbox" class="mr-1" value="">Tyre/Car Vibration
+                                    </label>
+                                    <input type="submit" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="aboutcontainer3" class="promopage1" style="padding-bottom: 0px;">
+        <div class="container htw">
+            <h2 class="privacyh2">TERMS OF SERVICE</h2>
+        </div>
+        <div class="container htw mt-4 privacy_p">
+            <div id="serviceid ">
+                <div class="pt-2">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <!-- <div data-toggle="collapse" data-target="#p1"><span class="htwt">INTRODUCTION</span>
+                            <div id="p1" class="collapse"> -->
+                            <div>
+                                <div id="p1">
+                                    <p class="htwp-p mt-2">
+                                        Please read these Terms and Conditions (the “Terms”) entered into between you and TowGig Technologies. It governs all use of the http://www.towgig.com/ Website and Application (the “Site”) and the TowGig Applications on the Website and Application. By
+                                        using the services on the TowGig site (including, without limitation, any associated links), you agree to be bound by the Terms of Service. This Website and Application is owned and operated by TowGig Technologies
+                                        (“TowGig Tech”) and therefore reserves the right to modify or replace the Terms of Service and all other operating rules, policies and procedures that may be published on the Site by TowGig Technologies from time
+                                        to time without notice.
+                                    </p>
+                                    <p class="htwp-p mt-2">Please review the Terms of Service periodically so that you will be apprised of any changes. The Service is offered and provided subject to acceptance without modification of all of the terms and conditions contained
+                                        herein, therefore your continued use of the services on the Site following the posting of any changes to the Terms of Service constitutes acceptance of those changes.</p>
+                                    <p class="htwp-p mt-2">
+                                        IF YOU DO NOT AGREE TO ALL OF THESE TERMS OF SERVICE, OR IF YOU ARE NOT ELIGIBLE OR AUTHORIZED TO ENTER INTO THIS AGREEMENT, THEN DO NOT REGISTER FOR, DOWNLOAD, ACCESS OR USE THE SERVICE. DOWNLOADING ANY APP, COMPLETING OUR REGISTRATION PROCESS OR OTHERWISE
+                                        ACCESSING OR USING ALL OR ANY PART OF THE SERVICE WILL CONSTITUTE ACCEPTANCE OF, AND CREATE A LEGALLY ENFORCEABLE CONTRACT UNDER WHICH YOU AGREE TO BE BOUND BY, ALL OF THESE TERMS OF SERVICE, WITHOUT MODIFICATION.
+                                    </p>
+                                    <p class="htwp-p mt-2">
+                                        Your access to use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service and all applicable laws and all conditions or policies referenced
+                                        herein. You agree that if you are unsure of the meaning of any part of these Terms or have any questions regarding the Terms, you will not hesitate to contact us for clarification.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12 mt-2">
+                            <div data-toggle="collapse" data-target="#p2"><span class="htwt">MODIFICATIONS
+                        </span>
+                                <div id="p2" class="collapse">
+                                    <p class="htwp-p mt-2">TowGig Technologies reserves the right, at its sole discretion, to update, modify or replace the Terms of Service (including any Policy), in whole or in part, at any time. TowGig Technologies will use reasonable efforts
+                                        to notify you of any material change in advance of the effective date of any change. Change notices may be communicated by postings at the Site, via the Apps, e-mail or otherwise. It is your obligation to periodically
+                                        check the Policies and other Terms of Service for any changes. You therefore understand that your continuous access or use of the Service following any change to the Terms of Service constitutes your acceptance
+                                        of those changes. The Terms of Service may not otherwise be amended, as they apply to you, except by a written agreement executed by you and TowGig Technologies.</p>
+                                    <p class="htwp-p mt-2">TowGig Technologies may modify, suspend or terminate the Service (including without limitation, the Site or any App), in whole or in part, at any time.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p3"><span class="htwt">SUMMARY OF SERVICE</span>
+                                <div id="p3" class="collapse">
+                                    <p class="htwp-p mt-2">
+                                        TowGig Technologies is an auto-tech platform that enables our users access our world class Auto Services from our professional service providers available round the clock. TowGig was designed to satisfy vehicle owners and car dealer's needs. TowGig Services
+                                        includes the ability for users to book appointments, purchase vehicle maintenance services, repairs, roadside assistance, vehicle transportation and related services (Vehicle Services), It also involves Vehicle
+                                        parts dealers, repair shops and independent contractors (Vehicle Parts Dealers, Mechanics, Towing Companies & Vehicle Transportation Companies).
+                                    </p>
+                                    <p class="htwp-p mt-2">In accordance with your request, TowGig Technologies will provide the platform which will enable you have access to Mechanics, Towing Companies or Vehicle Transportation Companies that are willing to provide your requested
+                                        Vehicle Services at and the most affordable rates.</p>
+                                    <p class="htwp-p mt-2">The platform provides access for Auto experts - a licensed and skilled motor vehicle specialist waiting to go & help car owners to Tow, Fix, or Haul their vehicle, and A Buyer, is a vehicle owner or dealer, who need
+                                        a service from auto Expert to come and Fix, Tow, or Haul their vehicle. With TowGig Technologies, auto owner or car dealers can connect instantly with an automobile service provider for an amazing service all the
+                                        times.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p4"><span class="htwt">ACCOUNT REGISTRATION</span>
+                                <div id="p4" class="collapse">
+                                    <p class="htwp-p mt-2">
+                                        Regardless of how you access the Service, to ensure the integrity of the Service, you are required to complete an account registration process.
+                                    </p>
+                                    <p class="htwp-p mt-2">
+                                        <strong>A.  Eligibility:</strong> To access our Services through our Website and Application of Application, you must be a legal entity, or an individual of Eighteen (18) years of age or older who can form legally
+                                        binding contracts. To become a Registered User, you must accept all of the terms and conditions incorporated by reference and linked to, these Terms of Service. By becoming a Registered User, you agree to:</p>
+                                    <ol>
+                                        <li>abide by the Terms of Service and the processes, procedures, and guidelines described throughout the Website and Application;</li>
+                                        <li>be financially responsible for your use of the Website and Application and the purchase or delivery of services; and</li>
+                                        <li>perform your obligations as specified by any Service Agreement that you accept, unless such obligations are prohibited by law or by the Terms of Service.</li>
+                                    </ol>
+                                    <p class="htwp-p mt-2">
+                                        TowGig Technologies reserves the right, in its sole discretion, to refuse, suspend, or terminate Services to anyone.
+                                    </p>
+                                    <p class="htwp-p mt-2">
+                                        B. Registration: To become a Registered User and to access services you must register for an Account. It is either you register as A Buyer or An Expert.
+                                    </p>
+                                    <ol>
+                                        <li>A <strong>Buyer</strong> is a vehicle owner or dealer, who need a service from auto Expert to come and Fix, Tow, or Haul their vehicle, while;</li>
+                                        <li>An <strong>Expert</strong> is a licensed and skilled motor vehicle specialist waiting to go & help car owners to Tow, Fix, or Haul their vehicle</li>
+                                    </ol>
+                                    <p class="htwp-p mt-2">
+                                        You agree to provide true, accurate and complete information as prompted by the registration form and all forms you access on the Website and Application, and to update this information to maintain its truthfulness, accuracy and completeness.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p5"><span class="htwt">Accounts and Profiles:</span>
+                                <div id="p5" class="collapse">
+                                    <ol>
+                                        <li class="li-p"><strong>General:</strong> Once you have registered with the Website and Application as a Registered User (either as a buyer or an expert), the TowGig will create your Account with www.towgig.com and associate it
+                                            with an Account ID. We may refuse to accept your application to register for the Service, in our sole discretion.</li>
+                                        <li class="li-p"><strong>Username and Password:</strong> During registration, you will be asked to choose a username and password for the Account. As a Registered User, you agree and you are entirely responsible to safeguard and
+                                            maintain the confidentiality of the username and password you use to access this Website and Application. You authorize TowGig Technologies to assume that any person using the service with your username and
+                                            password is you or is authorized to act for you. You agree to notify us immediately if you suspect any unauthorized use of the Account.</li>
+                                        <li class="li-p"><strong>Account Responsibilities:</strong> You are responsible for maintaining the confidentiality of your Account login information and are fully responsible for all activities that occur under your Account. You
+                                            agree to immediately notify TowGig Technologies of any unauthorized use, or suspected unauthorized use of your Account or any other breach of security. TowGig Technologies cannot and will not be liable for any
+                                            loss or damage arising from your failure to comply with the above requirements.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p6"><span class="htwt">USE OF THE SITE AND SERVICES</span>
+                                <div id="p6" class="collapse">
+                                    <p class="htwp-p mt-2">You confirm that you are at least 18 years of age or are accessing the Site under the supervision of a parent or legal guardian. Both parties agree that this Website and Application may only be used in accordance with
+                                        these Terms of Service. If you do not agree with the Terms of Service or do not wish to be bound by them, you agree to refrain from using this services.</p>
+                                    <p class="htwp-p mt-2">We grant you a non-transferable, revocable and non-exclusive license to use this Site, in accordance with the Terms of Service, for such things as: booking appointments, purchasing vehicle maintenance services, repairs,
+                                        roadside assistance, vehicle transportation and other related services, purchase of vechicle parts, locating repair shops and independent contractors, mechanics, towing & vehicle transportation companies. Commercial
+                                        use or use on behalf of any third party is prohibited, except as explicitly permitted by us in advance.</p>
+                                    <p class="htwp-p mt-2">For clarity, all Vehicle Services are provided by the applicable Mechanic, Towing Company or Vehicle Transportation Company, not TowGig Technologies. Accordingly, Vehicle Services are not deemed to be within the scope
+                                        of the Service offered and provided by TowGig Technologies, and TowGig Technologies (and its Business Partners, other than the applicable Mechanic, Towing Company or Vehicle Transportation Company) have no obligation
+                                        or liability regarding Vehicle Services.</p>
+                                    <p class="htwp-p mt-2">Users understand that any breach of these Terms of Service shall result in the immediate revocation of the license granted in this section without prior notice to you. Should we determine at our sole discretion that
+                                        you are in breach of any of these conditions, we reserve the right to deny you access to this service and its contents and do so without prejudice to any available remedies at law or otherwise.</p>
+                                    <p class="htwp-p mt-2">Certain services and related features that may be made available on the Site may require registration or subscription. Should you choose to register or subscribe for any such services or related features, you agree
+                                        to provide accurate and current information about yourself, and to promptly update such information if there are any changes. Every user of the Site is solely responsible for keeping passwords and other account
+                                        identifiers safe and secure.</p>
+                                    <p class="htwp-p mt-2">The account owner is entirely responsible for all activities that occur under such password or account. Furthermore, you must notify us of any unauthorized use of your password or account. The Site shall not be responsible
+                                        or liable, directly or indirectly, in any way for any loss or damage of any kind incurred as a result of, or in connection with, your failure to comply with this section.</p>
+                                    <p class="htwp-p mt-2">During the registration process, you agree to receive promotional emails from the Site. You can subsequently opt out of receiving such promotional e-mails by clicking on the link at the bottom of any promotional email.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p7"><span class="htwt">FEES, SUBSCRIPTIONS AND PAYMENTS</span>
+                                <div id="p7" class="collapse">
+                                    <p class="htwp-p mt-2">Except as expressly provided otherwise in the Terms of Service, TowGig Technologies and each user is solely responsible for all of its costs and expenses related to the Service.</p>
+                                    <ol>
+                                        <li class="li-p"><strong>As a Buyer:</strong> You may access and use the Service without charge. In the future, TowGig Technologies may decide to charge for Apps or other features of the Service in which case you will be notified.
+                                            As a Buyer, you hereby agree to pay all applicable fees, in the amounts, at the times and subject to any other conditions established for that App or feature. Such fees may be specified on a recurring basis
+                                            (e.g., subscription or usage fees) or non-recurring basis (e.g., one-time fees). <br>You are solely liable for the cost of Vehicle Services you receive. The price for Vehicle Services (including any applicable
+                                            taxes) will be established by the applicable professional service provider, as set forth in the offer you accepted (or as increased or decreased as a result of changes in the scope of Vehicle Services to which
+                                            you and the professional service provider have agreed). You hereby agree that TowGig Technologies may immediately charge the full and final price to your credit card after the professional service provider notifies
+                                            TowGig Technologies that the Vehicle Services have been completed. After receipt of payment from your credit card, TowGig Technologies will retain a service fee and pay the remainder to the professional service
+                                            provider, in accordance with the arrangement between them. <br>All amounts due hereunder shall be paid in US dollars, immediately in full without any deduction. Any amount not paid when due shall bear a late
+                                            payment charge until paid at the rate of 1.5% per month or the maximum amount permitted by law, whichever is less. If any payment is past due, TowGig Technologies shall have the right to take whatever action
+                                            it deems appropriate (including without limitation, suspending or terminating your access and use of the Service). You agree to reimburse TowGig Technologies for all reasonable costs and expenses (including
+                                            attorneys' fees) incurred in collecting payments.</li>
+                                        <li class="li-p"><strong>As an Expert:</strong> The Service involves an online request, which enables buyers who are vehicle owners or dealers to request for available vehicle service. Experts who are Professional Service Providers
+                                            needs to subscribe to our Services to enable them receive and accept requests and issue quotations themselves or TowGig Technologies can accept and quote on the Professional Service Provider’s behalf. The requests
+                                            for service must originate from the from TowGig Technologies’s marketplace depending on the subscription plan chosen <br>TowGig Technologies may modify the subscription service and fees from time to time, including
+                                            by adding and deleting functions in an effort to improve your experience. TowGig Technologies will not make any modifications to the subscription service that materially reduce the functionality of the subscription
+                                            service provided to you during the subscription term. <br>Professional Service Providers understands that all charges associated with your access to and use of the Subscription Services “Subscription charges”
+                                            are due monthly in advance upon commencement of your subscription term. Subscription charges are non-refundable. There will be no refunds or credits for partial service periods, upgrade/downgrade refunds, or
+                                            refunds for service periods unused with an open account. <br>Subscription fees will remain fixed during the subscription term unless you: (i.) exceed your maximum quotes or (ii.) upgrade, change or add services
+                                            or (iii) subscribe to additional features. Where a price change applies to you, we will charge you under the new price structure starting with the next billing period in the subscription term. <br>You authorize
+                                            us to charge your credit card for all fees payable during the subscription term. You further authorize us to use a third party to process payments.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p8"><span class="htwt">ACCEPTABLE USE OF THE SITE</span>
+                                <div id="p8" class="collapse">
+                                    <p class="htwp-p mt-2">You agree, undertake and confirm that your use of TowGig Technologies shall be strictly governed by the following binding principles. TowGig Technologies provides the Website and Application and the Materials for your
+                                        individual, non-commercial use and solely for the purpose of carrying out shopping and individual transactions with the Website and Application. Any other use of the Website and Application or the Materials is rigorously
+                                        prohibited. You may not, either directly or indirectly:</p>
+                                    <ul>
+                                        <li class="li-p">Modify, republish, redistribute, delete, resell, sublicense, publicly perform, cache by proxy the Website and Application or Materials without the express written permission of TowGig Technologies or the applicable
+                                            rights holder;</li>
+                                        <li class="li-p">Use the Materials for telemarketing, direct marketing, and commercial mass e-mail or by agents or representatives or e-mail spammers;</li>
+                                        <li class="li-p">Reverse engineer, decompile, disassemble, merge, copy, use, disclose, rent, lease, loan, sell, sublicense or transfer the underlying source code or structure or sequence of the Technology or delete or alter author
+                                            attributes or copyright notices;</li>
+                                        <li class="li-p">Use any network monitoring or discovery software to determine Website and Application architecture, or extract information about usage or users;</li>
+                                        <li class="li-p">Reformat or frame any portion of the Website and Application or Materials;</li>
+                                        <li class="li-p">Use any device, software or routine that interferes with the proper working of the Website and Application, or otherwise attempt to interfere with the proper working of the Website and Application;</li>
+                                        <li class="li-p">Take any action that imposes, or may impose in our sole discretion an unreasonable or disproportionately large load on our infrastructure;</li>
+                                        <li class="li-p">Violate the Website and Application Terms, applicable law or the rights of others; or Disrupt or interfere with the security of, or otherwise cause harm to, the Website and Application.</li>
+                                    </ul>
+                                    <p class="htwp-p mt-2">You shall not use any “deep-link”, “page-scrape”, “robot”, “spider” or other automatic device, program, algorithm or methodology, or any similar or equivalent manual process, to access, acquire, copy or monitor any
+                                        portion of the Website and Application or any Content, or in any way reproduce or circumvent the navigational structure or presentation of the Website and Application or any Content, to obtain or attempt to obtain
+                                        any materials, documents or information through any means not purposely made available through the Website and Application. TowGig Technologies has the right to bar any such activity.</p>
+                                    <p class="htwp-p mt-2">You shall not attempt to gain unauthorized access to any portion or feature of TowGig Technologies Website and Application, or any other systems or networks connected to TowGig Technologies Website and Application or
+                                        to any TowGig Technologies’ server, computer, network, or to any of the services offered on or through TowGig Technologies Website and Application, by hacking, password “mining” or any other illegitimate means.</p>
+                                    <p class="htwp-p mt-2">You shall not probe, scan or test the vulnerability of TowGig Technologies Website and Application or any network connected to TowGig Technologies Website and Application nor breach the security or authentication measures
+                                        on TowGig Technologies Website and Application or any network connected to TowGig Technologies Website and Application. You may not reverse look-up, trace or seek to trace any information on any other user of or
+                                        visitor to TowGig Technologies Website and Application, or any other customer of TowGig Technologies, including any TowGig Technologies account not owned by you, to its source, or exploit TowGig Technologies Website
+                                        and Application or any service or information made available or offered by or through TowGig Technologies, in any way where the purpose is to reveal any information, including but not limited to personal identification
+                                        or information, other than your own information, as provided for by the TowGig Technologies Website and Application.</p>
+                                    <p class="htwp-p mt-2">You agree that you will not take any action that imposes an unreasonable or disproportionately large load on the infrastructure of TowGig Technologies Website and Application or TowGig Technologies’s systems or networks,
+                                        or any systems or networks connected to TowGig Technologies.</p>
+                                    <p class="htwp-p mt-2">You agree not to use any device, software or routine to interfere or attempt to interfere with the proper working of the Website and Application or any transaction being conducted on the Website and Application, or
+                                        with any other person’s use of the Website and Application.</p>
+                                    <p class="htwp-p mt-2">You may not forge headers or otherwise manipulate identifiers in order to disguise the origin of any message or transmittal you send to TowGig Technologies on or through the Website and Application or any service offered
+                                        on or through the Website and Application. You may not pretend that you are, or that you represent, someone else, or impersonate any other individual or entity.</p>
+                                    <p class="htwp-p mt-2">You may not use the Website and Application or any Content for any purpose that is unlawful or prohibited by these Terms of Service, or to solicit the performance of any illegal activity or other activity which infringes
+                                        the rights of TowGig Technologies or others.</p>
+                                    <p class="htwp-p mt-2">Solely to enable TowGig Technologies to use the information you supply us with, so that we are not violating any rights you might have in Your Information, you agree to grant us a non- exclusive, worldwide, perpetual,
+                                        irrevocable, royalty-free, sub-licensable (through multiple tiers) right to exercise the copyright, publicity, database rights or any other rights you have in Your Information, in any media now known or not currently
+                                        known, with respect to Your Information. TowGig Technologies will only use Your Information in accordance with the Terms of Service and TowGig Technologies’ <a href="privacy.html" style="text-decoration: underline;"> Privacy Policy</a>.</p>
+                                    <p class="htwp-p mt-2">You shall not engage in advertising to, or solicitation of, other users of TowGig Technologies to buy or sell any products or services, including, but not limited to, products related being displayed on TowGig Technologies
+                                        or related to TowGig Technologies. You may not transmit any chain letters or unsolicited commercial or junk email to other users via TowGig Technologies. It shall be a violation of these Terms of Service to use
+                                        any information obtained from TowGig Technologies in order to harass, abuse, or harm another person, or in order to contact, advertise to, solicit, or sell to another person outside of TowGig Technologies without
+                                        TowGig Technologies’ prior explicit consent.</p>
+                                    <p class="htwp-p mt-2">You understand that TowGig Technologies has the right at all times to disclose any information (including the identity of the persons providing information or materials on TowGig Technologies Website and Application)
+                                        as necessary to satisfy any law, regulation or valid governmental request. This may include, without limitation, disclosure of the information in connection with investigation of alleged illegal activity or solicitation
+                                        of illegal activity or in response to a lawful court order or subpoena. In addition, we can (and you hereby expressly authorize us to) disclose any information about you to law enforcement or other government officials,
+                                        as we, in our sole discretion, believe necessary or appropriate in connection with the investigation and/or resolution of possible crimes, especially those that may involve personal injury.</p>
+                                    <p class="htwp-p mt-2">You hereby represent and warrant that you have all necessary rights in and to all information you provide, and that such Content shall not infringe any proprietary or other rights of third parties or contain any libelous,
+                                        tortious, or otherwise unlawful information</p>
+                                    <p class="htwp-p mt-2">TowGig Technologies shall have all the rights to take necessary action and claim damages that may occur due to your involvement/participation in any way on your own or through group/s of People, intentionally or unintentionally
+                                        in DoS/DDoS (Distributed Denial of Services).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p9"><span class="htwt">USER CONTENT</span>
+                                <div id="p9" class="collapse">
+                                    <p class="htwp-p mt-2">This means any and all information and content that a user submits to, or uses with, the Site (e.g., content in the user’s account). You are solely responsible for your User Content. You assume all risks associated
+                                        with use of your User Content, including any reliance on its accuracy, completeness or usefulness by others, or any disclosure of your User Content that personally identifies you or any third party. You represent
+                                        and warrant that your User Content does not violate our Acceptable Use Policy as provided for in the Section above.</p>
+                                    <p class="htwp-p mt-2">You may not represent or imply to others that your User Content is in any way provided, sponsored or endorsed by TowGig Technologies. Because you alone are responsible for your User Content, you may expose yourself
+                                        to liability if, for example, your User Content violates the Acceptable Use Policy. TowGig Technologies is not obligated to backup any User Content, and your User Content may be deleted at any time without prior
+                                        notice. You are solely responsible for creating and maintaining your own backup copies of your User Content if you desire.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p0"><span class="htwt">USER CONTENT LICENSE</span>
+                                <div id="p0" class="collapse">
+                                    <p class="htwp-p mt-2">You hereby grant (and you represent and warrant that you have the right to grant) to TowGig Technologies an irrevocable, nonexclusive, royalty-free and fully paid, worldwide license to reproduce, distribute, publicly
+                                        display and perform, prepare derivative works of, incorporate into other works, and otherwise use and exploit your User Content, and to grant sublicenses of the foregoing rights, solely for the purposes of including
+                                        your User Content in the Site. You irrevocably waive (and agree to cause to be waived) any claims and assertions of moral rights or attribution with respect to your User Content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p10"><span class="htwt">INTELLECTUAL PROPERTY</span>
+                                <div id="p10" class="collapse">
+                                    <p class="htwp-p mt-2">You acknowledge that TowGig Technologies is the proprietor, or an authorized licensee, of all Intellectual Property Rights in relation to the Content. You may not reproduce or replicate any part of the Content or of
+                                        the layout or design of the Website and Application.</p>
+                                    <p class="htwp-p mt-2">Your use of the Website and Application does not provide you with any Intellectual Property Rights in the Website and Application or the Content. However, subject to your rights under our Privacy Policy, you agree to
+                                        provide TowGig Technologies with a non-exclusive, perpetual, royalty free license to use any intellectual property that you create in the course of using the Website and Application, or upload to our Website and
+                                        Application, for any purpose whatsoever.</p>
+                                    <p class="htwp-p mt-2">This Website and Application is provided for personal use only. You agree not to make any use of this Website and Application for commercial gain.</p>
+                                    <p class="htwp-p mt-2">You may download and view content, or print a copy of the material on the Website and Application for personal, non-commercial use, provided you do not modify the content in any way, including by removing any copyright
+                                        or trade mark notice.</p>
+                                    <p class="htwp-p mt-2">All trademarks and logos displayed on the Website and Application are the property of their respective owners and are protected by applicable trade mark and copyright law.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p11"><span class="htwt">INTELLECTUAL PROPERTY INFRINGEMENT POLICY</span>
+                                <div id="p11" class="collapse">
+                                    <p class="htwp-p mt-2">It is the policy of TowGig Technologies to take appropriate action where necessary to uphold and recognize all relevant State, Federal and International laws in connection with material that is claimed to be infringing
+                                        any trademark, copyright, patent and all or any other Intellectual Property laws. If you are an intellectual property rights owner and you believe that TowGig Technologies sells, offers for sale, or makes available
+                                        goods and/or services that infringe your intellectual property rights, send the following information below in its entirety to our physical address: TowGig Technologies - 1 Hardy Road #1206 Bedford, NH 03110. Information
+                                        required:
+                                    </p>
+                                    <ol>
+                                        <li>An electronic or physical signature of the person authorized to act on behalf of the owner of an exclusive that is allegedly infringed;</li>
+                                        <li>A description of the allegedly infringing work or material;</li>
+                                        <li>A description of where the allegedly infringing material is located on the site (product(s) URL);</li>
+                                        <li>Information reasonably sufficient to allow us to contact you, such as your address, telephone number and e-mail address;</li>
+                                        <li>A statement by you that you have a good faith belief that the disputed use of the material is not authorized by the copyright or other proprietary right owner, its agent, or the law;</li>
+                                        <li>Identification of the intellectual property rights that you claim are infringed by the Website and Application(e.g. "XYZ copyright", "ABC trademark, Reg. No. 123456, registered 1/1/04",etc);</li>
+                                        <li>A statement by you that the above information and notification is accurate, and under penalty of perjury, that you are the copyright owner or authorized to act on behalf of the owner whose exclusive right is allegedly
+                                            infringed.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p12"><span class="htwt">THIRD PARTY LINKS</span>
+                                <div id="p12" class="collapse">
+                                    <p class="htwp-p mt-2">The Website and Application may include links to Third Party Website and Applications. TowGig Technologies makes no guarantee as to the content, functionality, or accuracy of any Third Party Website and Applications.
+                                        Third Party Website and Applications are subject to the terms and conditions outlined by that third party.</p>
+                                    <p class="htwp-p mt-2">Any links to Third Party Website and Applications do not:</p>
+                                    <ul>
+                                        <li class="li-p">indicate a relationship between TowGig Technologies and the third party; or</li>
+                                        <li class="li-p">indicate any endorsement or sponsorship by TowGig Technologies of the Third Party Website and Application, or the goods or services it provides,</li>
+
+                                    </ul>
+                                    <p class="htwp-p mt-2">The Website and Application is linked to various social networking sites, including Facebook and Twitter. You acknowledge and agree that:</p>
+                                    <ul>
+                                        <li class="li-p">any comments or content that you post on such social networking sites through a link provided on the Website and Application, are subject to the terms and conditions of that particular social networking site;</li>
+                                        <li class="li-p">you will not post any comments that are false, misleading, deceptive or defamatory to TowGig Technologies or its employees, agents, or officers, or which may damage the reputation of TowGig Technologies; and</li>
+                                        <li class="li-p">we are not responsible or liable for any comments or content that you or other Users post on social networking sites.</li>
+                                    </ul>
+                                    <p class="htwp-p mt-2">If you create a link to the Website and Application, the Website and Application from which you create the link must not contain any illegal, offensive or distasteful material, including (but not limited to) material
+                                        that promotes harassment or discrimination.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p13"><span class="htwt">INDEMNIFICATION</span>
+                                <div id="p13" class="collapse">
+                                    <p class="htwp-p mt-2">You agree to indemnify and hold TowGig Technologies (and its officers, employees, and agents) harmless, including costs and attorneys’ fees, from any claim or demand made by any third party due to or arising out of
+                                        (a.) your use of the Site, (b.) your violation of these Terms, (c.) your violation of applicable laws or regulations or (d.) your User Content. TowGig Technologies reserves the right, at your expense, to assume
+                                        the exclusive defense and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defense of these claims. You agree not to settle any matter without the prior written
+                                        consent of TowGig Technologies. TowGig Technologies will use reasonable efforts to notify you of any such claim, action or proceeding upon becoming aware of it.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p14"><span class="htwt"> MOBILE APPLICATIONS</span>
+                                <div id="p14" class="collapse">
+                                    <p class="htwp-p mt-2">If you are accessing our Services using a mobile device or phone (device), some of the Content may be limited or restricted.</p>
+                                    <p class="htwp-p mt-2">You acknowledge and agree that your use of the Website and Application on your device may be subject to separate charges imposed by your mobile phone service provider (carrier), such as data usage charges, and phone
+                                        charges, for which you will be solely responsible.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p15"><span class="htwt">PRIVACY AND PERSONAL INFORMATION</span>
+                                <div id="p15" class="collapse">
+                                    <p class="htwp-p mt-2">Any Personal Information provided to TowGig Technologies through the Website and Application is subject to our Privacy Policy.</p>
+                                    <p class="htwp-p mt-2">Any non-personal information you send to TowGig Technologies through the Website and Application (including by way of the blog or forums), such as questions, comments, or suggestions, is not encrypted, nor will it be
+                                        treated as confidential. You agree that you have provided a non- exclusive, perpetual, royalty free license to TowGig Technologies to use the non-personal information you upload to our Website and Application for
+                                        any purpose whatsoever.</p>
+                                    <p class="htwp-p mt-2">You agree that we may disclose the Personal Information we collect about you (including, but not limited to, your name and contact details) to the relevant authorities if we consider you are in breach of these Terms
+                                        and Conditions. If you have infringed the Intellectual Property Rights of a third party, you agree that we may provide your personal details to the relevant Intellectual Property Rights holder.</p>
+                                    <p class="htwp-p mt-2">You agree that we may disclose any information we, in our absolute discretion, consider we are required to disclose in order to satisfy any applicable rule of law, regulation, legal process or government request.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p16"><span class="htwt">INTERNATIONAL USE</span>
+                                <div id="p16" class="collapse">
+                                    <p class="htwp-p mt-2">You hereby expressly consent to the transmission, collection, storage, processing and use of your User Data, User Content and Analytics within, from and to the United States, in addition to the country where you are
+                                        located (if not the United States). TowGig Technologies makes no representation that the Service is accessible, appropriate or legally available for use in locations outside the United States, and accessing and
+                                        using the Service is prohibited from territories where doing so would be illegal. If you access or use the Service from other locations, then you do so at your own initiative and are responsible for compliance with
+                                        local laws.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p17"><span class="htwt">TRADEMARK, COPYRIGHT AND RESTRICTION</span>
+                                <div id="p17" class="collapse">
+                                    <p class="htwp-p mt-2">This site is controlled and operated by TowGig Technologies. All material on this site, including images, illustrations, audio clips, and video clips, are protected by copyrights, trademarks, and other intellectual
+                                        property rights that are owned and controlled by us or by other parties that have licensed their material to us. Material on TowGig Technologies web site owned, operated, licensed or controlled by us is solely for
+                                        your personal, non-commercial use. You must not copy, reproduce, republish, upload, post, transmit or distribute such material in any way, including by e-mail or other electronic means and whether directly or indirectly
+                                        and you must not assist any other person to do so. Without the prior written consent of the owner, modification of the materials, use of the materials on any other web site or networked computer environment or use
+                                        of the materials for any purpose other than personal, non-commercial use is a violation of the copyrights, trademarks and other proprietary rights, and is prohibited.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p18"><span class="htwt">ASSIGNMENT</span>
+                                <div id="p18" class="collapse">
+                                    <p class="htwp-p mt-2">We may at any time, and without the need for further consent from you, assign or transfer all or any of our rights or obligations under these Terms and Conditions to any person or entity.</p>
+                                    <p class="htwp-p mt-2">You may not assign or transfer any of your rights or obligations under these Terms and Conditions without obtaining our prior written consent.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p19"><span class="htwt">CONTENT AMENDMENTS</span>
+                                <div id="p19" class="collapse">
+                                    <p class="htwp-p mt-2">We may amend, remove, alter or vary any of the Content at any time, without prior notice to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p20"><span class="htwt">DISCLAIMERS / WARRANTIES</span>
+                                <div id="p20" class="collapse">
+                                    <p class="htwp-p mt-2">THE SITE IS PROVIDED ON AN “AS-IS” AND “AS AVAILABLE” BASIS, AND TOWGIG TECHNOLOGIES(AND OUR SUPPLIERS) EXPRESSLY DISCLAIM ANY AND ALL WARRANTIES AND CONDITIONS OF ANY KIND,WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+                                        ALL WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT, ACCURACY, OR NON-INFRINGEMENT. WE (AND OUR SUPPLIERS) MAKE NO WARRANTY THAT THE SITE WILL MEET YOUR REQUIREMENTS,
+                                        WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE BASIS, OR WILL BE ACCURATE, RELIABLE, FREE OF VIRUSES OR OTHER HARMFUL CODE, COMPLETE, LEGAL, OR SAFE. IF APPLICABLE LAW REQUIRES ANY WARRANTIES
+                                        WITH RESPECT TO THE SITE, ALL SUCH WARRANTIES ARE LIMITED IN DURATION TO NINETY (90) DAYS FROM THE DATE OF FIRST USE.</p>
+                                    <p class="htwp-p mt-2">SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU. SOME JURISDICTIONS DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE LIMITATION
+                                        MAY NOT APPLY TO YOU.</p>
+                                    <p class="htwp-p mt-2">ALL REPRESENTATIONS AND WARRANTIES REGARDING ANY VEHICLE SERVICES SHALL BE, IF AT ALL, ONLY AS EXPRESSLY AGREED BETWEEN YOU AND THE APPLICABLE PROFESSIONAL SERVICE PROVIDER.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p21"><span class="htwt">LIMITATION ON LIABILITY</span>
+                                <div id="p21" class="collapse">
+                                    <p class="htwp-p mt-2">TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL TOWGIG TECHNOLOGIES(OR OUR SUPPLIERS) BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY LOST PROFITS, LOST DATA, COSTS OF PROCUREMENT OF SUBSTITUTE PRODUCTS, OR ANY
+                                        INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES ARISING FROM OR RELATING TO THESE TERMS OR YOUR USE OF, OR INABILITY TO USE, THE SITE, EVEN IF TOWGIG TECHNOLOGIES HAS BEEN ADVISED OF
+                                        THE POSSIBILITY OF SUCH DAMAGES. ACCESS TO, AND USE OF, THE SITE IS AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR DEVICE OR COMPUTER SYSTEM, OR LOSS OF DATA RESULTING
+                                        THEREFROM.
+                                    </p>
+                                    <p class="htwp-p mt-2">TO THE MAXIMUM EXTENT PERMITTED BY LAW, NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, OUR LIABILITY TO YOU FOR ANY DAMAGES ARISING FROM OR RELATED TO THIS AGREEMENT (FOR ANY CAUSE WHATSOEVER AND REGARDLESS
+                                        OF THE FORM OF THE ACTION), WILL AT ALL TIMES BE LIMITED TO A MAXIMUM OF FIFTY US DOLLARS (U.S. $50). THE EXISTENCE OF MORE THAN ONE CLAIM WILL NOT ENLARGE THIS LIMIT. YOU AGREE THAT OUR SUPPLIERS WILL HAVE NO LIABILITY
+                                        OF ANY KIND ARISING FROM OR RELATING TO THIS AGREEMENT.</p>
+                                    <p class="htwp-p mt-2">SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.</p>
+                                    <p class="htwp-p mt-2">NOTE: THESE LIMITATIONS SHALL APPLY TO THE FULLEST EXTENT PERMITTED BY LAW.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p22"><span class="htwt">SEVERABILITY</span>
+                                <div id="p22" class="collapse">
+                                    <p class="htwp-p mt-2">Any Personal Information provided to TowGig Technologies through the Website and Application is subject to our Privacy Policy. If any is invalid, unenforceable, or illegal, provision of these Terms and Conditions would
+                                        be valid, enforceable and legal if some part of it were deleted, the provisions will apply with the minimum modification necessary to make it legal, valid and enforceable.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p23"><span class="htwt">TERMINATION</span>
+                                <div id="p23" class="collapse">
+                                    <p class="htwp-p mt-2">We reserve the right to terminate your access to this Website and Application, or any of its features or any of the Services:</p>
+                                    <ul>
+                                        <li class="li-p">at any time and without any prior notice, if you have breached these Terms and Conditions; or</li>
+                                        <li class="li-p">at our discretion, giving 24 hours written notice (including as an announcement on the Website and Application).</li>
+                                    </ul>
+                                    <p class="htwp-p mt-2">If you elect to terminate your registration and account, you may do so at any time by contacting us. Upon any termination, all rights and obligations of the parties under these Terms shall cease, and you shall immediately
+                                        stop accessing and using the Service.</p>
+                                    <p class="htwp-p mt-2">All obligations that accrued prior to the effective date of termination including payment and service completion obligations shall survive. TowGig Technologies will reasonably cooperate with completing any Vehicle Services
+                                        booked prior to termination which will include collecting and distributing payments. TowGig Technologies may retain and use non-personally identifiable User Data. After termination, TowGig Technologies has no obligation
+                                        to maintain any User Data or User Content or to forward any unread or unsent messages to you or to any other user or third party.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p24"><span class="htwt">PRICING/TYPOGRAPHICAL ERROR</span>
+                                <div id="p24" class="collapse">
+                                    <p class="htwp-p mt-2">If TowGig Technologies comes across any difference in pricing resulting from typographic errors with regards to pricing or service information, TowGig Technologies shall have the right to rectify the same or cancel
+                                        the order(s) and refund monies, if any, collected from the customer within 10-15 business days of such corrective action taken. The mode of refund will be the same as at the time of placing the order. Cash on Delivery
+                                        order refunds will be done by cheque.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p25"><span class="htwt">CHANGES TO THESE TERMS</span>
+                                <div id="p25" class="collapse">
+                                    <p class="htwp-p mt-2">These Terms are subject to occasional revision, and if we make any substantial changes, we may notify you by prominently posting notice of the changes on our Site. Any changes to these Terms will be effective upon thirty
+                                        (30) calendar days following our posting of notice of the changes on our Site. These changes will be effective immediately for new users of our Site. Continued use of our Site following notice of such changes shall
+                                        indicate your acknowledgement of such changes and agreement to be bound by the terms and conditions of such changes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p26"><span class="htwt">EXPORT</span>
+                                <div id="p26" class="collapse">
+                                    <p class="htwp-p mt-2">The Site may be subject to U.S. export control laws and may be subject to export or import regulations in other countries. You agree not to export, re-export, or transfer, directly or indirectly, any U.S. technical
+                                        data acquired from TowGig Technologies, or any products utilizing such data, in violation of the United States export laws or regulations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p27"><span class="htwt">ELECTRONIC COMMUNICATIONS</span>
+                                <div id="p27" class="collapse">
+                                    <p class="htwp-p mt-2">The communications between you and TowGig Technologies use electronic means, whether you use the Site or send us emails, or whether TowGig Technologies posts notices on the Site or communicates with you via email. For
+                                        contractual purposes, you: (a.) consent to receive communications from TowGig Technologies in an electronic form; and (b.) agree that all terms and conditions, agreements, notices, disclosures, and other communications
+                                        that TowGig Technologies provides to you electronically satisfy any legal requirement that such communications would satisfy if it were be in a hardcopy writing. The foregoing does not affect your non-waivable rights.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p28"><span class="htwt">ENTIRE TERMS</span>
+                                <div id="p28" class="collapse">
+                                    <p class="htwp-p mt-2">These Terms constitute the entire agreement between you and us regarding the use of the Site. Our failure to exercise or enforce any right or provision of these Terms shall not operate as a waiver of such right or provision.
+                                        The section titles in these Terms are for convenience only and have no legal or contractual effect. The word “including” means “including without limitation”. If any provision of these Terms is, for any reason,
+                                        held to be invalid or unenforceable, the other provisions of these Terms will be unimpaired and the invalid or unenforceable provision will be deemed modified so that it is valid and enforceable to the maximum extent
+                                        permitted by law. This agreement does not establish any partnership, joint venture or agency between the Company and you. These Terms, and your rights and obligations herein, may not be assigned, subcontracted,
+                                        delegated, or otherwise transferred by you without the Company’s prior written consent, and any attempted assignment, subcontract, delegation, or transfer in violation of the foregoing will be null and void. TowGig
+                                        Technologies may freely assign these.</p>
+                                    <p class="htwp-p mt-2">Notice: All notices required or permitted to be given under these Terms of Service, shall be in writing and shall be deemed to have been duly given if delivered personally or sent by pre-paid telex, telefax or telegram,
+                                        or mailed first-class, postage pre-paid, by registered or certified mail (notices sent by telex or telefax, or telegram, shall be deemed to have been given on the date sent; those mailed shall be deemed to have
+                                        been given ten (10) business days after mailing) to the addresses set forth below or to such other address as any party shall designate by notice in writing. </p>
+                                    <p class="htwp-p mt-2">If to TowGig Technologies:</p>
+                                    <note>TowGig Technologies:</note>
+                                    <address>1 Hardy Road
+                                    #1206 Bedford,
+                                    NH 03110. USA
+                                    </address>
+                                    <a href="towgig.com" style="text-decoration: underline;">help@towgig.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p29"><span class="htwt">ARBITRATION</span>
+                                <div id="p29" class="collapse">
+                                    <p class="htwp-p mt-2">You and TowGig Technologies agree to arbitrate any dispute that arises or is related to the Terms or Services, except in the case where either party seeks equitable and any relief for the alleged unlawful use of copyrights,
+                                        trademarks, trade names, trade secrets, logos, or patents; and that any arbitration prevents you from suing in court or from having a jury trial. Arbitration prevents you from suing in court or from having a jury
+                                        trial and the arbitration will occur in Bedford, New Hampshire. The arbitration will be confidentially conducted by a single arbitrator in accordance with the rules of the State or Federal courts of Bedford, New
+                                        Hampshire shall have exclusive jurisdiction over any appeals of an arbitration award and any other suit, if any, between the parties that is not subject to arbitration.</p>
+                                    <p class="htwp-p mt-2">The proceedings shall be in English, all evidence shall be in English (or translated into English) and the governing law shall be as set forth herein. The arbitrator’s decision shall be in writing and shall comply with
+                                        all terms and conditions in the applicable version of the Terms of Service. The decision and award rendered shall be final and binding on both parties. You and TowGig Technologies agree that any dispute heard in
+                                        arbitration or in court will not commence against the other a class action, class arbitration or representative action or proceeding.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p30"><span class="htwt">GOVERNING LAW</span>
+                                <div id="p30" class="collapse">
+                                    <p class="htwp-p mt-2">The interpretation and execution of these Terms, and the relationship between you and TowGig Technologies, shall be governed and construed in accordance with the laws of New Hamshire, USA. Any claim or dispute arising
+                                        either directly or indirectly out of these Terms shall be brought before a court of competent jurisdiction in the City of Bedford, New Hampsire, United States of America. The United Nations Convention on Contracts
+                                        for the International Sale of Goods shall not apply to the Terms of Service.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                            <div data-toggle="collapse" data-target="#p31"><span class="htwt">INTEGRATION</span>
+                                <div id="p31" class="collapse">
+                                    <p class="htwp-p mt-2">These Terms (including the then current Policies) are the entire agreement between you and TowGig Technologies with respect to access, use and operation of the Service, and supersede all prior or contemporaneous communications,
+                                        proposals and agreements (whether oral, written or electronic) between you and TowGig Technologies with respect to the Service. If any provision of the Terms of Service is found to be unenforceable or invalid, that
+                                        provision will be limited or eliminated to the minimum extent necessary so that the Terms of Service will otherwise remain in full force and effect and enforceable.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row mt-4 mb-5">
+                            <a href="cookie.html" class="mb-4"><button class="btn btn-primary">Visit Our Cookie Policy</button></a>
+                            <div><span class="htwt" style="color:#007bff;">CONTACT</span>
+                                <div id="p22">
+                                    <p class="htwp-p mt-2">Please feel free to send any questions or comments (including all inquiries unrelated to copyright infringement) regarding this Site to the support page on the Website and Application or to our physical office address:</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+                                <note>TowGig Technologies:</note>
+                                <address>1 Hardy Road
+                            #1206 Bedford,
+                            NH 03110. US
+                            </address>
+                                <a href="towgig.com" style="text-decoration: underline;">www.towgig.com </a> <br>
+                                <a href="towgig.com" style="text-decoration: underline;">help@towgig.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="aboutcontainer5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 offset-1 col-md-8 col-sm-12 col-xsm-12 ">
+                    <h2 class="pt-3">Download the app and Sign Up <strong>For Free</strong></h2>
+                    <button class="btn btn-outline-primary abtcontainer5-button">Get the App</button>
+                </div>
+                <div class="col-lg-1 col-md-3 col-sm-12 col-xsm-12">
+                    <img src="img/TowGig-3.png" class="TowGig3-img" alt="TowGig-3">
+                </div> 
+                <div class="col-lg-5 col-md-8 col-sm-12 col-xsm-12 offset-2  ">
+                    <br>
+                    <h2 class="cntnr5h2">We have a lot discounts available here.</h2>
+                    <button class="button container5-button-right">GO HERE</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div id="container7">
+        <div id="jssor_1">
+            <div data-u="loading" class="jssorl-009-spin">
+                <img class="img-style" src="img/spin.svg" />
+            </div>
+            <div data-u="slides" class="sliderdiv1">
+                <div class="imgpad">
+                    <img data-u="image" src="img/subaru.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/stripe.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/paypal.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" src="img/mobius.png" />
+                </div>
+                <div class="imgpad">
+                    <img data-u="image" />
+                </div><a data-u="any" href="https://www.jssor.com" style="display:none">web design</a>
+            </div>
+        </div>
+    </div> -->
+    <input class="checkbox-cb" id="checkbox-cb" type="checkbox" />
+    <!-- <div class="cookie-bar">
+    <span class="message">Visit to our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
+    <span class="mobile">Visit our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
+    <label for="checkbox-cb" class="close-cb">x</label>
+    </div> -->
+    <footer class="page-footer font-small stylish-color-dark pt-4 abtfooter">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class=" text-white mt-3 mb-4">Platform</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="services&promo.html">Service/Promo</a>
+                        </li>
+                        <li>
+                            <a href="benefit&bonus.html">Benefit/Bonus</a>
+                        </li>
+                        <li>
+                            <a href="how-it-works.html">How it works</a>
+                        </li>
+                        <li>
+                            <a href="costing.html">Costing</a>
+                        </li>
+                        <li>
+                            <a href="https://apps.apple.com/pk/app/towgig/id1507223706"><img alt="iosbtn" class="footer-img1" src="img/iosbtn.png" /></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.crymzee.towgig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class="text-white mt-3 mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="partner-with-us.html">Partner With Us</a>
+                        </li>
+                        <li>
+                            <a href="index.php#TowTruckNearMe">Tow Truck Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#!">Site Map</a>
+                        </li>
+                        <li><a href="blog.php">Blog</a>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-3 offset-1">
+                    <h5 class="text-white mt-3 mb-4">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="terms.html">Terms and Condition</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="refundPolicy.html">Refund Policy</a>
+                        </li>
+                        <li>
+                            <a href="user-agreement.html">End User License Agreement(EULA)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <ul class="list-unstyled list-inline text-center footersocial">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1 footersocial" href="https://www.youtube.com/channel/UCoC2uDJq_ZWqwTVGQs4z1ag">
+                    <i class="fab fa-youtube fa-1x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1 footersocial" href="https://twitter.com/towgig">
+                    <i class="fab fa-twitter fa-1x"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1 footersocial" href="https://www.facebook.com/TowGig-Technologies-100417204767612/">
+                    <i class="fab fa-facebook-f fa-1x"> </i>
+                </a>
+            </li>
+
+        </ul>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2020 TowGig Technologies
+        </div>
+        <div class="footer-copyright text-center py-3 text-muted"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- MODEL-BOX -->
+    <div class="modal fade" id="Modal-expert">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right model-pad">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <p class="boxmp">Meet Amazing Buyers Waiting for Your Service,It only takes 3-6 minutes to sign up & start earning.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp mt-2">For a quick sign up, Please enter your</p>
+                                                <section class="mx-2 pb-3 text-center">
+                                                    <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#signupemail" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                        </li>
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#signupphone" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContentMD">
+                                                        <div class="tab-pane fade in show active" id="signupemail" role="tabpanel" aria-labelledby="home-tab-md">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="signupphone" role="tabpanel" aria-labelledby="profile-tab-md">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number" value="" required/>
+                                                                <br>
+                                                                <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <!-- <p class="mbp1 mt-1 mt-3 ml-3">The App Link will be send to you, now</p> -->
+                                        <p class="mbp1 ml-3 mt-2" style="color:#424141e0!important;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for doing Business with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Modal-buyer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="container register">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11 register-right model-pad">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <p class="boxmp">A Diligence Expert is waiting to come service your vehicle.</p>
+                                    <div class="row register-form">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p class="mbp mt-1">For a quick sign up, Please enter your</p>
+                                                <section class="mx-2 pb-3 text-center">
+                                                    <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link active" id="home-tab-mdb" data-toggle="tab" href="#signupemailb" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
+                                                        </li>
+                                                        <li class="nav-item waves-effect waves-light">
+                                                            <a class="nav-link" id="profile-tab-mdb" data-toggle="tab" href="#signupphoneb" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContentMDb">
+                                                        <div class="tab-pane fade in show active" id="signupemailb" role="tabpanel" aria-labelledby="home-tab-mdb">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="email" class="form-control getemail" name="email" placeholder="Email Address" value="" required/>
+                                                                <span><p class="mbp12 mt-1">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister1"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="signupphoneb" role="tabpanel" aria-labelledby="profile-tab-mdb">
+                                                            <form name="myForm" action="towgigsignup.php" method="post">
+                                                                <input type="tel" class="form-control mt-2 getphone" name="phone_number[main]" id="phone_number1" value="" required/>
+                                                                <br>
+                                                                <span><p class="mbp12 mt-4">The App Link will be send to you</p><input type="submit" name="submit" class="btnRegister mt-3"  value="Send"/></span>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <!-- <p class="mbp1 mt-1 ml-3">The App Link will be send to you, now</p> -->
+                                        <p class="mbp1 ml-3 mt-2" style="color:#424141e0!important;"> Or go to the App store & search to download for free</p>
+                                        <h3 class="mbh31 ml-3">Thank You for Being an Amazing Buyer with TowGig</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $Idle: 0,
+                $SlideDuration: 5000,
+                $SlideEasing: $Jease$.$Linear,
+                $SlideWidth: 140,
+                $Align: 0
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <style>
+        /*jssor slider loading skin spin css*/
+        
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#phone_number"), {
+            separateDialCode: true,
+            preferredCountries: ["us"],
+            hiddenInput: "full",
+            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+        });
+
+        $("form").submit(function() {
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("input[name='phone_number[full]'").val(full_number);
+            alert(full_number);
+        });
+    </script>
+    <script>
+        var phone_number = window.intlTelInput(document.querySelector("#phone_number1"), {
+            separateDialCode: true,
+            preferredCountries: ["us"],
+            hiddenInput: "full",
+            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+        });
+
+        $("form").submit(function() {
+            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
+            $("input[name='phone_number[full]'").val(full_number);
+            alert(full_number);
+        });
+    </script>
+    <script type="text/javascript">
+        jssor_1_slider_init();
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

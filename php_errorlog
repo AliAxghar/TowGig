@@ -1,0 +1,44 @@
+[10-Sep-2020 00:44:58 CST6CDT] PHP Fatal error:  Uncaught Error: Class 'Twilio\Rest\Client' not found in /home/acodaweb/public_html/towgigsignup.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/acodaweb/public_html/towgigsignup.php on line 5
+[10-Sep-2020 00:45:43 CST6CDT] PHP Fatal error:  Uncaught Error: Class 'Client' not found in /home/acodaweb/public_html/towgigsignup.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/acodaweb/public_html/towgigsignup.php on line 5
+[10-Sep-2020 00:46:22 CST6CDT] PHP Fatal error:  Uncaught Error: Class 'Client' not found in /home/acodaweb/public_html/towgigsignup.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/acodaweb/public_html/towgigsignup.php on line 5
+[10-Sep-2020 00:52:49 CST6CDT] PHP Fatal error:  Uncaught Error: Class 'Twilio\Rest\Client' not found in /home/acodaweb/public_html/towgigsignup.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/acodaweb/public_html/towgigsignup.php on line 6
+[10-Sep-2020 00:56:11 CST6CDT] PHP Fatal error:  Uncaught Twilio\Exceptions\RestException: [HTTP 400] Unable to create record: Permission to send an SMS has not been enabled for the region indicated by the 'To' number: +923224277699. in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php:88
+Stack trace:
+#0 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php(227): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to creat...')
+#1 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/MessageList.php(66): Twilio\Version->create('POST', '/Accounts/AC9c2...', Array, Array)
+#2 /home/acodaweb/public_html/towgigsignup.php(23): Twilio\Rest\Api\V2010\Account\MessageList->create('+923224277699', Object(Twilio\Values))
+#3 {main}
+  thrown in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php on line 88
+[10-Sep-2020 01:00:24 CST6CDT] PHP Fatal error:  Uncaught Twilio\Exceptions\RestException: [HTTP 400] Unable to create record: Permission to send an SMS has not been enabled for the region indicated by the 'To' number: +923224277699. in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php:88
+Stack trace:
+#0 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php(227): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to creat...')
+#1 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/MessageList.php(66): Twilio\Version->create('POST', '/Accounts/AC9c2...', Array, Array)
+#2 /home/acodaweb/public_html/towgigsignup.php(23): Twilio\Rest\Api\V2010\Account\MessageList->create('+923224277699', Object(Twilio\Values))
+#3 {main}
+  thrown in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php on line 88
+[10-Sep-2020 03:18:24 CST6CDT] PHP Fatal error:  Uncaught Twilio\Exceptions\RestException: [HTTP 400] Unable to create record: A 'To' phone number is required. in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php:88
+Stack trace:
+#0 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php(227): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to creat...')
+#1 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/MessageList.php(66): Twilio\Version->create('POST', '/Accounts/AC9c2...', Array, Array)
+#2 /home/acodaweb/public_html/towgigsignup.php(20): Twilio\Rest\Api\V2010\Account\MessageList->create('', Object(Twilio\Values))
+#3 {main}
+  thrown in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php on line 88
+[10-Sep-2020 03:20:24 CST6CDT] PHP Fatal error:  Uncaught Twilio\Exceptions\RestException: [HTTP 400] Unable to create record: A 'To' phone number is required. in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php:88
+Stack trace:
+#0 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php(227): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to creat...')
+#1 /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Rest/Api/V2010/Account/MessageList.php(66): Twilio\Version->create('POST', '/Accounts/AC9c2...', Array, Array)
+#2 /home/acodaweb/public_html/towgigsignup.php(20): Twilio\Rest\Api\V2010\Account\MessageList->create('', Object(Twilio\Values))
+#3 {main}
+  thrown in /home/acodaweb/public_html/vendor/twilio/sdk/src/Twilio/Version.php on line 88
