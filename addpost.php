@@ -104,7 +104,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
@@ -112,12 +112,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.php">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                        <a class="nav-link mr-3" href="allblogs.php">All Blogs</a>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link navlinkback" href="logout.php">logout</a>
@@ -131,6 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <span class="contact100-form-title getintouch" >
             Add Blog
         </span>
+
                 
             <div class="col-md-12">
                     <?php

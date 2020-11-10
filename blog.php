@@ -90,7 +90,7 @@ require_once "backend/database.php";
                                     echo '</div>';
                                     echo '<div class="card-desc">';
                                     echo '<h3>'.$row['title'].'</h3>';?>
-                                    <p><?php echo substr($row['short_description'],0,200)," .............";?></p>
+                                    <p style="margin-bottom:40px;"><?php echo substr($row['short_description'],0,200)," .............";?></p>
                                     <a href="blog_detail.php?Id=<?php echo $row["Id"]; ?>" class="btn-card">Read more</a>
                                     <?php
                                     echo '</div>';
