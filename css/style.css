@@ -2895,14 +2895,14 @@ ol li {
 
 ul#myTabMD {
     float: left!important;
-    width: 47%!important;
+    width: 25%!important;
     margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 768px) {
     ul#myTabMD {
         float: left!important;
-        width: 65%!important;
+        width: 35%!important;
         margin-bottom: 10px;
     }
 }
@@ -2923,7 +2923,7 @@ ul#myTabMD {
 .tow-truck-btn {
     position: fixed!important;
     right: 0!important;
-    top: 180px!important;
+    top: 240px!important;
     background: linear-gradient(to right, #42b883 11%, #064acb 94%)!important;
     padding: 7px 20px!important;
     z-index: 1000!important;

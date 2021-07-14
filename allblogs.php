@@ -7,6 +7,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+$string = "I have taken this from towgig.";
+$slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $string)));
+
 require_once "backend/database.php";
  
 // Define variables and initialize with empty values
@@ -194,7 +197,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <a class="nav-link" href="blog.php">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-3" href="allblogs.php">All Blogs</a>
+                        <a class="nav-link" href="allblogs.php">All Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  mr-3" href="allcategory.php">All Categories</a>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link navlinkback" href="logout.php">logout</a>
@@ -435,6 +441,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
         </div>
     </div> -->
+    <!-- <div class="text-center"><?php echo $slug;?></div> -->
     <div class="container">
 	<p id="success"></p>
         <div class="table-wrapper">
@@ -453,14 +460,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <table class="table table-striped table-hover" id="mytable">
                 <thead>
                     <tr>
-						<th>
-							<!-- <span class="custom-checkbox">
+						<!-- <th>
+							<span class="custom-checkbox">
 								<input type="checkbox" id="selectAll">
 								<label for="selectAll"></label>
-							</span> -->
-						</th>
+							</span>
+						</th> -->
 						<th>ID</th>
                         <th>TITLE</th>
+                        <th>CATEGORY</th>
                         <th>IMAGE</th>
                         <th>CREATED AT</th>
                         <th>ACTION</th>
@@ -477,19 +485,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
                     ?>
                     <tr id="<?php echo $row["Id"]; ?>">
-                        <td>
+                        <!-- <td>
                             <span class="custom-checkbox">
                                 <input type="checkbox" class="user_checkbox" data-user-id="<?php echo $row["Id"]; ?>">
                                 <label for="checkbox2"></label>
                             </span>
-                        </td>
+                        </td> -->
                         <td><?php echo $row["Id"]; ?></td>
                         <td><?php echo substr($row['title'],0,50),"......"; ?></td>
+                        <?php
+                            $post_cat_id = $row["category"];
+                            if (!empty($post_cat_id)) {
+                                $sql = "SELECT * FROM post_category WHERE id=$post_cat_id";
+                                $rs = mysqli_query($link,$sql);
+                                $getRowAssoc = mysqli_fetch_assoc($rs);
+                            }
+                            if (!empty($getRowAssoc)) {
+                                echo '<td>'.$getRowAssoc['name'].'</td>';
+                            }else{
+                                echo '<td style="text-align:center;">None</td>';
+                            }
+                        ?>
                         <td><img class="allblogImage" src="images/<?php echo $row["image"]; ?>" alt=""></td>
                         <td><?php echo $row["created_at"]; ?></td>
                         <td style="text-align:center;">
-                            <a href="delete_post.php?Id=<?php echo $row["Id"]; ?>" class="delete remove" id="" name="uid" data-id=""><i class="material-icons" data-toggle="tooltip" 
-                            title="Delete">&#xE872;</i></a>
+                            <a href="edit_post.php?Id=<?php echo $row["Id"]; ?>" class="edit">
+                                <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                            </a>
+                            <a href="delete_post.php?Id=<?php echo $row["Id"]; ?>" class="delete remove" id="" name="uid" data-id="">
+                                <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                            </a>
                         </td>
                     </tr>
 				<?php

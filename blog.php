@@ -20,6 +20,30 @@ require_once "backend/database.php";
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+    <style>
+        #blog-filter .filterDiv {
+            display: none;
+        }
+
+        #blog-filter .show {
+            display: block;
+        }
+
+        #blog-filter .container-fluid {
+            /* margin-top: 20px;
+            overflow: hidden; */
+        }
+        .btn-outline-info:not(:disabled):not(.disabled).active, .btn-outline-info:not(:disabled):not(.disabled):active, .show>.btn-outline-info.dropdown-toggle {
+            color: #fff;
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+        .btn-outline-info:focus{
+            color: #fff;
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+    </style>
 </head>
 
 <body class="aboutbody" id="aboutus">
@@ -72,47 +96,79 @@ require_once "backend/database.php";
         <div class="container htw">
             <h2 class="privacyh2">Our Blogs</h2>
         </div>
-        <section class="details-card pt-3 pb-5">
+        <section class="details-card pt-3 pb-5" id="blog-filter">
             <div class="container">
-                <div class="row">
-                <?php
-                $sql = "SELECT * FROM post";
-                if($result = mysqli_query($link, $sql)){
-                    if(mysqli_num_rows($result) > 0){
-                        while($row = mysqli_fetch_array($result)){
-                            echo '<div class="col-md-4 mt-2">';
-                                echo '<div class="card-content pb-2">';
-                                    echo '<div class="card-img">';
-                                        echo "<img src='images/".$row['image']."' >";
-                                    echo '</div>';
-                                    echo '<div class="card-footer">';
-                                    echo '<span><small class="text-muted">Last updated '.$row['updated_at'].'</small></span>';
-                                    echo '</div>';
-                                    echo '<div class="card-desc">';
-                                    echo '<h3>'.$row['title'].'</h3>';?>
-                                    <p style="margin-bottom:40px;"><?php echo substr($row['short_description'],0,200)," .............";?></p>
-                                    <a href="blog_detail.php?Id=<?php echo $row["Id"]; ?>" class="btn-card">Read more</a>
-                                    <?php
-                                    echo '</div>';
-                                echo '</div>';
-                                echo '</div>';
+                <div class="row pt-4">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sup_sorting sup_bottompadder30">
+                            <div class="filter-nav text-center" id="myBtnContainer">
+                                <button  class="btn btn-outline-info active mt-2" onclick="filterSelection('all')">All</button>
+                                <?php
+                                    $sql = "SELECT * FROM post_category";
+                                    $posts = $link->query($sql);
+                                    while($row = $posts->fetch_assoc()){?>
+                                        <button  class="btn btn-outline-info mt-2" onclick="filterSelection('<?php echo $row['slug']; ?>')"><?php echo $row['name']; ?></button>
+                                <?php
+                                    }?>         
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div id="filtercontainer">
+                    <!-- <div class="container-fluid"> -->
+                        <div class="row pt-4">
+                        <?php
+                        $sql = "SELECT * FROM post";
+                        if($result = mysqli_query($link, $sql)){
+                            if(mysqli_num_rows($result) > 0){
+                                while($row = mysqli_fetch_array($result)){
+                                    $cat_i = $row['category'];
+                                    $sql_i = "SELECT * FROM post_category WHERE id=".$cat_i;
+                                    if ($posts = $link -> query($sql_i)) {
+                                        while ($row_i = $posts -> fetch_row()) {
+                                        //   printf ("%s (%s)\n", $row_i[0], $row_i[1]);
+                                            // echo "<div class='filterDiv ".$row_i[2]."'>";
+                                            echo '<div class="filterDiv '.$row_i[2].' col-md-4 mt-2">';
+                                            echo '<div class="card-content pb-2">';
+                                                echo '<div class="card-img">';
+                                                    echo "<img src='images/".$row['image']."' >";
+                                                echo '</div>';
+                                                echo '<div class="card-footer">';
+                                                echo '<span><small class="text-muted">Last updated '.$row['updated_at'].'</small></span>';
+                                                echo '</div>';
+                                                echo '<div class="card-desc">';
+                                                echo '<h3>'.$row['title'].'</h3>';?>
+                                                <p style="margin-bottom:40px;"><?php echo substr($row['short_description'],0,200)," .............";?></p>
+                                                <a href="blog_detail.php?Id=<?php echo $row["Id"]; ?>" class="btn-card">Read more</a>
+                                                <?php
+                                                echo '</div>';
+                                            echo '</div>';
+                                            echo '</div>';
+                                            // echo '</div>';
+                                        }
+                                        $posts -> free_result();
+                                    }
+                                }
+                            } else{
+                                // echo "No records matching your query were found.";
+                                echo '<div class="col-md-3 mt-2"></div>';
+                                echo '<div class="col-md-6 mt-2">
+                                <h3 style="text-align:center!important;">There is no any blog in your database.</h3>
+                                </div>';
+                                echo '<div class="col-md-3 mt-2"></div>';
+                                
+                            }
+                        } else{
+                            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
                         }
-                    } else{
-                        // echo "No records matching your query were found.";
-                        echo '<div class="col-md-3 mt-2"></div>';
-                        echo '<div class="col-md-6 mt-2">
-                        <h3 style="text-align:center!important;">There is no any blog in your database.</h3>
-                        </div>';
-                        echo '<div class="col-md-3 mt-2"></div>';
                         
-                    }
-                } else{
-                    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-                }
-                 
-                // Close connection
-                mysqli_close($link);
-                ?>
+                        // Close connection
+                        mysqli_close($link);
+                        ?>
+                        </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </section>
@@ -286,9 +342,9 @@ require_once "backend/database.php";
                                                         <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#signupemail" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
                                                         </li>
-                                                        <li class="nav-item waves-effect waves-light">
+                                                        <!-- <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#signupphone" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
-                                                        </li>
+                                                        </li> -->
                                                     </ul>
                                                     <div class="tab-content" id="myTabContentMD">
                                                         <div class="tab-pane fade in show active" id="signupemail" role="tabpanel" aria-labelledby="home-tab-md">
@@ -340,9 +396,9 @@ require_once "backend/database.php";
                                                         <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link active" id="home-tab-mdb" data-toggle="tab" href="#signupemailb" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
                                                         </li>
-                                                        <li class="nav-item waves-effect waves-light">
+                                                        <!-- <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link" id="profile-tab-mdb" data-toggle="tab" href="#signupphoneb" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
-                                                        </li>
+                                                        </li> -->
                                                     </ul>
                                                     <div class="tab-content" id="myTabContentMDb">
                                                         <div class="tab-pane fade in show active" id="signupemailb" role="tabpanel" aria-labelledby="home-tab-mdb">
@@ -465,6 +521,62 @@ require_once "backend/database.php";
     <script type="text/javascript">
         jssor_1_slider_init();
     </script>
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        // var btns = btnContainer.getElementsByClassName(".active");
+        var elems = btnContainer.querySelectorAll(".active");
+        [].forEach.call(elems, function(el) {
+            el.classList.remove("active");
+        });
+        e.target.className = "active";
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].addEventListener("click", function(){
+        //         var current = document.getElementsByClassName("active");
+        //         current[0].className = current[0].className.replace(" active", "");
+        //         this.className += " active";
+        //     });
+        // }
+        // function myfFunction(e) {
+        //     var elems = document.querySelectorAll(".btn");
+        //     [].forEach.call(elems, function(el) {
+        //         el.classList.remove("active");
+        //     });
+        //     e.target.className = "active";
+        // }
+</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

@@ -9,37 +9,46 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 $msg = "";
-$title = $short_description = $category = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $Id = $_POST['Id'];
     $title = $_POST['title'];
     $category = $_POST['category'];
     $short_description = $_POST['short_description'];
     $description =  $_POST['editor'];
     $target = "images/".basename($_FILES['image']['name']);
-    $image = $_FILES['image']['name'];
-    $sql = "INSERT INTO post (title, category, short_description, description, image) VALUES (?, ?, ?, ?, ?)";
-    if(empty(trim($_POST["title"]))){
-        $msg = "Please enter a title.";
-    } elseif(empty(trim($_POST["category"]))){
-        $msg = "Please enter a category.";
-    } elseif(empty(trim($_POST["short_description"]))){
-        $msg = "Please enter a short description.";
-    } else{
-        if($stmt = mysqli_prepare($link, $sql)){
-            mysqli_stmt_bind_param($stmt, "sssss", $title, $category, $short_description, $description, $image);
-            
-            if(mysqli_stmt_execute($stmt)){
-                if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-                    header("location: allblogs.php");
-                }else{
-                    $msg = "Failed to upload image";
-                }
-            } else{
-                $msg = 'Something went wrong.';
-            }
-            mysqli_stmt_close($stmt);
+    $image= $_FILES['image']['name'];
+    $image_temp=$_FILES['image']['tmp_name'];
+    if($image_temp != "")
+    {
+        move_uploaded_file($image_temp, $target);
+
+        $update="update post SET title=? ,category=? ,short_description=?, description=?, image=? where Id=?";
+        $stmt = $link->prepare($update);
+        $stmt->bind_param('ssssss', $title, $category, $short_description, $description, $image, $Id);
+        $stmt->execute();
+
+        if ($stmt->error) {
+            echo "FAILURE!!! " . $stmt->error;
+        }
+        else {
+           header("location:allblogs.php");
+        }
+    }else
+    {
+
+        $update="update post SET title=? ,category=? ,short_description=? ,description=? where Id=?";
+        $stmt = $link->prepare($update);
+        $stmt->bind_param('sssss', $title, $category, $short_description, $description, $Id);
+        $stmt->execute();
+
+        if ($stmt->error) {
+            echo "FAILURE!!! " . $stmt->error;
+        }
+        else {
+           header("location:allblogs.php");
         }
     }
+    mysqli_close($link);
 }
 ?>
 <!DOCTYPE html>
@@ -60,6 +69,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/util.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/main.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet"> -->
+    <!-- <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -99,6 +112,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-works.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="blog.php">Blogs</a>
                     </li>
@@ -118,7 +140,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-6">
-                    <span class="contact100-form-title getintouch" >Add Blog</span>
+                    <span class="contact100-form-title getintouch" >Edit Blog</span>
                     </div>
                     <div class="col-3">
                         <div style="float:right;" class="mb-2"><a class="btn btn-success" href="add_category.php">Add Category</a></div>
@@ -131,45 +153,58 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     ?>
                         <div style="text-align:center;"><div class="alert alert-info mt-3" style="text-align:center;width:100%;display:block;"><?php echo $msg; ?></div></div>
                 <?php
-                    }?>
-                <form class="" name="contactform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label class="">Title:</label>
-                        <input class="form-control" type="text" id="title" name="title" placeholder="title">
-                    </div>
-                    <input type="hidden" name="size" value="1000000">
-                    <div class="form-group">
-                        <label class="">Image:</label>
-                        <input class="form-control image-field" type="file" id="image" name="image">
-                    </div>
-                    <div class="form-group">
-                        <label for="sel1">Select Category:</label>
-                        <select class="form-control" name="category">
-                            <option value="">-- Select --</option>
-                            <?php
-                                $records = mysqli_query($link, "SELECT * FROM post_category");  // Use select query here 
+                    }
+                    $Id = $_GET['Id'];
+                    $sql = "SELECT * FROM post WHERE Id=".$Id;
+                    $posts = $link->query($sql);
+            
+            
+                    while($row = $posts->fetch_assoc()){?>
+                        <form class="" name="contactform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="">Title:</label>
+                                <input class="form-control" type="text" id="title" name="title" value="<?php echo $row['title']; ?>" placeholder="title">
+                            </div>
+                            <input type="hidden" name="Id" value="<?php echo $row['Id']; ?>">
+                            <input type="hidden" name="size" value="1000000">
+                            <div class="form-group">
+                                <label class="">Image:</label>
+                                <input class="form-control image-field" type="file" id="image"  value="<?php echo $row['image']; ?>" name="image">
+                            </div>
+                            <div class="form-group">
+                                <label for="sel1">Select Category:</label>
+                                <select class="form-control" name="category">
+                                    <option value="">-- Select --</option>
+                                    <?php
+                                        $records = mysqli_query($link, "SELECT * FROM post_category");  // Use select query here 
 
-                                while($data = mysqli_fetch_array($records))
-                                {
-                                    echo "<option class='form-control' value='". $data['id'] ."'>" .$data['name'] ."</option>";  // displaying data in option menu
-                                }	
-                            ?>  
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="mb-3">Short Description:</label>
-                        <input type="text" name="short_description" id="short_description" class="form-control" placeholder="short description" >
-                    </div>
-                    <div class="form-group">
-                        <label class=" mb-3">Detail Description:</label>
-                        <textarea name="editor" id="editor" rows="10" cols="80" class="" required>
-                        Write your post here
-                        </textarea>
-                    </div>
-                    <div class="form-group" style="text-align:center;">
-                        <input type="submit" class="post-btn" value="Post">
-                    </div>
-                </form>
+                                        while($data = mysqli_fetch_array($records)){
+                                            if ($row['category']==$data['id']){
+                                                echo "<option class='form-control' selected value='". $data['id'] ."'>" .$data['name'] ."</option>";
+                                            }else{
+                                                echo "<option class='form-control' value='". $data['id'] ."'>" .$data['name'] ."</option>";
+                                            }
+                                        }	
+                                    ?>  
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-3">Short Description:</label>
+                                <input type="text" name="short_description" id="short_description" value="<?php echo $row['short_description']; ?>" class="form-control" placeholder="short description" >
+                            </div>
+                            <div class="form-group">
+                                <label class=" mb-3">Detail Description:</label>
+                                <textarea name="editor" id="editor" rows="10" cols="80" value="" class="" required>
+                                    <?php echo $row['description']; ?>
+                                </textarea>
+                            </div>
+                            <div class="form-group" style="text-align:center;">
+                                <input type="submit" class="post-btn" value="Update">
+                            </div>
+                        </form>
+                    <?php
+                        }
+                    ?>
             </div>
             <!-- <div class="col-md-1"></div> -->
         </div>
