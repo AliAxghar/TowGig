@@ -1,3 +1,106 @@
+<?php
+// Include config file
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+// $string = "I have taken this from wordpress and it works";
+// $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $string)));
+
+require_once "backend/database.php";
+ 
+// Define variables and initialize with empty values
+$email = $password = $confirm_password = "";
+$email_err = $password_err = $confirm_password_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Validate email
+    if(empty(trim($_POST["email"]))){
+        $email_err = "Please enter a email.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT id FROM users WHERE email = ?";
+        
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_email);
+            
+            // Set parameters
+            $param_email = trim($_POST["email"]);
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                
+                if(mysqli_stmt_num_rows($stmt) == 1){
+                    $email_err = "This email is already taken.";
+                } else{
+                    $email = trim($_POST["email"]);
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+    
+    // Validate password
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter a password.";     
+    } elseif(strlen(trim($_POST["password"])) < 6){
+        $password_err = "Password must have atleast 6 characters.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate confirm password
+    if(empty(trim($_POST["confirm_password"]))){
+        $confirm_password_err = "Please confirm password.";     
+    } else{
+        $confirm_password = trim($_POST["confirm_password"]);
+        if(empty($password_err) && ($password != $confirm_password)){
+            $confirm_password_err = "Password did not match.";
+        }
+    }
+    
+    // Check input errors before inserting in database
+    if(empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+        
+        // Prepare an insert statement
+        $sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_password);
+
+            $param_email = $email;
+            $param_password = password_hash($password, PASSWORD_DEFAULT);
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Redirect to login page
+                header("location: login.php");
+            } else{
+                echo "Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+    
+    // Close linkection
+    mysqli_close($link);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +109,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TowGig</title>
+    <!-- <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css"> -->
     <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/userstyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script src="ajax/ajax.js"></script>
+    <style>
+        .nav-link {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 17px !important;
+            font-weight: 500!important;
+            padding: 7px 13px !important;
+        }
+        
+        .nav-link:hover {
+            color: #42b883 !important;
+            font-size: 17px !important;
+            font-weight: 500!important;
+            padding: 7px 13px !important;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            span.tech1 {
+                text-align: center!important;
+            }
+        }
+        .modal button.close{
+            margin-top: -6px;
+            margin-right: -6px;
+        }
+        .iti {
+            position: relative;
+            display: inline-block;
+            width: 100%!important;
+        }
+        input#image {
+            padding-top: 16px!important;
+        }
+        .modal-content {
+            background-color: white!important;
+        }
+        img.allblogImage {
+            height: 50px;
+            width: 70px;
+        }
+    </style>
 </head>
 
 <body class="aboutbody" id="aboutus">
@@ -32,32 +184,36 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="how-it-works.html">How it Works</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.php">Blog</a>
+                        <a class="nav-link" href="allblogs.php">All Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-3" href="contact.html">Contact Us</a>
+                        <a class="nav-link  mr-3" href="allcategory.php">All Categories</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item mr-2">
+                        <a class="nav-link navlinkback" href="logout.php">logout</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active navlinkback" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Sign Up
                     </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a data-toggle="modal" data-target="#Modal-buyer" class="dropdown-item" href="#">Buyer</a>
                             <a data-toggle="modal" data-target="#Modal-expert" class="dropdown-item" href="#">Expert</a>
-                            <!-- <a data-toggle="modal" data-target="#myModal" class="dropdown-item" href="#">Buyer</a>
-                        <a data-toggle="modal" data-target="#myModal1" class="dropdown-item" href="#">Expert</a> -->
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -90,7 +246,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Username*" value="" />
+                                        <input type="text" class="form-control" placeholder="email*" value="" />
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Password *" value="" />
@@ -135,7 +291,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Email/Username" value="" />
+                                        <input type="text" class="form-control" placeholder="Email/email" value="" />
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Password" value="" />
@@ -285,283 +441,161 @@
             </div>
         </div>
     </div> -->
-    <div id="aboutcontainer3" class="promopage1" style="padding-bottom: 0px;">
-        <div class="container htw">
-            <h2>Welcome to Services and Promo Codes</h2>
-            <h3 class="abtcntnrh4">TowGig Technologies is here to make it easier for auto service provider and motorist to do business in a fast, secure and genuine standard.</h3>
-            <div class="row pt-4">
-                <div class="table-responsive pt-2">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th class="th1">Amount </th>
-                                <th class="th1">Coupon Discount Name </th>
-                                <th class="th1">Promo Code</th>
-                                <th class="th1">Choose One</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong class="td1">$5</strong></td>
-                                <td><strong class="td2">Get $5</strong> credit First time user </td>
-                                <td><strong class="td2">TowGigfirsttimePROM</strong></td>
-                                <td class="td41"><strong class="td412">Select</strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong class="td1">$5</strong></td>
-                                <td><strong class="td2">Get $5</strong> credit after 25 Gigs bough </td>
-                                <td><strong class="td2">TowGig25GIGS</strong></td>
-                                <td class="td41"><strong class="td412">Select</strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong class="td1">$10</strong></td>
-                                <td><strong class="td2">Get $10</strong> credit on labor day</td>
-                                <td><strong class="td2">TowGiglaborday</strong></td>
-                                <td class="td41"><strong class="td412">Select</strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong class="td1">5%</strong></td>
-                                <td><strong class="td2">Get $5</strong> from TowGig Benefit</td>
-                                <td><strong class="td2">TowGig Benefits plan</strong></td>
-                                <td class="td42"><strong class="td412"><a style="color:#fff;text-decoration:none" href="contact.html">Contact Us</a></strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong class="td1">5%</strong></td>
-                                <td><strong class="td2">Get $5</strong> at qualifying car repair shop</td>
-                                <td></td>
-                                <td class="td42"><strong class="td412"><a style="color:#fff;text-decoration:none" href="#">Call Us</a></strong></td>
-                            </tr>
-                            <tr>
-                                <td><strong class="td1">5%</strong></td>
-                                <td><strong class="td2">Get $5</strong> if elderly over 65years</td>
-                                <td><strong class="td2">TowGig65&over</strong></td>
-                                <td class="td42"><strong class="td412"><a style="color:#fff;text-decoration:none" href="contact.html">Contact Us</a></strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <!-- <div class="text-center"><?php echo $slug;?></div> -->
+    <div class="container">
+	<p id="success"></p>
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+						<h2>Manage <b>Categories</b></h2>
+					</div>
+					<div class="col-sm-6">
+						<a href="add_category.php" class="btn btn-success"><i class="material-icons"></i> <span>Add New Category</span></a>
+						<!-- <a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple"><i class="material-icons"></i> <span>Delete</span></a>						 -->
+					</div>
                 </div>
             </div>
-            <div class="container htw">
-                <h2 class="pt-3 h213">Frequently Ship Cars?</h2>
-                <h3 class="abtcntnrh4 h2134">FOR CAR MANIFACTURER & CAR DEALER ONLY</h3>
-                <div class="row pt-4">
-                    <div class="table-responsive pt-2">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="th1">Plan Name</th>
-                                    <th class="th1">Amount</th>
-                                    <th class="th1">Savings</th>
-                                    <th class="th1">Benefits</th>
-                                    <th class="th1">Take Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong class="td1">Blue</strong></td>
-                                    <td><strong class="td2">$10/Month</strong></td>
-                                    <td><strong class="td2">8%</strong> Each time you ship with TowGig</td>
-                                    <td>See details at</td>
-                                    <td class="td41"><strong class="td412">Click Here</strong></td>
-                                </tr>
-                                <tr>
-                                    <td><strong class="td12">Black</strong></td>
-                                    <td><strong class="td2">$15/Month</strong></td>
-                                    <td><strong class="td2">12%</strong> Each time you ship with TowGig</td>
-                                    <td>See details at</td>
-                                    <td class="td42"><strong class="td412">Click Here</strong></td>
-                                </tr>
-                                <tr>
-                                    <td><strong class="td13">Brown</strong></td>
-                                    <td><strong class="td2">$220/year</strong></td>
-                                    <td><strong class="td2">20%</strong> Each time you ship with TowGig </td>
-                                    <td>See details at</td>
-                                    <td class="td42"><strong class="td412">Click Here</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="container htw mt-3">
-                <h2 class="pt-3 h213">The awesome services that You're Looking For</h2>
-                <!-- <h3 class="abtcntnrh4 h2134">FOR CAR MANIFACTURER & CAR DEALER ONLY</h3> -->
-                <div id="serviceid">
-                    <div class="pt-2">
-                        <div class="row mt-3">
-                            <div class="col-lg-7 col-md-12 col-sm-12 col-xsm-12">
-                                <div class="container6-col-section">
-                                    <h3 class="h331 pt-3">Tow/Haul or Shipping Services</h3>
-                                    <!-- <p class="pp1">Towing 1 car or hauling many cars? look no further. The
-                                        modern way of towing or shipping vehicles from point
-                                        A-B, has moved from endless phone calls, to website,
-                                        to an app. Start using TowGig Technologist & you'll be
-                                        amaze. To get the most exciting experience with towing, a
-                                        few taps on Your phone is all you need. TowGig will bring
-                                        to you the fastest, affordable & secure service to satisfy
-                                        your auto needs. The super TowGig app, will instantly
-                                        connect both the Buyer & service Expert to conduct a
-                                        secure & genuine business. <strong>Tow or ship: New,
-                                        used, or salvage cars</strong> within the city or across the country.
-                                        Tow even heavy duty trailer and even space-car.
-                                    </p> -->
-                                    <p class="pp1">Shipping 1 or many vehicles? look no further. The modern way of towing or shipping vehicles from point A-C, has moved from endless phone calls, to website booking, now to an app. Start utilizing TowGig Technologist
-                                        & you'll be amaze. To get the most exciting experience with towing, a few taps on your device is all you need. TowGig is fast; affordable, & convenience. Get connected to a auto service expert for your auto needs
-                                        now. <strong>Tow or ship; New, used, or
-                                        salvage cars</strong> within the city or across the country. Tow/ship heavy duty, trailer & even space-car.
-                                    </p>
-                                    <br>
-                                    <h3 class="h331 pt-5">Roadside Assistance Services</h3>
-                                    <!-- <p class="pp1">In Every 4 in 15 car owners needs Roadside help a day.
-                                        Stranded at roadside due to car brake-dawn? No worries.
-                                        No to long waiting for help requested by phone calls.
-                                        Now, With just a few Taps on Your phone, the TowGig app
-                                        shall connect you with a licensed auto Expert nearly by
-                                        for a fast, affordable & amazing service. Services under
-                                        <strong>Roadside Assistance</strong> include: <strong>Replacing Flat Tire, Fuel
-                                        Refill, Replace Bad Battery, Jump-start your car, Open
-                                        Locked out of your car, Check engine light on, Tire or
-                                        car vibration during or idling, and much more.</strong> You would
-                                        have yourself to be blame if you do not start using the TowGig
-                                        app for routine vehicle services. Download the TowGig app
-                                        now; & you'll be amaze you did. 
-                                    </p> -->
-                                    <p class="pp1">In Every 15 car owners, 3 needs Roadside help a day. Stranded at roadside due to car broke-dawn? No worries. No more endless phone calls. No to long wait. Now, with just a few Taps on your phone, the TowGig app shall
-                                        rapidly connect you with a licensed auto Expert nearby for a secure, affordable & amazing service. <strong> Roadside Assistance</strong> services include: <strong>Replacing Flat Tire, Fuel
-                                        delivery, Replace Bad Battery, Battery Jump-start, Locked-out, Check
-                                        engine light on, Tire or car vibrating during driving or idling, & more.</strong> You would have yourself to be blame if you do not start utilizing the TowGig app for routine vehicle services. Download, TowGig app
-                                        & sign-up free now, & you'll be amaze you did.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 col-md-12 col-sm-12 col-xsm-12 container6-col-img">
-                                <img src="img/TG.jpg" class="container6-img-tg1" alt="TowGig">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container freapp pt-4" id="aboutcontainer4">
-            <div class="row">
-                <!-- <div class="col-1"></div> -->
-                <div class="col-11 offset-1 container4-col">
-                    <h3 class="h3112">
-                        <span style="color: #006be9;font-size: 26px;">Download your free TowGig app now,</span> and Save <span style="color: #006be9;">$5-$10</span> on your first order.<br> <span style="color: #ffb837;"> </span>
-                    </h3>
-                </div>
-                <!-- <div class="col-1"></div> -->
-            </div>
-        </div>
-        <div class="container htw">
-            <h2 class="pt-3 h213">Some Key Notes for Buyer and Expert</h2>
-            <h3 class="abtcntnrh4 h2134">For Roadside Assistance Service</h3>
-            <div id="serviceid">
-                <div class="pt-2">
-                    <div class="row mb-5">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xsm-12">
-                            <div class="container6-col-section">
-                                <h3 class="h331">Tow/Haul or Shipping Services</h3>
-                                <p class="pp1">Some key notes to pay attention to under roadside service; Fuel Delivery(Gas and Diesel Refill). When the Buyer requested Fuel Refill service, the Expert will use their own money to buy the fuel, and take it to the Buyer
-                                    and put into the car. The quantity of fuel to be bought is fixed at 4 gallons, & at a fixed price of $20. This does not include the cost of service, and other factors that affects the cost of service. For example, fuel
-                                    cost: $20, service cost: $35, if in winter, plus: $5. The total amount will be: $60. See pricing page for more pricing details.
-                                </p>
-                                <p class="pp1">If your car battery is bad, you can order for a replacement through the app; and the Expert will pick up the battery & bring & install it on your vehicle. If Expert is with the Buyer, it turn out that the Buyer need a part
-                                    form the store, the Buyer can order the part, then send the Expert to the store to pick up part and bring it for installation. All of these is done through the app. And there's an additional cost if the Expert will
-                                    stop to, or leave to go pick up an auto part or.
-                                </p>
-                                <p class="pp1">If you notice that your car is vibrating when driving or idling, know that some thing major is coming. For your safety and that of others, it would be great not to keep driving for it's dangerous. In that regard, any thing
-                                    unusual with your car, stop, and request an auto Expert to come for a safety check..
-                                </p>
-                                <h3 class="h331 pt-3" style="text-align:left">Scheduling of Service</h3>
-                                <p class="pp1">To schedule a service with TowGig is easy and cool. The Buyer should click on the (clock icon) in their account home screen to schedule service for a later time; at least 2 and half hours in advance.
-                                </p>
-                                <h3 class="h331 pt-3" style="text-align:left">Expert & Buyer(Tow/Haul service)</h3>
-                                <p class="pp1">There are 2 auto categories. None as: <strong>Personal</strong> and <strong>Commercial</strong> - <strong>Personal means</strong>, privately use. And <strong>commercial means,</strong> the auto is use for business
-                                </p>
-                                <h2 class="pt-3 h213 h2h2" style="text-align:left;font-size:2.3rem">Auto condition</h2>
-                                <h3 class="ppp1 pt-2 pb-2" style="text-align:left">Under Auto Condition are the following</h3>
-                                <p class="pp1"><strong>-Can't start:</strong> This means; The engine of the car doesn't start and the vehicle can't drive
-                                </p>
-                                <p class="pp1"><strong>-Driveable:</strong> This means the vehicle starts & it can drive
-                                </p>
-                                <p class="pp1"><strong>-Collusion:</strong> This is when the car is involved in a crashed or had been in a accident
-                                </p>
-                                <p class="pp1"><strong>-Winch Needed:</strong>This is when the car is 0-12 feet away from the motor road. If the distance is more than 12 feet, the Buyer must indicate to the Expert the exact distance between the road and the car. The
-                                    Expert and Buyer will discuss the additional cost and the Buyer will pay the difference to the Expert based on their agreeable form of payment before the start of service. For example: Cost of towing; $50, Towgig price
-                                    for winch is $20 (distance between 0-12 feet). But if the distance from the road to the car is 20 feet, Buyer/Expert negotiated the difference in distance for; $10. Therefore, the charge will be: 50+20=$70.... The $10
-                                    is not calculated. So, the Buyer shall pay $10 to the Expert directly.
-                                </p>
-                                <p class="pp1 pt-2">The displayed cost seen on order alert screen is not fixed. When the Expert has completed the service the system shall automatically deduct the exact amount from the Buyer based on the platform pricing. There are videos
-                                    to help on youtube in case..
-                                </p>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-3 col-md-12 col-sm-12 col-xsm-12 container6-col-img">
-                        <img src="img/TG.jpg" class="container6-img-tg1" alt="TowGig">
-                    </div> -->
-                    </div>
-                </div>
-            </div>
+            <div id="alert"></div>
+            <table class="table table-striped table-hover" id="mytable">
+                <thead>
+                    <tr>
+						<!-- <th>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="selectAll">
+								<label for="selectAll"></label>
+							</span>
+						</th> -->
+						<th>ID</th>
+                        <th>NAME</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+				<tbody id="tbody">
+				<?php
+                    $sql = "SELECT * FROM post_category";
+                    $posts = $link->query($sql);
+            
+            
+                    while($row = $posts->fetch_assoc()){
+            
+                        if (!empty($row)) {
+                    ?>
+                            <tr id="<?php echo $row["id"]; ?>">
+                                <!-- <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" class="user_checkbox" data-user-id="<?php echo $row["Id"]; ?>">
+                                        <label for="checkbox2"></label>
+                                    </span>
+                                </td> -->
+                                <td><?php echo $row["id"]; ?></td>
+                                <td><?php echo $row['name']; ?></td>
+                                <td style="text-align:center;">
+                                    <a href="edit_category.php?id=<?php echo $row["id"]; ?>" class="edit">
+                                        <i class="material-icons" data-toggle="tooltip" 
+                                        title="Edit">&#xE254;</i></a>
+                                    <a href="delete_category.php?id=<?php echo $row["id"]; ?>" class="delete remove" id="" name="uid" data-id=""><i class="material-icons" data-toggle="tooltip" 
+                                    title="Delete">&#xE872;</i></a>
+                                </td>
+                            </tr>
+                        <?php
+                        }else{
+                            echo "<tr><h5 style='color:black;'>No Record Found</h5> </tr>";
+                        }
+				    }
+				?>
+				</tbody>
+			</table>
+			
         </div>
     </div>
-    <!-- <div id="aboutcontainer5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 offset-1 col-md-8 col-sm-12 col-xsm-12 ">
-                    <h2 class="pt-3">Download the app and Sign Up <strong>For Free</strong></h2>
-                    <button class="btn btn-outline-primary abtcontainer5-button">Get the App</button>
-                </div>
-                <div class="col-lg-1 col-md-3 col-sm-12 col-xsm-12">
-                    <img src="img/TowGig-3.png" class="TowGig3-img" alt="TowGig-3">
-                </div> 
-                <div class="col-lg-5 col-md-8 col-sm-12 col-xsm-12 offset-2  ">
-                    <br>
-                    <h2 class="cntnr5h2">We have a lot discounts available here.</h2>
-                    <button class="button container5-button-right">GO HERE</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- <div id="container7">
-        <div id="jssor_1">
-            <div data-u="loading" class="jssorl-009-spin">
-                <img class="img-style" src="img/spin.svg" />
-            </div>
-            <div data-u="slides" class="sliderdiv1">
-                <div class="imgpad">
-                    <img data-u="image" src="img/subaru.png" />
-                </div>
-                <div class="imgpad">
-                    <img data-u="image" />
-                </div>
-                <div class="imgpad">
-                    <img data-u="image" src="img/stripe.png" />
-                </div>
-                <div class="imgpad">
-                    <img data-u="image" />
-                </div>
-                <div class="imgpad">
-                    <img data-u="image" src="img/paypal.png" />
-                </div>
-                <div class="imgpad">
-                    <img data-u="image" />
-                </div>
-                <div class="imgpad">
-                    <img data-u="image" src="img/mobius.png" />
-                </div>
-                <div class="imgpad">
-                    <img data-u="image" />
-                </div><a data-u="any" href="https://www.jssor.com" style="display:none">web design</a>
-            </div>
-        </div>
-    </div> -->
-    <input class="checkbox-cb" id="checkbox-cb" type="checkbox" />
-    <div class="cookie-bar">
-        <span class="message">Visit to our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
-        <span class="mobile">Visit our <a class="top-h-link" href="costing.html">Costing</a> and <a class="top-h-link" href="benefit&bonus.html">Bonus/Benefi</a> page</span>
-        <label for="checkbox-cb" class="close-cb">x</label>
-    </div>
+	<!-- Add Modal HTML -->
+	<div id="addEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+                <form id="user_form" class="pt-3" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <div class="modal-header">						
+						<h4 class="modal-title">Add User</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" value="<?php echo $email; ?>">
+                            <span class="help-block"><?php echo $email_err; ?></span>
+                        </div>    
+                        <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+                            <span class="help-block"><?php echo $password_err; ?></span>
+                        </div>
+                        <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                            <label>Confirm Password</label>
+                            <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
+                            <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                        </div>
+                    </div>  
+                    <div class="modal-footer">
+					    <input type="hidden" value="1" name="type">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<button type="submit" class="btn btn-success" id="btn-add">Add</button>
+					</div>
+                    <!-- <p>Already have an account? <a href="login.php">Login here</a>.</p> -->
+                </form>
+				<form >
+				</form>
+			</div>
+		</div>
+	</div>
+    <!-- Edit Modal HTML -->
+	<!-- <div id="editEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+			</div>
+		</div>
+	</div> -->
+	<!-- Delete Modal HTML -->
+	<div id="deleteuser" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form class="pt-3" action="delete_user.php" method="post">	
+					<div class="modal-header">						
+						<h4 class="modal-title">Delete User</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+					<div class="modal-body">
+                    <input type="hidden" id="id_u" name="id" class="form-control" value="<?php echo $id; ?>">				
+						<p>Are you sure you want to delete these Records?</p>
+						<p class="text-warning"><small>This action cannot be undone.</small></p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<button type="submit" class="btn btn-danger" id="delete">Delete</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>    
+<?php
+if(count($_POST)>0){
+	if($_POST['type']==4){
+		$id=$_POST['id'];
+		$sql = "DELETE FROM users WHERE id in ($id)";
+		if (mysqli_query($link, $sql)) {
+			echo $id;
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . mysqli_error($link);
+		}
+		mysqli_close($link);
+	}
+}
+
+?>
     <footer class="page-footer font-small stylish-color-dark pt-4 abtfooter">
         <div class="container text-center text-md-left">
             <div class="row">
@@ -603,7 +637,6 @@
                         <li>
                             <a href="#!">Site Map</a>
                         </li>
-                        <li><a href="blog.php">Blog</a>
                     </ul>
                 </div>
                 <hr class="clearfix w-100 d-md-none">
@@ -674,9 +707,9 @@
                                                         <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#signupemail" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
                                                         </li>
-                                                        <!-- <li class="nav-item waves-effect waves-light">
+                                                        <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#signupphone" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
-                                                        </li> -->
+                                                        </li>
                                                     </ul>
                                                     <div class="tab-content" id="myTabContentMD">
                                                         <div class="tab-pane fade in show active" id="signupemail" role="tabpanel" aria-labelledby="home-tab-md">
@@ -722,15 +755,15 @@
                                     <div class="row register-form">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <p class="mbp mt-1">For a quick sign up, Please enter your</p>
+                                                <p class="mbp mt-2">For a quick sign up, Please enter your</p>
                                                 <section class="mx-2 pb-3 text-center">
                                                     <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
                                                         <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link active" id="home-tab-mdb" data-toggle="tab" href="#signupemailb" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
                                                         </li>
-                                                        <!-- <li class="nav-item waves-effect waves-light">
+                                                        <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link" id="profile-tab-mdb" data-toggle="tab" href="#signupphoneb" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
-                                                        </li> -->
+                                                        </li>
                                                     </ul>
                                                     <div class="tab-content" id="myTabContentMDb">
                                                         <div class="tab-pane fade in show active" id="signupemailb" role="tabpanel" aria-labelledby="home-tab-mdb">
@@ -748,6 +781,7 @@
                                                         </div>
                                                     </div>
                                                 </section>
+
                                             </div>
                                         </div>
                                         <!-- <p class="mbp1 mt-1 ml-3">The App Link will be send to you, now</p> -->
@@ -762,98 +796,7 @@
             </div>
         </div>
     </div>
-    <script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        window.jssor_1_slider_init = function() {
-
-            var jssor_1_options = {
-                $AutoPlay: 1,
-                $Idle: 0,
-                $SlideDuration: 5000,
-                $SlideEasing: $Jease$.$Linear,
-                $SlideWidth: 140,
-                $Align: 0
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            /*#region responsive code begin*/
-
-            var MAX_WIDTH = 980;
-
-            function ScaleSlider() {
-                var containerElement = jssor_1_slider.$Elmt.parentNode;
-                var containerWidth = containerElement.clientWidth;
-
-                if (containerWidth) {
-
-                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                    jssor_1_slider.$ScaleWidth(expectedWidth);
-                } else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-
-            ScaleSlider();
-
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-            /*#endregion responsive code end*/
-        };
-    </script>
-    <style>
-        /*jssor slider loading skin spin css*/
-        
-        .jssorl-009-spin img {
-            animation-name: jssorl-009-spin;
-            animation-duration: 1.6s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-        
-        @keyframes jssorl-009-spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <script>
-        var phone_number = window.intlTelInput(document.querySelector("#phone_number"), {
-            separateDialCode: true,
-            preferredCountries: ["us"],
-            hiddenInput: "full",
-            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-        });
-
-        $("form").submit(function() {
-            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
-            $("input[name='phone_number[full]'").val(full_number);
-            alert(full_number);
-        });
-    </script>
-    <script>
-        var phone_number = window.intlTelInput(document.querySelector("#phone_number1"), {
-            separateDialCode: true,
-            preferredCountries: ["us"],
-            hiddenInput: "full",
-            utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-        });
-
-        $("form").submit(function() {
-            var full_number = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
-            $("input[name='phone_number[full]'").val(full_number);
-            alert(full_number);
-        });
-    </script>
-    <script type="text/javascript">
-        jssor_1_slider_init();
-    </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -862,5 +805,39 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 </body>
-
+<script type="text/javascript">
+    $(".edit").click(function(){
+        var id = $(this).parents("tr").attr("id");
+        $.ajax({
+            url: 'edit_category.php',
+            type: 'POST',
+            data: {'id': id},
+            error: function() {
+                alert('Something is wrong');
+            },
+            success: function(data) {
+                $('#alert').append('<div class="alert alert-danger alert-dismissible fade show" role="alert">Data deleted successfully, Please wait for list to refresh!<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button></div>')
+            }
+        });
+    });
+    $(".remove").click(function(){
+        var id = $(this).parents("tr").attr("id");
+        if(confirm("Are you sure to remove this Category"))
+        {
+            $.ajax({
+               url: 'delete_category.php',
+               type: 'POST',
+               data: {'id': id},
+               error: function() {
+                  alert('Something is wrong');
+               },
+               success: function(data) {
+                    $('#alert').append('<div class="alert alert-danger alert-dismissible fade show" role="alert">Data deleted successfully, Please wait for list to refresh!<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button></div>')
+               }
+            });
+        }else{
+            return false
+        }
+    });
+</script>
 </html>

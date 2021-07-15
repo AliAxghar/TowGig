@@ -4,41 +4,53 @@ require_once "backend/database.php";
 session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
-
-// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-//     header("location: login.php");
-//     exit;
-// }
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
 $msg = "";
-$title = $short_description = $category = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $title = $_POST['title'];
-    $category = $_POST['category'];
-    $short_description = $_POST['short_description'];
-    $description =  $_POST['editor'];
-    $target = "images/".basename($_FILES['image']['name']);
-    $image = $_FILES['image']['name'];
-    $sql = "INSERT INTO post (title, category, short_description, description, image) VALUES (?, ?, ?, ?, ?)";
-    if(empty(trim($_POST["title"]))){
-        $msg = "Please enter a title.";
-    } elseif(empty(trim($_POST["category"]))){
-        $msg = "Please enter a category.";
-    } elseif(empty(trim($_POST["short_description"]))){
-        $msg = "Please enter a short description.";
-    } else{
-        if($stmt = mysqli_prepare($link, $sql)){
-            mysqli_stmt_bind_param($stmt, "sssss", $title, $category, $short_description, $description, $image);
-            
-            if(mysqli_stmt_execute($stmt)){
-                if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-                    header("location: allblogs.php");
-                }else{
-                    $msg = "Failed to upload image";
+    $category_name = $_POST['category'];
+    $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $category_name)));
+    $sql_cat = "SELECT * FROM post_category";
+    $allcat = $link->query($sql_cat);
+    if(mysqli_num_rows($allcat)==0){
+        $stmt = mysqli_prepare($link,"INSERT INTO post_category (name,slug) VALUES (?,?)");
+        if(false===$stmt){
+            $msg = "Something went wrong1";
+        }
+        $a_c = mysqli_stmt_bind_param($stmt,"ss",$category_name,$slug);
+        if(false===$a_c){
+            $msg = "Something went wrong2";
+        }
+        $a_c = $stmt->execute();
+        if ( false===$a_c ) {
+            $msg = "Error with execution";
+        }else{
+            header("location: allcategory.php");
+        }
+        $stmt->close();
+    }else{
+        while($row_cat = $allcat->fetch_assoc()){
+            if ($row_cat['slug'] == $slug){
+                $msg = "Category already exist";
+            }else{
+                $stmt = mysqli_prepare($link,"INSERT INTO post_category (name,slug) VALUES (?,?)");
+                if(false===$stmt){
+                    $msg = "Something went wrong1";
                 }
-            } else{
-                $msg = 'Something went wrong.';
+                $a_c = mysqli_stmt_bind_param($stmt,"ss",$category_name,$slug);
+                if(false===$a_c){
+                    $msg = "Something went wrong2";
+                }
+                $a_c = $stmt->execute();
+                if ( false===$a_c ) {
+                    $msg = "Error with execution";
+                }else{
+                    header("location: allcategory.php");
+                }
+                $stmt->close();
             }
-            mysqli_stmt_close($stmt);
         }
     }
 }
@@ -61,6 +73,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/util.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/main.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Palanquin+Dark|Roboto+Condensed&display=swap" rel="stylesheet"> -->
+    <!-- <script src='https://kit.fontawesome.com/ee1dfcbe90.js'></script> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -100,11 +116,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-works.html">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services&promo.html">Service/Promo</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="blog.php">Blogs</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="blog.php">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-3" href="allblogs.php">All Blogs</a>
+                        <a class="nav-link" href="allblogs.php">All Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  mr-3" href="allcategory.php">All Categories</a>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link navlinkback" href="logout.php">logout</a>
@@ -115,17 +146,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </nav>
     <div class="container pb-5">
         <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-3"></div>
-                    <div class="col-6">
-                    <span class="contact100-form-title getintouch" >Add Blog</span>
-                    </div>
-                    <div class="col-3">
-                        <div style="float:right;" class="mb-2"><a class="btn btn-success" href="add_category.php">Add Category</a></div>
-                    </div>
-                </div>
-            </div>
+        <span class="contact100-form-title getintouch" >
+            Add Blog Category
+        </span>
+
+                
             <div class="col-md-12">
                     <?php
                     if (!empty($msg)) {
@@ -135,40 +160,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     }?>
                 <form class="" name="contactform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="">Title:</label>
-                        <input class="form-control" type="text" id="title" name="title" placeholder="title" required>
-                    </div>
-                    <input type="hidden" name="size" value="1000000">
-                    <div class="form-group">
-                        <label class="">Image:</label>
-                        <input class="form-control image-field" type="file" id="image" name="image" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="sel1">Select Category:</label>
-                        <select class="form-control" name="category" required>
-                            <option value="">-- Select --</option>
-                            <?php
-                                $records = mysqli_query($link, "SELECT * FROM post_category");  // Use select query here 
-
-                                while($data = mysqli_fetch_array($records))
-                                {
-                                    echo "<option class='form-control' value='". $data['id'] ."'>" .$data['name'] ."</option>";  // displaying data in option menu
-                                }	
-                            ?>  
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="mb-3">Short Description:</label>
-                        <input type="text" name="short_description" id="short_description" required class="form-control" placeholder="short description" >
-                    </div>
-                    <div class="form-group">
-                        <label class=" mb-3">Detail Description:</label>
-                        <textarea name="editor" id="editor" rows="10" cols="80" class="" required>
-                        Write your post here
-                        </textarea>
+                        <label class="">Category:</label>
+                        <input type="text" class="form-control" id="only-text" name="category" value="" placeholder="category" required/>
                     </div>
                     <div class="form-group" style="text-align:center;">
-                        <input type="submit" class="post-btn" value="Post">
+                        <input type="submit" class="post-btn" value="Add">
                     </div>
                 </form>
             </div>

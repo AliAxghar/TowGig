@@ -218,9 +218,9 @@
                                                         <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#signupemail" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
                                                         </li>
-                                                        <li class="nav-item waves-effect waves-light">
+                                                        <!-- <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#signupphone" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
-                                                        </li>
+                                                        </li> -->
                                                     </ul>
                                                     <div class="tab-content" id="myTabContentMD">
                                                         <div class="tab-pane fade in show active" id="signupemail" role="tabpanel" aria-labelledby="home-tab-md">
@@ -272,9 +272,9 @@
                                                         <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link active" id="home-tab-mdb" data-toggle="tab" href="#signupemailb" role="tab" aria-controls="home-md" aria-selected="true">Email</a>
                                                         </li>
-                                                        <li class="nav-item waves-effect waves-light">
+                                                        <!-- <li class="nav-item waves-effect waves-light">
                                                             <a class="nav-link" id="profile-tab-mdb" data-toggle="tab" href="#signupphoneb" role="tab" aria-controls="profile-md" aria-selected="false">Phone</a>
-                                                        </li>
+                                                        </li> -->
                                                     </ul>
                                                     <div class="tab-content" id="myTabContentMDb">
                                                         <div class="tab-pane fade in show active" id="signupemailb" role="tabpanel" aria-labelledby="home-tab-mdb">

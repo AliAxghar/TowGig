@@ -449,7 +449,7 @@ include_once('backend/database.php');
                                                 <section class="mx-2 pb-3 text-center">
                                                     <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
                                                         <li class="nav-item waves-effect waves-light"><a aria-controls="home-md" aria-selected="true" class="nav-link active" data-toggle="tab" href="#signupemail" id="home-tab-md" role="tab">Email</a></li>
-                                                        <li class="nav-item waves-effect waves-light"><a aria-controls="profile-md" aria-selected="false" class="nav-link" data-toggle="tab" href="#signupphone" id="profile-tab-md" role="tab">Phone</a></li>
+                                                        <!-- <li class="nav-item waves-effect waves-light"><a aria-controls="profile-md" aria-selected="false" class="nav-link" data-toggle="tab" href="#signupphone" id="profile-tab-md" role="tab">Phone</a></li> -->
                                                     </ul>
 
                                                     <div class="tab-content" id="myTabContentMD">
@@ -504,7 +504,7 @@ include_once('backend/database.php');
                                                 <section class="mx-2 pb-3 text-center">
                                                     <ul class="nav nav-tabs md-tabs text-center" id="myTabMD" role="tablist">
                                                         <li class="nav-item waves-effect waves-light"><a aria-controls="home-md" aria-selected="true" class="nav-link active" data-toggle="tab" href="#signupemailb" id="home-tab-mdb" role="tab">Email</a></li>
-                                                        <li class="nav-item waves-effect waves-light"><a aria-controls="profile-md" aria-selected="false" class="nav-link" data-toggle="tab" href="#signupphoneb" id="profile-tab-mdb" role="tab">Phone</a></li>
+                                                        <!-- <li class="nav-item waves-effect waves-light"><a aria-controls="profile-md" aria-selected="false" class="nav-link" data-toggle="tab" href="#signupphoneb" id="profile-tab-mdb" role="tab">Phone</a></li> -->
                                                     </ul>
 
                                                     <div class="tab-content" id="myTabContentMDb">
