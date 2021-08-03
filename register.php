@@ -324,7 +324,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         </ul>
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2020 TowGig Technologies
+        <div class="footer-copyright text-center py-3 text-muted">All Rights Reserved © 2021 TowGig Technologies
         </div>
         <div class="footer-copyright text-center py-3 text-muted"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
         </div>

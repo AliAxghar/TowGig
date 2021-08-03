@@ -248,7 +248,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <div class="footer-copyright text-center py-3 text-muted" style="text-align: center!important;">All Rights Reserved © 2020 TowGig Technologies
+                    <div class="footer-copyright text-center py-3 text-muted" style="text-align: center!important;">All Rights Reserved © 2021 TowGig Technologies
                     </div>
                     <div class="footer-copyright text-center py-3 text-muted" style="text-align: center!important;"><span>Developed by<a class="text-white" href="https://crymzee.com"> Crymzee Pvt. Ltd.</a></span>
                     </div>
