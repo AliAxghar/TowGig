@@ -5,10 +5,10 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 
-// if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-//     header("location: login.php");
-//     exit;
-// }
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
 $msg = "";
 $title = $short_description = $category = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -136,12 +136,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <form class="" name="contactform" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="">Title:</label>
-                        <input class="form-control" type="text" id="title" name="title" placeholder="title" required>
+                        <input class="form-control" type="text" id="title" name="title" placeholder="title">
                     </div>
                     <input type="hidden" name="size" value="1000000">
                     <div class="form-group">
                         <label class="">Image:</label>
-                        <input class="form-control image-field" type="file" id="image" name="image" required>
+                        <input class="form-control image-field" type="file" id="image" name="image">
                     </div>
                     <div class="form-group">
                         <label for="sel1">Select Category:</label>
@@ -196,7 +196,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </li>
                         <li>
                             <a href="https://apps.apple.com/pk/app/towgig/id1507223706"><img alt="iosbtn" class="footer-img1" src="img/iosbtn.png" /></a>
-                            <a href="https://play.google.com/store/apps/details?id=com.crymzee.towgig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.crymzee.tow_gig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
                         </li>
                     </ul>
                 </div>

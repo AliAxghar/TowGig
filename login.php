@@ -30,9 +30,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
-        $password = trim($_POST["password"]);
+        $password1 = trim($_POST["password"]);
     }
-    
     // Validate credentials
     if(empty($email_err) && empty($password_err)){
         // Prepare a select statement
@@ -44,7 +43,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Set parameters
             $param_email = $email;
-            
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Store result
@@ -56,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $email, $password);
                     // echo $hashed_password;
                     if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, password_hash($password, PASSWORD_DEFAULT))){
+                        if(password_verify($_POST['password'], $password)) {
                             // Password is correct, so start a new session
                             session_start();
                             
@@ -67,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // Redirect user to welcome page
                             header("location: allblogs.php");
-                        } else{
+                        }else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
                         }
@@ -239,7 +237,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </li>
                         <li>
                             <a href="https://apps.apple.com/pk/app/towgig/id1507223706"><img alt="iosbtn" class="footer-img1" src="img/iosbtn.png" /></a>
-                            <a href="https://play.google.com/store/apps/details?id=com.crymzee.towgig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.crymzee.tow_gig"><img alt="googlebtn" class="footer-img2" src="img/googlebtn.png" /></a>
                         </li>
                     </ul>
                 </div>

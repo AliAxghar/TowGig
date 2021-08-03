@@ -10,7 +10,7 @@
     $phone = $_POST['phone_number']['full'];
     $subject = "TowGig Signup Request";
     $subject2 = "TowGig Services";
-    $message2 = "Thanks for choosing TowGig, Click the link to download the app \n Playstore = https://play.google.com/store/apps/details?id=com.crymzee.towgig \n Appstore = https://apps.apple.com/pk/app/towgig/id1507223706";
+    $message2 = "Thanks for choosing TowGig, Click the link to download the app \n Playstore = https://play.google.com/store/apps/details?id=com.crymzee.tow_gig \n Appstore = https://apps.apple.com/pk/app/towgig/id1507223706";
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
@@ -24,7 +24,7 @@
     // if(isset($phone)) {
     //   $message = $client->messages->create($phone, // to
     //                         [
-    //                             "body" => "Thanks for choosing TowGig, Click the link to download the app \n Playstore = https://play.google.com/store/apps/details?id=com.crymzee.towgig \n Appstore = https://apps.apple.com/pk/app/towgig/id1507223706",
+    //                             "body" => "Thanks for choosing TowGig, Click the link to download the app \n Playstore = https://play.google.com/store/apps/details?id=com.crymzee.tow_gig \n Appstore = https://apps.apple.com/pk/app/towgig/id1507223706",
     //                             "from" => "+12058283417"
     //                         ]
     //               );
